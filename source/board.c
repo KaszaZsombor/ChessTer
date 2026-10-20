@@ -4,12 +4,12 @@
 /* Piece gyárfüggvény */
 piece b_create_piece(piece_t type, color_t col, int hasMoved)
 {
-    return (piece){.col = col, .hasMoved = hasMoved, .tpye = type};
+    return (piece){.col = col, .hasMoved = hasMoved, .type = type};
 }
 
 piece b_create_empty_piece()
 {
-    return (piece){.col = NONE, .hasMoved = 0, .tpye = EMPTY};
+    return (piece){.col = NONE, .hasMoved = 0, .type = EMPTY};
 }
 
 /* Visszaad egy memóriaszemét nélküli táblát, ami teljesen üres*/

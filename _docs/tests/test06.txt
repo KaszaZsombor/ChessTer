@@ -1,0 +1,134 @@
+TESZT: A bástya,vezér futó lépésgenerátor tesztelése
+VÁRT EREDMÉNY: Az e2 gyalogot levéve a tábláról a futó és a vezér csak szabályos lépéseket téve tudnak mozogni,
+                a program kiírja a bemenet hibáját, és ha a lépés sikerült lerajzolja a táblát.
+
+MAIN:
+#include <stdio.h>
+#include "board.h"
+#include "types.h"
+#include "move.h"
+#include "ui.h"
+
+int main(void){
+    board main_brd = b_create();
+    b_setdefault(&main_brd);
+
+    b_setpiece(&main_brd, p_createpos(4,6), b_create_empty_piece());
+
+    ui_drawboard(main_brd);
+
+    int result = 1;
+    while (result != END)
+    {
+        int size = 6;
+        char buffer[6];
+
+        result = ui_getusrin(&size, buffer);
+        
+        if(result == END)break;
+        else if(result == ERROR)
+        {
+            printf("Nem ertelmezett bemenet\n");
+            continue;
+        }
+
+        move mv;
+        if(ui_parse_str(&mv, buffer, size) == ERROR)
+        {
+            printf("A lepes nincs a tablan\n");
+        };
+
+        if(m_make_move(&main_brd, mv) == ERROR)
+        {
+            printf("A lepes nem szabalyos\n");
+            continue;
+        }
+
+        ui_drawboard(main_brd);
+    }
+    return 0;
+}
+
+
+EREDMÉNY: A generátor működik ezeknél a bábuknál
+.---.---.---.---.---.---.---.---. 
+| r | n | b | q | k | b | n | r | 8
+|---+---+---+---+---+---+---+---| 
+| p | p | p | p | p | p | p | p | 7
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 6
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 5
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 4
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 3
+|---+---+---+---+---+---+---+---| 
+| P | P | P | P |   | P | P | P | 2
+|---+---+---+---+---+---+---+---| 
+| R | N | B | Q | K | B | N | R | 1
+'---'---'---'---'---'---'---'---' 
+  a   b   c   d   e   f   g   h
+l1o9
+A lepes nincs a tablan
+A lepes nem szabalyos
+f1c4
+.---.---.---.---.---.---.---.---. 
+| r | n | b | q | k | b | n | r | 8
+|---+---+---+---+---+---+---+---| 
+| p | p | p | p | p | p | p | p | 7
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 6
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 5
+|---+---+---+---+---+---+---+---| 
+|   |   | B |   |   |   |   |   | 4
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 3
+|---+---+---+---+---+---+---+---| 
+| P | P | P | P |   | P | P | P | 2
+|---+---+---+---+---+---+---+---| 
+| R | N | B | Q | K |   | N | R | 1
+'---'---'---'---'---'---'---'---' 
+  a   b   c   d   e   f   g   h
+d1f3
+.---.---.---.---.---.---.---.---. 
+| r | n | b | q | k | b | n | r | 8
+|---+---+---+---+---+---+---+---| 
+| p | p | p | p | p | p | p | p | 7
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 6
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 5
+|---+---+---+---+---+---+---+---| 
+|   |   | B |   |   |   |   |   | 4
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   | Q |   |   | 3
+|---+---+---+---+---+---+---+---| 
+| P | P | P | P |   | P | P | P | 2
+|---+---+---+---+---+---+---+---| 
+| R | N | B |   | K |   | N | R | 1
+'---'---'---'---'---'---'---'---' 
+  a   b   c   d   e   f   g   h
+f3f7
+.---.---.---.---.---.---.---.---. 
+| r | n | b | q | k | b | n | r | 8
+|---+---+---+---+---+---+---+---| 
+| p | p | p | p | p | Q | p | p | 7
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 6
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 5
+|---+---+---+---+---+---+---+---| 
+|   |   | B |   |   |   |   |   | 4
+|---+---+---+---+---+---+---+---| 
+|   |   |   |   |   |   |   |   | 3
+|---+---+---+---+---+---+---+---| 
+| P | P | P | P |   | P | P | P | 2
+|---+---+---+---+---+---+---+---| 
+| R | N | B |   | K |   | N | R | 1
+'---'---'---'---'---'---'---'---' 
+  a   b   c   d   e   f   g   h
+f7c7
+A lepes nem szabalyos
+^Z

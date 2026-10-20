@@ -17,6 +17,10 @@ int ui_getusrin(int *size, char *msg)
                 *size = i + 1;
                 return SUCCESS;
             }
+            else
+            {
+                return ERROR;
+            }
         }
     }
     *size = i + 1;
@@ -58,7 +62,7 @@ void ui_drawboard(board brd)
         if(i > 0)printf("%s",mid);
         for(int j = 0; j < 8; j++)
         {
-            char c = getc_p(brd.pcs[j][i].tpye);
+            char c = getc_p(brd.pcs[j][i].type);
             if(brd.pcs[j][i].col == BLACK) c = to_lower(c);
             printf("| %c ", c);
         }

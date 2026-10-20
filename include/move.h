@@ -13,6 +13,6 @@ position p_add(position a, position b);
 move m_createmove(position from, position to, piece_t pp);
 void m_make_generatedmove(board *pbrd, generated_move gmv);
 move m_createmove(position from, position to, piece_t pp);
-
+int m_make_move(board *pbrd, move mv);
 
 #endif

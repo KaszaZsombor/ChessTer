@@ -1,5 +1,6 @@
 #include "move.h"
 #include "board.h"
+#include "movegenerator.h"
 
 /* POSITION FÜGGVÉNYEK AZ EGYSZERŰBB HASZNÁLATHOZ */
 /*gyárfüggvény*/
@@ -120,4 +121,33 @@ void m_make_generatedmove(board *pbrd, generated_move gmv)
         case EP:    make_ep_move(pbrd, gmv.move);       break;
         default:    make_normal_move(pbrd, gmv.move);
     }
+}
+
+
+int m_make_move(board *pbrd, move mv)
+{
+    /* Ha nincs a táblán a kezdő vagy végpozíció kidobjuk */
+    if(!b_ison(mv.from) || !b_ison(mv.from))return ERROR;
+
+    /* Azért 27 hosszú a töb, mert 27 a vezér összes lépésése üres táblán
+    ennél csak kevesebb lépése lehet egy bábunak*/
+    generated_move list[MVL_MAX] = {0};
+    int size = 0;
+
+    /* Ha nem sikerül a keresés lépjünk ki ERROR-al*/
+    if(mg_generate_all_moves(*pbrd, mv.from, list, &size) == ERROR) return ERROR;
+
+    /* Keressük meg hogy a lépés kezdőpozíciójából generált lépések között
+    van-e olyan aminek a véghelyzete megegyezik a megadott lépés véghelyzetével. 
+    Ha igen, hajtsuk végre ezt a generált lépést.*/
+    for(int i = 0; i < size; i++)
+    {
+        if(p_isequal(list[i].move.to, mv.to))
+        {
+            m_make_generatedmove(pbrd, list[i]);
+            return SUCCESS;
+        }
+    }
+    /* Ha valahogyan ide jutunk, biztosan rossz valami*/
+    return ERROR;
 }
