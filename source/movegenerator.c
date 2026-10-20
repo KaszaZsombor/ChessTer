@@ -4,7 +4,7 @@
 
 
 
-
+/* generatedmove gyárfüggvény */
 generated_move create_generatedmove(position from, position to, piece_t ppt ,move_t type)
 {
     return (generated_move){.move.from = from, .move.to = to, .move.promotion_piece = ppt , .type = type};
@@ -58,19 +58,99 @@ int generate_all_moves_RBQ(board brd, position from, piece pcs, generated_move *
 }
 
 /* Generate all moves for the pawns */
-int generate_all_moves_P(board brd, position from, piece pcs, generated_move *list, int *size){
+int generate_all_moves_P(board brd, move mv, piece pcs, generated_move *list, int *size)
+{
+    position from = mv.from;
+    int count = 0;
+    position forward;
 
+    /* Előreirány meghatározása */
+    if(pcs.col == WHITE) forward = UP;
+    else forward = DOWN;
+
+    /* ütésirányok meghatározása */
+    position takedirs[2] = {p_add(forward,LEFT), p_add(forward,RIGHT)};
+
+    position searchpos = from;
+
+    /* ütési pozíciók vizsgálata */
+    for(int i = 0; i < 2; i++)
+    {
+        searchpos = from;
+        searchpos = p_add(searchpos, takedirs[i]);
+        piece foundpcs;
+        if(b_getpiece(&brd, searchpos, &foundpcs) == ERROR)continue;/* Ha nincs a táblán, nem jó*/
+        /*ha ütési helyzetben egy en-passant pozíció van, az csak úgy lehet ha az előző lépésben
+        duplalépést léptk mellénk egy gyaloggal, mert minden lépés után törlődik. Ilyenkor lehet en-passant lépni*/
+        if(p_isequal(searchpos, brd.ep_pos))
+        {
+            /* a lista frissítése*/
+            list[count] = create_generatedmove(from, searchpos, EMPTY, EP);
+            count++;
+            continue;
+        }
+        /* ha ellenfél bábu van itt, le lehet ütni*/
+        if(foundpcs.col != pcs.col && foundpcs.type != EMPTY)   
+        {
+            if(searchpos.row != 0 && searchpos.row != 7)
+            {
+                list[count] = create_generatedmove(from, searchpos, EMPTY, NORMAL);
+                count++;
+                continue;
+            }
+            /* csak akkor jutunk ide ha ütve prmotolunk*/
+            if(mv.promotion_piece == EMPTY)return ERROR;/* Ha nincs megadva promotion bábu*/
+            list[count] = create_generatedmove(from, searchpos, mv.promotion_piece, PP);
+            count++;
+            continue;
+        }
+    }
+
+    /* előrelépések vizsgálata */
+    searchpos = from;
+    searchpos = p_add(searchpos, forward);
+
+    piece foundpcs;
+    /*biztosan a táblán van, ha szélső mezőre ér promotion miatt már nem galog*/
+    (void)b_getpiece(&brd, searchpos, &foundpcs);
+
+    if(foundpcs.type == EMPTY)
+    {
+        if(searchpos.row == 0 || searchpos.row == 7)
+        {
+            /* Ez vagy empty vagy helyes, nem kell mást vizsgálni. Az inputról nem fogadunk el
+            rossz promotion_piece adatot*/
+            if(mv.promotion_piece == EMPTY)return ERROR;
+            list[count] = create_generatedmove(from, searchpos, mv.promotion_piece, PP);
+            count++;
+        }
+        else
+        {
+            list[count] = create_generatedmove(from, searchpos, EMPTY, NORMAL);
+            count++;
+        }
+        /* dupla előrelépés vizsgálata */
+        searchpos = p_add(searchpos, forward);
+        (void)b_getpiece(&brd, searchpos, &foundpcs);
+        if(foundpcs.type == EMPTY && pcs.hasMoved == 0)
+        {
+            list[count] = create_generatedmove(from, searchpos, EMPTY, DP);
+            count++;
+        }
+    }
+    *size = count;
+    return SUCCESS;
 }
 
 /* visszaadja sikerült e találni lépést ha igen, akkor beírja a tömbbe és beírja a hosszát*/
 /*Ide átmásoljuk a táblát, a generálás során véletlenül sem akarunk az eredetin változtatni
 a board, position a lépésehatározáshoz szükséges*/
-int mg_generate_all_moves(board brd, position from, generated_move *list, int *size)
+int mg_generate_all_moves(board brd, move mv, generated_move *list, int *size)
 {
     piece mvpcs;
     /* biztosan nem lesz error a visszatérése ennek, mert a mg_make_move-bane már leellenőriztük
     hogy a tálán van a position. Ha már itt megvan, átadjuk a lépésgenerálóknak is*/
-    (void)b_getpiece(&brd, from, &mvpcs);
+    (void)b_getpiece(&brd, mv.from, &mvpcs);
 
     switch(mvpcs.type)
     {
@@ -78,10 +158,10 @@ int mg_generate_all_moves(board brd, position from, generated_move *list, int *s
         elég a lépéseik generálásához*/
         case QUEEN:
         case ROOK:
-        case BISHOP: return generate_all_moves_RBQ(brd, from, mvpcs, list, size);
+        case BISHOP: return generate_all_moves_RBQ(brd, mv.from, mvpcs, list, size);
         case KING: break;
         case KNIGHT: break;
-        case PAWN: break;
+        case PAWN: return generate_all_moves_P(brd, mv, mvpcs, list, size);
         default: return ERROR; /* Csak ha üres mezővel akarnánk lépni*/
     }
     return SUCCESS;

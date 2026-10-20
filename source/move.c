@@ -7,9 +7,9 @@
 position p_createpos(int file, int row){ return (position){.file = file, .row = row};}
 /*egyenlőség ellenőrző*/
 int p_isequal(position a, position b){ return (a.row == b.row && a.file == b.file);}
-/*összeadó*/
+/*positio összeadó*/
 position p_add(position a, position b){ return p_createpos(a.file + b.file,a.row + b.row);}
-/*szorzó*/
+/*position szorzó*/
 position p_times(position a, int b){ return p_createpos(a.file * b, a.row * b);}
 
 /* MOVE FÜGGVÉNYEK */
@@ -135,7 +135,7 @@ int m_make_move(board *pbrd, move mv)
     int size = 0;
 
     /* Ha nem sikerül a keresés lépjünk ki ERROR-al*/
-    if(mg_generate_all_moves(*pbrd, mv.from, list, &size) == ERROR) return ERROR;
+    if(mg_generate_all_moves(*pbrd, mv, list, &size) == ERROR) return ERROR;
 
     /* Keressük meg hogy a lépés kezdőpozíciójából generált lépések között
     van-e olyan aminek a véghelyzete megegyezik a megadott lépés véghelyzetével. 

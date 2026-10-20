@@ -8,20 +8,18 @@ int main(void){
     board main_brd = b_create();
     b_setdefault(&main_brd);
 
-    b_setpiece(&main_brd, p_createpos(4,6), b_create_empty_piece());
-
     ui_drawboard(main_brd);
 
-    int result = 1;
-    while (result != END)
+    while (1)
     {
+        int usrin_result;
         int size = 6;
         char buffer[6];
 
-        result = ui_getusrin(&size, buffer);
+        usrin_result = ui_getusrin(&size, buffer);
         
-        if(result == END)break;
-        else if(result == ERROR)
+        if(usrin_result == END)break;
+        else if(usrin_result == ERROR)
         {
             printf("Nem ertelmezett bemenet\n");
             continue;
@@ -31,6 +29,7 @@ int main(void){
         if(ui_parse_str(&mv, buffer, size) == ERROR)
         {
             printf("A lepes nincs a tablan\n");
+            continue;
         };
 
         if(m_make_move(&main_brd, mv) == ERROR)
