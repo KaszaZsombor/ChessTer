@@ -14,7 +14,8 @@ typedef enum color_t {NONE, WHITE, BLACK}color_t;
 typedef enum move_t {NORMAL, DP, PP, CSTL_L, CSTL_S, EP}move_t;
 
 /*Egy táblapozíciót tárol*/
-typedef struct{
+typedef struct
+{
     int file;
     int row;
 } position;
@@ -38,21 +39,24 @@ typedef struct{
 
 
 /* Az input ilyen típusban tárolódik*/
-typedef struct {
+typedef struct
+{
     position from;
     position to;
     piece_t promotion_piece;
 } move;
 
 /*legenerált lépések*/
-typedef struct{
+typedef struct
+{
     move move;
     move_t type;
 }generated_move;
 
 /*A táblának tárolnia kell a bábukat, azok színét, ki tud sáncolni, van-e valahol en_passant és hogy
 ki jön*/
-typedef struct{
+typedef struct
+{
     piece_t pcs[8][8];
     color_t pcs_col[8][8];
     position ep_pos;
