@@ -43,7 +43,7 @@ int main(void){
 
 EREDMÉNY: Az elvártak szerint működött. Az b_ison vizsgálata felesleges, mert nem enged a bemenet táblán kívüli
           pozíciót beolvasni a parsing része a programnak. De ha másik UI lesz ugyanerre a programra készítve,
-          mondjuk SDL2-vel, akkor ez a függvény nem vizsgál. Ezért nem lesz kitörölve az b_ison függvény.
+          mondjuk SDL2-vel, akkor ez a függvény nem vizsgál. Ezért nem lesz kitörölve az b_ison függvény
 
 .---.---.---.---.---.---.---.---. 
 |   |   |   |   |   |   |   |   | 8
