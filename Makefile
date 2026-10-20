@@ -2,7 +2,7 @@ CC = gcc
 FLAGS = -Wall -Wextra  -Wshadow -Wpedantic -Werror -g -Iinclude 
 
 TARGET = sakk.exe
-SRC_DIR = src
+SRC_DIR = source
 OBJ_DIR = bin
 
 SRCS = $(wildcard $(SRC_DIR)/*.c)

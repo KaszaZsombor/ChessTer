@@ -2,13 +2,14 @@
 #define TYPES_H
 
 
-/*Visszatérési értékek*/
+/*Visszatérési értékek, ezeket adják vissza int-ként a függvények futás után,
+jelezve a lefutás sikerességét*/
 enum{ERROR = -1, SUCCESS, DRAW, WW, BW};
 
 /* A bábu típusát jelöli, az empty jelölést az üres mező kapja*/
 typedef enum piece_t {EMPTY, PAWN, ROOK, KNIGHT, BISHOP, QUEEN, KING}piece_t;
 /* A bábu színét, vagy a következő játékos színét tárolja. A NONE az üres mezőké*/
-typedef enum color_t {BLACK, WHITE, NONE}color_t;
+typedef enum color_t {NONE, WHITE, BLACK}color_t;
 /*A legenerált lépések típusai, ahol a bábucserén kívül más teendő is van*/
 typedef enum move_t {NORMAL, DP, PP, CSTL_L, CSTL_S, EP}move_t;
 
@@ -19,7 +20,7 @@ typedef struct{
 } position;
 
 /* A nincs pozíció jelölése */
-#define NOPOS (position) { -1, -1};
+#define NOPOS (position) { -1, -1}
 
 
 /* konstans irányok a lépésgeneráláshoz*/
@@ -56,7 +57,8 @@ typedef struct{
     color_t pcs_col[8][8];
     position ep_pos;
     color_t side;
-    int cstl_rigths[2][2];
+    int cstl_rigths_w[2];
+    int cstl_rigths_b[2];
 }board;
 
 #endif
