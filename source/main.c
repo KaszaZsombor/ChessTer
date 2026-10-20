@@ -10,25 +10,28 @@ int main(void){
     b_setdefault(&main_brd);
     ui_drawboard(main_brd);
 
-    int size = 6;
-    char buffer[6];
-
-    int result = ui_getusrin(&size, buffer);
-    if(result == END)return 0;
-    if(result == OVERFLOW)
+    int result = 1;
+    while (result != END)
     {
-        printf("OVER\n");
-        return 0;
-    }
-    if(result == NOT_ACCEPTED)
-    {
-        printf("UNDER\n");
-        return 0;
-    }
-    printf("%s\n", buffer);
+        int size = 6;
+        char buffer[6];
 
-    m_piece_to_p(&main_brd, p_createpos(3,1),p_createpos(1,3));
-    ui_drawboard(main_brd);
+        result = ui_getusrin(&size, buffer);
+        
+        if(result == END)break;
+        else if(result == ERROR)continue;;
+
+        move mv;
+        result = ui_parse_str(&mv, buffer, size);
+        
+        if(result == ERROR)continue;
+
+        m_make_generatedmove(&main_brd, (generated_move){.move = mv, .type = NORMAL});
+
+        ui_drawboard(main_brd);
+    }
+    
+    
 
     return 0;
 }

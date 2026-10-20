@@ -1,16 +1,25 @@
 #include "types.h"
+#include "move.h"
+
+/* Piece gyárfüggvény */
+piece b_create_piece(piece_t type, color_t col, int hasMoved)
+{
+    return (piece){.col = col, .hasMoved = hasMoved, .tpye = type};
+}
+
+piece b_create_empty_piece()
+{
+    return (piece){.col = NONE, .hasMoved = 0, .tpye = EMPTY};
+}
 
 /* Visszaad egy memóriaszemét nélküli táblát, ami teljesen üres*/
 board b_create()
 {
     board brd = 
     {
-        .pcs = {EMPTY},
-        .pcs_col = {NONE},
+        .pcs = {0},
         .ep_pos = NOPOS,
         .side = NONE,
-        .cstl_rigths_b = {0,0},
-        .cstl_rigths_w = {0,0},
     };
     return brd;
 }
@@ -22,21 +31,19 @@ int b_ison(position pos)
 }
 
 /* Egy bábu lekérése a tábláról, ha helytelen a pozÍció az értéken nem váltotat*/
-int b_getpiece(board *pbrd, position pos, piece_t *t_out, color_t *col_out)
+int b_getpiece(board *pbrd, position pos, piece *pcs)
 {
     if(!b_ison(pos))return ERROR;
-    *t_out = pbrd->pcs[pos.file][pos.row];
-    *col_out = pbrd->pcs_col[pos.file][pos.row];
+    *pcs = pbrd->pcs[pos.file][pos.row];
     return SUCCESS;
 }
 
 /* Egy bábu egy tábálra helyezése, visszatérési érték magyarázat a TYPES.H fájlban */
-int b_setpiece(board *pbrd, position pos, piece_t pcst, color_t col)
+int b_setpiece(board *pbrd, position pos, piece pcs)
 {
     /* Ha a keresett pozíció nincs a táblán*/
     if(!b_ison(pos))return ERROR;
-    pbrd->pcs[pos.file][pos.row] = pcst;
-    pbrd->pcs_col[pos.file][pos.row] = col;
+    pbrd->pcs[pos.file][pos.row] = pcs;
     return SUCCESS;
 }
 
@@ -51,29 +58,24 @@ color_t opponent_col(color_t color)
 /* A táblát alaphelyzetbe állítja */
 void b_setdefault(board *pbrd)
 {
-    for(int i = 0; i < 2; i++)
-    {
-        pbrd->cstl_rigths_b[i] = 1;
-        pbrd->cstl_rigths_w[i] = 1;
-    }
     pbrd->ep_pos = NOPOS;
     pbrd->side = WHITE;
     /* A gyalogokat rakjuk a táblára*/
     for(int i = 0; i < 8; i++)
     {
-        (void)b_setpiece(pbrd,(position){i,1}, PAWN, BLACK);
-        (void)b_setpiece(pbrd,(position){i,6}, PAWN, WHITE);
+        (void)b_setpiece(pbrd, p_createpos(i, 1), b_create_piece(PAWN, BLACK, 0));
+        (void)b_setpiece(pbrd, p_createpos(i, 6), b_create_piece(PAWN, WHITE, 0));
     }
     /*Tisztek felállítása az enum sorrendjében, az elsőt kihagyva*/
     /*Balról jobbra amég tudunk, majd a maradékot jobbról balra*/
     for(int i = 0; i < 6; i++)
     {
-        (void)b_setpiece(pbrd, (position){i, 0}, i+2, BLACK);
-        (void)b_setpiece(pbrd, (position){i, 7}, i+2, WHITE);
+        (void)b_setpiece(pbrd, p_createpos(i, 0), b_create_piece(i+2, BLACK, 0));
+        (void)b_setpiece(pbrd, p_createpos(i ,7), b_create_piece(i+2, WHITE, 0));
     }
     for(int i = 0; i < 3; i++)
     {
-        (void)b_setpiece(pbrd, (position){7-i, 0}, i+2, BLACK);
-        (void)b_setpiece(pbrd, (position){7-i, 7}, i+2, WHITE);
+        (void)b_setpiece(pbrd, p_createpos(7-i, 0), b_create_piece(i+2, BLACK, 0));
+        (void)b_setpiece(pbrd, p_createpos(7-i, 7), b_create_piece(i+2, WHITE, 0));
     }
 }

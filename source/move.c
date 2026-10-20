@@ -12,13 +12,112 @@ position p_add(position a, position b){ return p_createpos(a.file + b.file,a.row
 position p_times(position a, int b){ return p_createpos(a.file * b, a.row * b);}
 
 /* MOVE FÜGGVÉNYEK */
-int m_piece_to_p(board *pbrd, position frm, position to)
+/*gyárfüggvény*/
+move m_createmove(position from, position to, piece_t pp)
 {
-    piece_t mving_pc;
-    color_t mving_col;
-    if(!b_ison(frm) || !b_ison(to)) return ERROR;
-    (void) b_getpiece(pbrd, frm, &mving_pc, &mving_col);
-    (void) b_setpiece(pbrd, frm, EMPTY, NONE);
-    (void) b_setpiece(pbrd, to, mving_pc, mving_col);
-    return SUCCESS;
+    move mv;
+    mv.from = from;
+    mv.to = to;
+    mv.promotion_piece = pp;
+    return mv;
+}
+
+/*normál lépés*/
+void make_normal_move(board *pbrd, move mv)
+{
+    /* A lépés meglépése a táblán */
+    piece pc;
+    (void)b_getpiece(pbrd, mv.from, &pc);
+    /* A bábu adatainak frissítése */
+    pc.hasMoved = 1;
+    (void)b_setpiece(pbrd, mv.to, pc);
+    (void)b_setpiece(pbrd, mv.from, b_create_empty_piece());
+    pbrd->ep_pos = NOPOS;
+}
+
+/*rövidsánc*/
+void make_cstl_s_move(board *pbrd, move mv)
+{
+    make_normal_move(pbrd, mv);
+
+    /* Az alrébblépés "vektorának" meghatározása a bástyánál */
+    position rookPos = p_add(mv.to, RIGHT);
+    position rookToPos = p_add(mv.from, RIGHT);
+    
+    /* en-passant-ot magától visszaállítja NOPOSITIONBE */
+    make_normal_move(pbrd, m_createmove(rookPos, rookToPos, EMPTY));
+}
+
+/* hosszúsánc */
+void make_cstl_l_move(board *pbrd, move mv)
+{
+    make_normal_move(pbrd, mv);
+    
+    /* bástya lépésének meghatározása */
+    position rookPos = p_add(mv.to, p_times(LEFT, 2));
+    position rookToPos = p_add(mv.to, RIGHT);
+
+    /* en passant pozíció automatikus törlése */
+    make_normal_move(pbrd, m_createmove(rookPos, rookToPos, EMPTY));
+}
+
+/*promotion*/
+void make_pp_move(board *pbrd, move mv)
+{
+    /* A szín megtalálásához*/
+    piece pc;
+    (void)b_getpiece(pbrd, mv.from, &pc);
+    /* mögötti mező törlése */
+    (void)b_setpiece(pbrd, mv.from, b_create_empty_piece());
+    /* új tiszt lerakása */
+    (void)b_setpiece(pbrd, mv.to, b_create_piece(mv.promotion_piece, pc.col, 1));
+    pbrd->ep_pos = NOPOS;
+}
+
+/*duplagyalog*/
+void make_dp_move(board *pbrd, move mv)
+{
+    piece pc;
+    (void)b_getpiece(pbrd, mv.from, &pc);
+    
+    /* hátrairány meghatározása */
+    position back;
+    if(pc.col == WHITE)back = DOWN;
+    else back = UP;
+
+    make_normal_move(pbrd, mv);
+    /* en passant pozíció meghatározása */
+    pbrd->ep_pos = p_add(mv.to, back);
+}
+
+/* En passant */
+void make_ep_move(board *pbrd, move mv)
+{
+    piece pc;
+    (void)b_getpiece(pbrd, mv.from, &pc);
+
+    position back;
+    if(pc.col == WHITE)back = DOWN;
+    else back = UP;
+
+    /*TÖRLI AZ EN-PASSANT MEZŐT */
+    make_normal_move(pbrd, mv);
+
+    position deletePos = p_add(mv.to, back);
+    (void)b_setpiece(pbrd,deletePos, b_create_empty_piece());
+}   
+
+/*A már szabályosa generált lépések közül kiválasztott megtétele, nem szükséges
+szabályellenőrzés*/
+void m_make_generatedmove(board *pbrd, generated_move gmv)
+{
+    switch(gmv.type)
+    {
+        case PP:    make_pp_move(pbrd, gmv.move);       break;
+        case DP:    make_dp_move(pbrd, gmv.move);       break;
+        case CSTL_L:make_cstl_l_move(pbrd, gmv.move);   break;
+        case CSTL_S:make_cstl_s_move(pbrd, gmv.move);   break;
+        case EP:    make_ep_move(pbrd, gmv.move);       break;
+        default:    make_normal_move(pbrd, gmv.move);
+    }
 }

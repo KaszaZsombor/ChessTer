@@ -10,8 +10,9 @@ position p_times(position a, int b);
 position p_add(position a, position b);
 
 /*MOVE*/
-
-int m_piece_to_p(board *pbrd, position frm, position to);
+move m_createmove(position from, position to, piece_t pp);
+void m_make_generatedmove(board *pbrd, generated_move gmv);
+move m_createmove(position from, position to, piece_t pp);
 
 
 #endif

@@ -36,7 +36,12 @@ typedef struct
 #define DOWNRIGHT (position){1,1}
 #define DOWNLEFT (position){-1,-1}
 
-
+typedef struct
+{
+    piece_t tpye;
+    color_t col;
+    int hasMoved;
+}piece;
 
 /* Az input ilyen típusban tárolódik*/
 typedef struct
@@ -57,12 +62,9 @@ typedef struct
 ki jön*/
 typedef struct
 {
-    piece_t pcs[8][8];
-    color_t pcs_col[8][8];
+    piece pcs[8][8];
     position ep_pos;
     color_t side;
-    int cstl_rigths_w[2];
-    int cstl_rigths_b[2];
 }board;
 
 #endif
