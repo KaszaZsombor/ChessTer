@@ -15,10 +15,16 @@ board b_create()
     return brd;
 }
 
+/* A táblán van-e?*/
+int b_ison(position pos)
+{
+    return !(pos.file > 7 || pos.file < 0 || pos.row > 7 || pos.row < 0);
+}
+
 /* Egy bábu lekérése a tábláról, ha helytelen a pozÍció az értéken nem váltotat*/
 int b_getpiece(board *pbrd, position pos, piece_t *t_out, color_t *col_out)
 {
-    if(pos.file > 7 || pos.file < 0 || pos.row > 7 || pos.row < 0)return ERROR;
+    if(!b_ison(pos))return ERROR;
     *t_out = pbrd->pcs[pos.file][pos.row];
     *col_out = pbrd->pcs_col[pos.file][pos.row];
     return SUCCESS;
@@ -28,7 +34,7 @@ int b_getpiece(board *pbrd, position pos, piece_t *t_out, color_t *col_out)
 int b_setpiece(board *pbrd, position pos, piece_t pcst, color_t col)
 {
     /* Ha a keresett pozíció nincs a táblán*/
-    if(pos.file > 7 || pos.file < 0 || pos.row > 7 || pos.row < 0)return ERROR;
+    if(!b_ison(pos))return ERROR;
     pbrd->pcs[pos.file][pos.row] = pcst;
     pbrd->pcs_col[pos.file][pos.row] = col;
     return SUCCESS;

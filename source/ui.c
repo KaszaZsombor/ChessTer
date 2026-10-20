@@ -1,12 +1,37 @@
 #include <stdio.h>
 #include "ui.h"
 
+/* A kimenet a beolvasás sikerét határozza meg,
+a size befele a maximum msg size, kifele a beolvasott size*/
+int ui_getusrin(int *size, char *msg)
+{
+    int i;
+    for(i = 0; i < *size; i++)
+    {
+        if(scanf("%c", &msg[i]) == EOF)return END;
+        if(msg[i] == '\n')
+        {
+            if(i >= 4)
+            {
+                /* Ha megfelelő hosszú szöveget kaptunk*/
+                *size = i;
+                return ACCEPTED;
+            }
+            else return NOT_ACCEPTED;
+        }
+    }
+    *size = i;
+    /* A stdin letisztítása ha túl sok karakter volt az input */
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) { }
+    return OVERFLOW;
+}
+
 char to_lower(char c)
 {
     if(c >= 'A' && c <= 'Z')return c + 'a' - 'A';
     else return c;
 }
-
 
 char getc_p(piece_t piece)
 {

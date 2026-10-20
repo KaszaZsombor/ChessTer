@@ -12,3 +12,5 @@ FÁJLRENDSZER:
 MEGJ:
     ha a bin mappa nem létezne a make legenerálja
     minden make clean törli a bin mappát is, nem csak a .o fájlokat
+    minden nem void visszatérési típusú függvény visszatéréi értéke void-á van castolva,
+        jelezve hogy szándékosan van figyelmen kívül hagyva
