@@ -1,3 +1,7 @@
+/**
+ * @file board.c
+ * @brief A tábla kezelését szolgáló függvények.
+ */
 #include "types.h"
 #include "move.h"
 
@@ -7,6 +11,7 @@ piece b_create_piece(piece_t type, color_t col, int hasMoved)
     return (piece){.col = col, .hasMoved = hasMoved, .type = type};
 }
 
+/*empty piece gyárfüggvény*/
 piece b_create_empty_piece()
 {
     return (piece){.col = NONE, .hasMoved = 0, .type = EMPTY};
@@ -31,10 +36,10 @@ int b_ison(position pos)
 }
 
 /* Egy bábu lekérése a tábláról, ha helytelen a pozÍció az értéken nem váltotat*/
-int b_getpiece(board *pbrd, position pos, piece *pcs)
+int b_getpiece(board brd, position pos, piece *pcs)
 {
     if(!b_ison(pos))return ERROR;
-    *pcs = pbrd->pcs[pos.file][pos.row];
+    *pcs = brd.pcs[pos.file][pos.row];
     return SUCCESS;
 }
 
@@ -78,4 +83,10 @@ void b_setdefault(board *pbrd)
         (void)b_setpiece(pbrd, p_createpos(7-i, 0), b_create_piece(i+2, BLACK, 0));
         (void)b_setpiece(pbrd, p_createpos(7-i, 7), b_create_piece(i+2, WHITE, 0));
     }
+}
+
+
+int b_is_attacked(board brd, piece pcs)
+{
+
 }

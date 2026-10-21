@@ -28,7 +28,7 @@ void make_normal_move(board *pbrd, move mv)
 {
     /* A lépés meglépése a táblán */
     piece pc;
-    (void)b_getpiece(pbrd, mv.from, &pc);
+    (void)b_getpiece(*pbrd, mv.from, &pc);
     /* A bábu adatainak frissítése */
     pc.hasMoved = 1;
     (void)b_setpiece(pbrd, mv.to, pc);
@@ -67,7 +67,7 @@ void make_pp_move(board *pbrd, move mv)
 {
     /* A szín megtalálásához*/
     piece pc;
-    (void)b_getpiece(pbrd, mv.from, &pc);
+    (void)b_getpiece(*pbrd, mv.from, &pc);
     /* mögötti mező törlése */
     (void)b_setpiece(pbrd, mv.from, b_create_empty_piece());
     /* új tiszt lerakása */
@@ -79,7 +79,7 @@ void make_pp_move(board *pbrd, move mv)
 void make_dp_move(board *pbrd, move mv)
 {
     piece pc;
-    (void)b_getpiece(pbrd, mv.from, &pc);
+    (void)b_getpiece(*pbrd, mv.from, &pc);
     
     /* hátrairány meghatározása */
     position back;
@@ -95,7 +95,7 @@ void make_dp_move(board *pbrd, move mv)
 void make_ep_move(board *pbrd, move mv)
 {
     piece pc;
-    (void)b_getpiece(pbrd, mv.from, &pc);
+    (void)b_getpiece(*pbrd, mv.from, &pc);
 
     position back;
     if(pc.col == WHITE)back = DOWN;

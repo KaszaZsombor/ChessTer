@@ -1,6 +1,20 @@
+/**
+ * @file ui.c
+ * @author Kasza Zsombor
+ * @brief A felhasználó - program közti információküzlést végzi.
+ * @version 0.1
+ * @date 2026-10-21
+ * 
+ * @copyright Copyright (c) 2026
+ * 
+ */
+
+ 
 #include <stdio.h>
 #include "ui.h"
 #include "move.h"
+
+
 /* A kimenet a beolvasás sikerét határozza meg,
 a size befele a maximum msg size, kifele a beolvasott size*/
 int ui_getusrin(int *size, char *msg)

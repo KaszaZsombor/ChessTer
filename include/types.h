@@ -1,20 +1,43 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+/**
+ * @brief A maximum mennyiségű lépés ami generálódhat
+ * @details Ez a vezér lépéseinek száma, egy üres táblán.
+ */
 #define MVL_MAX 27
 
-/*Visszatérési értékek, ezeket adják vissza int-ként a függvények futás után,
-jelezve a lefutás sikerességét*/
+
+/**
+ * @brief A függvények default visszatérési értékei
+ * 
+ */
 enum{ERROR = -1, SUCCESS};
 
-/* A bábu típusát jelöli, az empty jelölést az üres mező kapja*/
+/**
+ * @brief A bábutípusokat határozza meg
+ * @details Az EMPTY jelöli a nincs bábut.
+ */
 typedef enum piece_t {EMPTY, PAWN, ROOK, KNIGHT, BISHOP, QUEEN, KING}piece_t;
-/* A bábu színét, vagy a következő játékos színét tárolja. A NONE az üres mezőké*/
+
+/**
+ * @brief A színeket határozza meg
+ * @details A NONE jelöli a nincs színt.
+ */
 typedef enum color_t {NONE, WHITE, BLACK}color_t;
-/*A legenerált lépések típusai, ahol a bábucserén kívül más teendő is van*/
+
+
+
+/**
+ * @brief A lépéstípusokat tárolja 
+ * @details A lépéstípusok tárolása lehetővé teszi a szétválogatásukat, és az egyes típusok különböző kezelési módját
+ */
 typedef enum move_t {NORMAL, DP, PP, CSTL_L, CSTL_S, EP}move_t;
 
-/*Egy táblapozíciót tárol*/
+/**
+ * @brief A position a 2 egész számot tárol
+ * @details Ezek jelölhetnek egy táblapozíciót vagy irányt is.
+ */
 typedef struct
 {
     int file;
@@ -26,7 +49,6 @@ typedef struct
 
 
 /* konstans irányok a lépésgeneráláshoz*/
-
 #define UP (position)     {.file = 0, .row =-1}
 #define DOWN (position)   {.file = 0, .row = 1}
 #define LEFT (position)   {.file =-1, .row = 0}
@@ -37,6 +59,10 @@ typedef struct
 #define DOWNRIGHT (position){.file = 1, .row = 1}
 #define DOWNLEFT (position) {.file =-1, .row =-1}
 
+/**
+ * @brief A bábu alapvető adatait tárolja: szín, típus, lépett-e
+ * 
+ */
 typedef struct
 {
     piece_t type;
@@ -44,7 +70,10 @@ typedef struct
     int hasMoved;
 }piece;
 
-/* Az input ilyen típusban tárolódik*/
+/**
+ * @brief A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül
+ * 
+ */
 typedef struct 
 {
     position from;
@@ -52,15 +81,21 @@ typedef struct
     piece_t promotion_piece;
 } move;
 
-/*legenerált lépések*/
+/**
+ * @brief Ez a legenerált lépéseket tárolja
+ * @details A generált lépések biztosan szabályosak, így ezek közül választva csak szabályos lépést tudunk lépni.
+ */
 typedef struct
 {
     move move;
     move_t type;
 }generated_move;
 
-/*A táblának tárolnia kell a bábukat, azok színét, ki tud sáncolni, van-e valahol en_passant és hogy
-ki jön*/
+/**
+ * @brief A játék alapvető adatai tárolja
+ * @details A board tárol egy 8x8-as táblát, ami a bábukat tartalmazza. Tartalmaz még egy en-passant positiont és
+ * a lépő oldal színét.
+ */
 typedef struct
 {
     piece pcs[8][8];
