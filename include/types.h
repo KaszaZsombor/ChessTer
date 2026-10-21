@@ -1,3 +1,8 @@
+/**
+ * @file types.h
+ * @brief Alapvető típusokat és globális konstansokat határozza meg.
+ */
+
 #ifndef TYPES_H
 #define TYPES_H
 
@@ -10,7 +15,6 @@
 
 /**
  * @brief A függvények default visszatérési értékei
- * 
  */
 enum{ERROR = -1, SUCCESS};
 
@@ -45,19 +49,45 @@ typedef struct
 } position;
 
 /* A nincs pozíció jelölése */
+/**
+ * @brief A nincs position jelölése
+ */
 #define NOPOS (position) { .file = -1, .row = -1}
 
 
 /* konstans irányok a lépésgeneráláshoz*/
+/**
+ * @brief Konstans fel irány.
+ */
 #define UP (position)     {.file = 0, .row =-1}
+/**
+ * @brief Konstans le irány.
+ */
 #define DOWN (position)   {.file = 0, .row = 1}
+/**
+ * @brief Konstans balra irány.
+ */
 #define LEFT (position)   {.file =-1, .row = 0}
+/**
+ * @brief Konstans jobbra irány.
+ */
 #define RIGHT (position)  {.file = 1, .row = 0}
+/**
+ * @brief Konstans jobbra-fel irány.
+ */
 #define UPRIGHT (position){.file = 1, .row =-1}
- /* Az UPLEFT értéke egyezik a NOPOS positionnel, de az UPLEFT egy irányt jelöl nem helyzetet*/
+/**
+ * @brief Konstans balra-fel irány.
+ */
 #define UPLEFT (position)   {.file =-1, .row =-1}
+/**
+ * @brief Konstans jobbra-le irány.
+ */
 #define DOWNRIGHT (position){.file = 1, .row = 1}
-#define DOWNLEFT (position) {.file =-1, .row =-1}
+/**
+ * @brief Konstans balra-le irány.
+ */
+#define DOWNLEFT (position) {.file =-1, .row = 1}
 
 /**
  * @brief A bábu alapvető adatait tárolja: szín, típus, lépett-e
@@ -85,6 +115,7 @@ typedef struct
  * @brief Ez a legenerált lépéseket tárolja
  * @details A generált lépések biztosan szabályosak, így ezek közül választva csak szabályos lépést tudunk lépni.
  */
+
 typedef struct
 {
     move move;

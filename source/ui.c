@@ -1,40 +1,35 @@
 /**
  * @file ui.c
- * @author Kasza Zsombor
  * @brief A felhasználó - program közti információküzlést végzi.
- * @version 0.1
- * @date 2026-10-21
- * 
- * @copyright Copyright (c) 2026
- * 
  */
-
- 
 #include <stdio.h>
 #include "ui.h"
 #include "move.h"
 
 
-/* A kimenet a beolvasás sikerét határozza meg,
-a size befele a maximum msg size, kifele a beolvasott size*/
+/**
+ * @brief A user által beadott szöveg feldolgozása. 
+ * @param size A feldolgozott szöveg hossza.
+ * @param msg A feldolgozott szöveg.
+ * @return ERROR, SUCCESS vagy END. ERROR ha sikertelen, SUCCESS ha sikeres, END ha végjelet kapott.
+ */
 int ui_getusrin(int *size, char *msg)
 {
+    /* A kimenet a beolvasás sikerét határozza meg,
+    a size befele a maximum msg size, kifele a beolvasott size*/
     int i;
     for(i = 0; i < *size; i++)
     {
         if(scanf("%c", &msg[i]) == EOF)return END;
         if(msg[i] == '\n')
         {
+            /* Ha megfelelő hosszú szöveget kaptunk*/
             if(i >= 4)
             {
-                /* Ha megfelelő hosszú szöveget kaptunk*/
                 *size = i + 1;
                 return SUCCESS;
             }
-            else
-            {
-                return ERROR;
-            }
+            else return ERROR;
         }
     }
     *size = i + 1;
@@ -44,12 +39,24 @@ int ui_getusrin(int *size, char *msg)
     return ERROR;
 }
 
+
+/**
+ * @brief A karakterek kisbetűssé változtatása
+ * @param c
+ * @return char 
+ */
 char to_lower(char c)
 {
     if(c >= 'A' && c <= 'Z')return c + 'a' - 'A';
     else return c;
 }
 
+
+/**
+ * @brief Visszaadja a megfelelő kiírandó karakert egy adott bábutípushoz.
+ * @param pc_t 
+ * @return char 
+ */
 char getc_p(piece_t pc_t)
 {
     switch (pc_t) 
@@ -64,6 +71,11 @@ char getc_p(piece_t pc_t)
     }
 }
 
+
+/**
+ * @brief Kirajzolja az adott táblát a konzolra.
+ * @param brd 
+ */
 void ui_drawboard(board brd)
 {
     char *top =   ".---.---.---.---.---.---.---.---. \n";
@@ -86,6 +98,13 @@ void ui_drawboard(board brd)
     printf("%s", under);
 }
 
+
+/**
+ * @brief Egy adott karakter file-számmá alakítása.
+ * @param c 
+ * @param out Az átalakított szám.
+ * @return ERROR vagy SUCCESS attól függően, hogy sikerült-e. 
+ */
 int get_file_c(char c, int *out)
 {
     c = to_lower(c);
@@ -97,6 +116,13 @@ int get_file_c(char c, int *out)
     return ERROR;
 }
 
+
+/**
+ * @brief Egy adott karakter row-számmá alakítása.
+ * @param c 
+ * @param out Az átalakított szám.
+ * @return ERROR vagy SUCCESS attól függően, hogy sikerült-e. 
+ */
 int get_row_c(char c, int *out)
 {
     if(c >= '1' && c <= '8')
@@ -108,6 +134,12 @@ int get_row_c(char c, int *out)
     return ERROR;
 }
 
+
+/**
+ * @brief A promotion bábu typusának megállapítása
+ * @param c
+ * @return piece_t 
+ */
 piece_t get_piece_c(char c)
 {
     c = to_lower(c);
@@ -121,10 +153,19 @@ piece_t get_piece_c(char c)
     }
 }
 
-/* Feldolgozza a beérkező szöveget */
-/* Ide érkező szövegek hossza 5 vagy 6*/
+
+/**
+ * @brief Feldolgozza a ui_getusrin által beolvasott szöveget.
+ * @details A függvény a karaktersorozatból egy lépésprototípust hoz létre.
+ * Csak 5 vagy 6 hosszú karaktersorozatokat fogad el.
+ * @param pmv Ide másolja a létrehozott adatokat.
+ * @param buff A karaktersorozat.(elejére mutató pointer)
+ * @param size A karaktersorozat hossza
+ * @return ERROR vagy SUCCESS attól függőe, hogy sikeres volt-e.
+ */
 int ui_parse_str(move *pmv, char *buff, int size)
 {
+    /* Feldolgozza a beérkező szöveget */
     if(size == 5 || size == 6)
     {
         /* A sorok és oszlopok beállítása segédfüggvényekkel, ha nem sikerül valamelyik
