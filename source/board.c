@@ -50,7 +50,7 @@ board b_create()
 
 
 /**
- * @brief A position a táblán van-e?
+ * @brief Visszaadja, hogy a pozíció a táblán van-e vagy sem.
  * @param pos 
  * @return bool
  */

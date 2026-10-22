@@ -8,7 +8,17 @@
 
 
 /**
- * @brief A user által beadott szöveg feldolgozása. 
+ * @defgroup ui A user interface
+ * @brief A program felhasználója és a program sakk-logikája között álló fordító réteg.
+ * @details A projektben képességeim szerint megpróbáltam a lehető legjobban szétválasztani a UI-t a program többi részétől.
+ * Ennek oka az, ha később grafikus megjelenítést szeretnék készíteni a programhoz, akkor magával a logikával nem kell
+ * foglalkoznom. Elég megírni ezt a köztes réteget, a grafikus megjelenítést, majd hozzá lehet kötni ugyanazt a
+ * kódot.
+ */
+
+/**
+ * @ingroup ui
+ * @brief A user által beadott szöveg feldolgozása.
  * @param size A feldolgozott szöveg hossza.
  * @param msg A feldolgozott szöveg.
  * @return ERROR, SUCCESS vagy END. ERROR ha sikertelen, SUCCESS ha sikeres, END ha végjelet kapott.
@@ -41,6 +51,7 @@ int ui_getusrin(int *size, char *msg)
 
 
 /**
+ * @ingroup ui
  * @brief A karakterek kisbetűssé változtatása
  * @param c
  * @return char 
@@ -53,6 +64,7 @@ char to_lower(char c)
 
 
 /**
+ * @ingroup ui
  * @brief Visszaadja a megfelelő kiírandó karakert egy adott bábutípushoz.
  * @param pc_t 
  * @return char 
@@ -73,6 +85,7 @@ char getc_p(piece_t pc_t)
 
 
 /**
+ * @ingroup ui
  * @brief Kirajzolja az adott táblát a konzolra.
  * @param brd 
  */
@@ -100,6 +113,7 @@ void ui_drawboard(board brd)
 
 
 /**
+ * @ingroup ui
  * @brief Egy adott karakter file-számmá alakítása.
  * @param c 
  * @param out Az átalakított szám.
@@ -118,6 +132,7 @@ int get_file_c(char c, int *out)
 
 
 /**
+ * @ingroup ui
  * @brief Egy adott karakter row-számmá alakítása.
  * @param c 
  * @param out Az átalakított szám.
@@ -136,6 +151,7 @@ int get_row_c(char c, int *out)
 
 
 /**
+ * @ingroup ui
  * @brief A promotion bábu typusának megállapítása
  * @param c
  * @return piece_t 
@@ -155,6 +171,7 @@ piece_t get_piece_c(char c)
 
 
 /**
+ * @ingroup ui
  * @brief Feldolgozza a ui_getusrin által beolvasott szöveget.
  * @details A függvény a karaktersorozatból egy lépésprototípust hoz létre.
  * Csak 5 vagy 6 hosszú karaktersorozatokat fogad el.

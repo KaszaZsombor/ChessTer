@@ -19,9 +19,9 @@ Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A
 
 ### Projekt elérhetősége:
 
-- github: https://github.com/KaszaZsombor/prog_hazi_v3
+- https://github.com/KaszaZsombor/prog_hazi_v3
 
 
 ### A dokumentáció:
 
-A részletes API-dokumentációt a Doxygen generálja.
+- https://kaszazsombor.hu 

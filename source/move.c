@@ -8,11 +8,19 @@
 #include "board.h"
 #include "movegenerator.h"
 
+/**
+ * @defgroup pos_func Position függvények
+ * @brief A position fügvények egyszerűbbé és lehetővé teszik a position típusú változókkal történő
+ * műveleteket.
+ * @details A nekünk szükséges position-aritmetika az összeadás, szorzás és egyenlőség vizsgálat. Ezen kívül
+ * a gyárfüggvény segítségével könnyen kezelhetővé válik ez a típus.
+ */
 
 
 /**
- * @brief position gyárfüggvény.
- * @details A position típusú változók egyszerűbb
+ * @ingroup pos_func
+ * @brief A position gyárfüggvény.
+ * @details A position típusú változók egyszerűbb létrehozásáéra.
  * @param file  (0-7)
  * @param row  (0-7)
  * @return position 
@@ -20,7 +28,8 @@
 position p_createpos(int file, int row){ return (position){.file = file, .row = row};}
 
 /**
- * @brief A két position egyenlő?
+ * @ingroup pos_func
+ * @brief A két megadott pozíció egyenlőségét vizsgálja.
  * @param pos1
  * @param pos2
  * @return bool (pos1 == pos2) 
@@ -28,7 +37,8 @@ position p_createpos(int file, int row){ return (position){.file = file, .row = 
 int p_isequal(position pos1, position pos2){ return (pos1.row == pos2.row && pos1.file == pos2.file);}
 
 /**
- * @brief Összead 2 positiont.
+ * @ingroup pos_func
+ * @brief Összead 2 pozíciót.
  * @param pos1 
  * @param pos2 
  * @return position (pos1 + pos2) 
@@ -36,18 +46,27 @@ int p_isequal(position pos1, position pos2){ return (pos1.row == pos2.row && pos
 position p_add(position pos1, position pos2){ return p_createpos(pos1.file + pos2.file,pos1.row + pos2.row);}
 
 /**
- * @brief Egész szám és position szorzata.
+ * @ingroup pos_func
+ * @brief Egész szám és pozíció szorzata.
  * @param pos
  * @param i
  * @return position (a * b)
  */
 position p_times(position pos, int i){ return p_createpos(pos.file * i, pos.row * i);}
 
+/**
+ * @defgroup play_helper A lépés függvényei.
+ * @brief Ezek a függvények lépik meg a megadott lépést a megadott táblán.
+ * @details A m_play_generatedmove függvény ezeknek a függvényeknek osztja szét a generált lépéseket,
+ * azok típusa szerint. Ezeknek a függvényeknek a lépés végrehatásának kezelése a feladatuk,
+ * és annak a táblának az információinak frissítése, amin a lépést lépték.
+ */
 
 
 /**
- * @brief move gyárfüggvény.
- * @details A move gyárfüggvény egyszerűbbé teszi a move típusú változók létrehozását.
+ * @ingroup play_helper
+ * @brief Lépés gyárfüggvény.
+ * @details A lépés gyárfüggvény egyszerűbbé teszi a move típusú változók létrehozását.
  * @param from
  * @param to
  * @param pp A promotion-bábu típusa ha van, egyébként EMPTY.
@@ -64,12 +83,13 @@ move m_createmove(position from, position to, piece_t pp)
 
 
 /**
+ * @ingroup play_helper
  * @brief Egy normál lépés megtétele a táblán.
  * @details Ezek a lépések nem igényelnek különleges kezelést.
  * @param pbrd 
  * @param mv 
  */
-static void play_normal_move(board *pbrd, move mv)
+void play_normal_move(board *pbrd, move mv)
 {
     /*normál lépés*/
     /* A lépés meglépése a táblán */
@@ -82,13 +102,14 @@ static void play_normal_move(board *pbrd, move mv)
 }
 
 /**
+ * @ingroup play_helper
  * @brief A rövidsánc végrehajtása az adott táblán.
  *  @details A hosszúsánc során a király 2 lépéssel közelebbi oldalon található bástya felé lép,
  * majd az a bástya a másik oldalára kerül. Ennek is különleges a kezelési igénye. https://en.wikipedia.org/wiki/Castling#Rules
  * @param pbrd 
  * @param mv 
  */
-static void play_shortcstl(board *pbrd, move mv)
+void play_shortcstl(board *pbrd, move mv)
 {
     /*rövidsánc*/
     play_normal_move(pbrd, mv);
@@ -101,13 +122,14 @@ static void play_shortcstl(board *pbrd, move mv)
 }
 
 /**
- * @brief A hosszúsánc végrehajtása adott táblán
+ * @ingroup play_helper
+ * @brief A hosszúsánc végrehajtása adott táblán.
  * @details A hosszúsánc során a király 2 lépéssel a távolabbi oldalon található bástya felé lép,
  * majd az a bástya a másik oldalára kerül. Ennek is különleges a kezelési igénye. https://en.wikipedia.org/wiki/Castling#Rules
  * @param pbrd 
  * @param mv 
  */
-static void play_longcstl(board *pbrd, move mv)
+void play_longcstl(board *pbrd, move mv)
 {
     /* király léptetése */
     play_normal_move(pbrd, mv);
@@ -121,13 +143,14 @@ static void play_longcstl(board *pbrd, move mv)
 }
 
 /**
+ * @ingroup play_helper
  * @brief A promotion lépés kezelése az adott táblán.
  * @details A promotion lépésnél, vagy átváltozásnál a belépő gyalog egy tetszőleges tisztté változik át, ami szintén
  * különleges kezelést igényel. https://en.wikipedia.org/wiki/Pawn_(chess)#Promotion
  * @param pbrd 
  * @param mv 
  */
-static void play_pp_move(board *pbrd, move mv)
+void play_pp_move(board *pbrd, move mv)
 {
     /* A szín megtalálásához*/
     piece pc;
@@ -139,6 +162,7 @@ static void play_pp_move(board *pbrd, move mv)
 }
 
 /**
+ * @ingroup play_helper
  * @brief A dupla gyaloglépés kezelése az adott táblán.
  * @details A dupla gyaloglépés során létrejön egy olyan postition a táblán, ahova az ellenfél egyik gyalogja
  * En-passant tud ütni. Ezt a positiont a táblán tárolni kell pontosan 1 lépésig,
@@ -146,7 +170,7 @@ static void play_pp_move(board *pbrd, move mv)
  * @param pbrd 
  * @param mv 
  */
-static void play_dp_move(board *pbrd, move mv)
+void play_dp_move(board *pbrd, move mv)
 {
     /*duplagyalog*/
     piece pc;
@@ -163,13 +187,14 @@ static void play_dp_move(board *pbrd, move mv)
 }
 
 /**
+ * @ingroup play_helper
  * @brief Az en-passant lépés kezelése, adott táblán.
  * @details Az En-Passant lépés azért igényel különleges kezelést, mert nem az ütő
  * bábu nem a leütött bábu helyét eszi át, hanem az a mögötti mezőre kerül. https://en.wikipedia.org/wiki/Pawn_(chess)#En_passant
  * @param pbrd
  * @param mv 
  */
-static void play_ep_move(board *pbrd, move mv)
+void play_ep_move(board *pbrd, move mv)
 {
     /* En passant */
     piece pc;
@@ -190,12 +215,13 @@ static void play_ep_move(board *pbrd, move mv)
 
  
 /**
+ * @ingroup play_helper
  * @brief Egy a program által generált lépést oszt szét a segédfüggvényeknek. Amik aztán a lépés típusától függően 
  * végrehajtják a lépést. Így tudja a program kezelni a különleges lépéseket.
  * @param pbrd 
  * @param gmv 
  */
-static void m_play_generatedmove(board *pbrd, generated_move gmv)
+void m_play_generatedmove(board *pbrd, generated_move gmv)
 {
     /*A már szabályosa generált lépések közül kiválasztott megtétele, nem szükséges
     szabályellenőrzés*/
@@ -213,10 +239,11 @@ static void m_play_generatedmove(board *pbrd, generated_move gmv)
 
 
 /**
+ * @ingroup play_helper
  * @brief A default lépéshvégrehajtó függvény
- * @details A függvény a beolvasott lépés-prototípus alapján legenáráltattja az összes
- * lehetséges lépést, majd meghatározza hogy megtalálható-e ezek között a prototípus, ha igen,
- * akkor a lépést megteszi.
+ * @details A függvény a beolvasott lépésszándék alapján legenáráltattja az összes
+ * lehetséges lépést a szándék kezdeti pozíciójából, majd meghatározza hogy megtalálható-e ezek között a szándék, ha igen,
+ * akkor a lépést meglépteti a táblán.
  * @param pbrd 
  * @param mv 
  * @return SUCCESS vagy ERROR attól függően hogy sikerült-e

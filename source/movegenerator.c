@@ -6,9 +6,18 @@
 #include "move.h"
 #include "board.h"
 
+/**
+ * @defgroup move_gen Lépésgeneráló függvények
+ * @brief Ezek a függvények a bábuk lépéseit generálják
+ * @details A lépésgeneráló függvények az egyik legfontosabb és központibb része a programnak. Ezek a függvények
+ * felelősek a megadott lépés-szándék alapján, az összes lehetséges lépés előállításáért.
+ * A legtöbb hiba és bug is itt keletkezett.
+ */
 
 /**
+ * @ingroup move_gen
  * @brief A generatedmove gyárfüggvény. 
+ * @details Egyszerűbbé teszi a generated_move típusú változók létrehozását.
  * @param from 
  * @param to 
  * @param ppt 
@@ -23,7 +32,14 @@ generated_move mg_create_generatedmove(position from, position to, piece_t ppt ,
 
 
 /**
+ * 
+ * @ingroup move_gen
  * @brief Legenerálja az összes szabályos lépést, egy bástyára, futóra vagy vezérre.
+ * @details Ez a hárum bábutípus hasonló logika szerint lép. Elindulunk az összes bábu által látható
+ * irányba, majd egyesével haladunk a tábla pozícióin az egyes irányokba. Ha a talált mező üres,
+ * akkor megfelel és folytatjuk a keresést. Ha a talált bábu ellenséges, az megfelel, vizsont továbbb nem tudunk menni
+ * abba az irányba, ezért megyünk a következőre. Ha a talált bábu saját, már az a mező sem jó, és jöhet a következő irány.
+ * És ha leérünk a tábláról, akkor is jöhet a következő irány.
  * @param brd 
  * @param from 
  * @param pc 
@@ -76,7 +92,10 @@ void mg_generate_all_moves_RBQ(board brd, position from, piece pc, generated_mov
 
 
 /**
+ * @ingroup move_gen
  * @brief Az összes gyaloglépés generálása egy adott pozícióból.
+ * @details A gyloglépések generálása is összetettebb. Ellenőrizni kell az en-passant lehetőségét, a dupla-lépés
+ * lehetőségét, az ütéseket. És ezek alapján megfelelő lépéstípusú lépéseket létrehozni.
  * @param brd 
  * @param mv 
  * @param pc 
@@ -172,13 +191,16 @@ void mg_generate_all_moves_P(board brd, move mv, piece pc, generated_move *list,
 
 
 /**
- * @brief Egy adott király tud-e sáncolni rövidre?
+ * @ingroup move_gen
+ * @brief Egy adott király tud-e sáncolni rövidre.
+ * @details Ez a függvény segít megállapítani a királylépés generáló függvénynek, hogy lehet rövidre sáncolni.
+ * Ennek is több különböző eltétele van, amit ellenőrizni kell.
  * @param brd 
  * @param pos
  * @param pc 
  * @return bool 
  */
-static int canshortcstl(board brd, position pos, piece pc)
+int canshortcstl(board brd, position pos, piece pc)
 {
     /* rövidsánc kezelése */
     /*feltételek: ne legyen sakkban, az áthaladt mezők ne legyenek támadva, nem léptek a királlyal, nem léptek a bástyával
@@ -203,13 +225,16 @@ static int canshortcstl(board brd, position pos, piece pc)
 
 
 /**
- * @brief Egy adott király tud-e sáncolni hosszúra?
+ * @ingroup move_gen
+ * @brief Egy adott király tud-e sáncolni hosszúra.
+ * @details Ez a függvény segít megállapítani a királylépés generáló függvénynek, hogy lehet hosszúra sáncolni.
+ * Ennek is több különböző eltétele van, amit ellenőrizni kell.
  * @param brd 
  * @param pos 
  * @param pc 
  * @return bool 
  */
-static int canlongcstl(board brd, position from, piece pc)
+int canlongcstl(board brd, position from, piece pc)
 {
     /* hosszúsánc kezelése */
     /*feltételek: ne legyen sakkban, az áthaladt mezők ne legyenek támadva, nem léptek a királlyal, nem léptek a bástyával
@@ -234,7 +259,11 @@ static int canlongcstl(board brd, position from, piece pc)
 
 
 /**
- * @brief A király lépéseinek generálása. 
+ * @ingroup move_gen
+ * @brief A király lépéseinek generálása.
+ * @details A királynak több különleges lépése van. Ezek a 2 sánc. Ezeknek az ellenőrzését segédfüggvények hatják végre.
+ * A függvény nem ellenőrzi, hogy a király lépés után támadott mezőn van-e. Ez azért van, mert nem csak királylépés után
+ * kerülhet a király sakkba. A sakkokat egy próbatáblán ellenőrzi, a lépésvégrehajtó függvény.
  * @param brd 
  * @param from 
  * @param pcs 
@@ -280,7 +309,10 @@ void mg_generate_all_moves_K(board brd, position from, piece pc, generated_move 
 
 
 /**
- * @brief A huszár lépéseinek generálása
+ * @ingroup move_gen
+ * @brief A huszár lépéseinek generálása.
+ * @details A huszárléppések generálása viszonylag egyszerűbb. Csak a lehetséges veégpozíciók ellenőrzése szükséges,
+ * ugyanis a huszár át tudja ugrani a többi bábut.
  * @param brd 
  * @param from
  * @param pc 
@@ -313,7 +345,10 @@ void mg_generate_all_moves_N(board brd, position from, piece pc, generated_move 
 
 
 /**
- * @brief Az érkező lépésprototípust adja a megfelelő lépésgenerátornak, a bábu typusa alapján
+ * @ingroup move_gen
+ * @brief Az érkező lépésprototípust adja a megfelelő lépésgenerátornak, a bábu typusa alapján.
+ * @details Ez a fő lépésgeneráló függvény. Az érkező lépés-prototípus alapján legeneráltatja a megfelelő
+ * generálófüggvénnyel az összes lehetséges lépést, majd visszaküldi azt a hívónak.
  * @param brd
  * @param mv 
  * @param list Ebbe a tömbbe másolja a generált lépéseket a függvény.
