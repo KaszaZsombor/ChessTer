@@ -163,7 +163,7 @@ void b_setdefault(board *pbrd)
  * @param pos 
  * @param col   A támadott szín.
  * @return bool
- * @bug Gyalog és király támadását nem nézi
+ * @bug A gylogtámadást nem látja
  */
 int b_is_attacked(board brd, position pos, color_t col)
 {
@@ -171,12 +171,13 @@ int b_is_attacked(board brd, position pos, color_t col)
     generated_move rookmove_l[MVL_MAX];
     generated_move bishopmove_l[MVL_MAX];
     generated_move knightmove_l[MVL_MAX];
-    //generated_move kingmove_l[MVL_MAX];
+    generated_move kingmove_l[MVL_MAX];
 
+    /* A visszadatt lépéstömbök hosszai */
     int rookl_size = 0;
     int bishl_size = 0;
     int knightl_size = 0;
-    //int kingmove_size = 0;
+    int kingmove_size = 0;
 
     /* A huszárlépések legenerálása erről a mezőről, a visszakapott move-ok közül
     megvizsgáljuk melyiken található ellenfél bábu, ami ezt a lépést tudná tenni*/
@@ -184,25 +185,34 @@ int b_is_attacked(board brd, position pos, color_t col)
     (void)mg_generate_all_moves_RBQ(brd, pos, b_create_piece(ROOK, col, 0), rookmove_l, &rookl_size);
     (void)mg_generate_all_moves_RBQ(brd, pos, b_create_piece(BISHOP, col, 0), bishopmove_l, &bishl_size);
 
+    /*A királylépéseket egy már hasMoved = 1 királlyal generáltatjuk, hogy csak normál lépéseket kapjunk a vizsgalathoz*/
+    (void)mg_generate_all_moves_K(brd, pos, b_create_piece(KING, col, 1), kingmove_l, &kingmove_size);
+
+    /* Megnézzük hogy a generált lépések végpozíciójában van-e olyan bábu ami tudna oda támadni. */
+    /*(void) cast a getpiece előtt, biztosan a táblán vannak a kapott pozíciók*/
+    piece pc;
     for( int i = 0; i < knightl_size; i++)
     {
-        piece pc;
         (void)b_getpiece(brd, knightmove_l[i].move.to, &pc);
         if( pc.type == KNIGHT ) return 1; /* EZ EGY BOOL*/
     }
-
+    /* Futós ellenőrzése, vezérsellenőrzés 1 */
     for(int i = 0; i < bishl_size; i++)
     {
-        piece pc;
         (void)b_getpiece(brd, bishopmove_l[i].move.to, &pc);
-        if(pc.type == BISHOP || pc.type == QUEEN)return 1;
+        if(pc.type == BISHOP || pc.type == QUEEN)return 1; /* BOOL*/
     }
-
+    /* Bástya ellenőrzése, vezérs ellenőrzés 2*/
     for(int i = 0; i < rookl_size ; i++)
     {
-        piece pc;
         (void)b_getpiece(brd, rookmove_l[i].move.to, &pc);
-        if(pc.type == ROOK || pc.type == QUEEN) return 1;
+        if(pc.type == ROOK || pc.type == QUEEN) return 1; /* BOOL*/
+    }
+    /* Király ellenőrzése */
+    for(int i = 0; i < kingmove_size; i++)
+    {
+        (void)b_getpiece(brd, kingmove_l[i].move.to, &pc);
+        if(pc.type == KING ) return 1;/* BOOL */
     }
 
     return 0;

@@ -63,6 +63,7 @@ position p_times(position pos, int i){ return p_createpos(pos.file * i, pos.row 
  */
 
 
+ 
 /**
  * @ingroup play_helper
  * @brief Lépés gyárfüggvény.

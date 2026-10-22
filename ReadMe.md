@@ -2,27 +2,27 @@
 
 ## Sakk program - 2026/27 őszi félév
 
-Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A projekt egy sakkjáték. A játék a stdin-ről lépéseket olvas be, lefordítja, majd a szabályosság ellenőrzése után a stdout -ra lerajzolja a lépés utáni sakktábla állását. 
+Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A projekt egy sakkjáték. A játék a stdin-ről lépéseket olvas be, lefordítja, majd a szabályosság ellenőrzése után a stdout -ra lerajzolja a lépés utáni sakktábla állását.
 
-### Mit tud:
+### Mit tud
 
 - A program figyel az éppen következő játékosra, kétszer ugyanaz a szín nem léphet.
 - A program figyel a sáncolási szabályokra és a sakkokra. Lépés után nem maradhat sakkban a lépő szín királya.
 - A szabályos lépések betartatásán kívül az átalakulás során meg lehet adni, milyen bábuvá alakuljon át a gyalog. Amennyiben nem volt ilyen megadva, automatikusan vezérré alakul.
 - A játszmát egyszerűen meg lehet szakítani a stdin EOF karakterrel. Windowson ez Crtl + z.
 
-### Telepítés és használat:
+### Telepítés és használat
 
 - A telepítése lehetséges a sakk.exe fájl letöltésével és futtatásával.
 - A projekt letöltésével source-ból is építhető a projekt, a github oldalról letöltve.
-- A futtatás után az alábbi formátumban lehet a lépéseket megadni: filerowfilerow(optional Q N B R). 
+- A futtatás után az alábbi formátumban lehet a lépéseket megadni: filerowfilerow(optional Q N B R).
 - Például: e2e4 vagy e7e8Q. Ha átváltozásnál nincs megadva bábu, automatikusan vezérré változik a gyalog.
+- Minden lépés után ENTER kell a helyes működéshez
 
-### Projekt elérhetősége:
+### Projekt elérhetősége
 
-- https://github.com/KaszaZsombor/SAKK
+- <https://github.com/KaszaZsombor/SAKK>
 
+### A dokumentáció
 
-### A dokumentáció:
-
-- https://docs.kaszazsombor.hu/
+- <https://docs.kaszazsombor.hu>

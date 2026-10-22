@@ -5,7 +5,7 @@
       "name": "Win32-MinGW",
       "includePath": [
         "${workspaceFolder}/include",
-        "${workspaceFolder}/src"
+        "${workspaceFolder}/source"
       ],
       "defines": [],
       "compilerPath": "C:/mingw64/bin/gcc.exe",
