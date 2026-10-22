@@ -1,5 +1,6 @@
 CC = gcc
-FLAGS = -Wall -Wextra  -Wshadow -Wpedantic -g -Iinclude 
+FLAGS = -Iinclude 
+DEBUGFLAGS = -Wall -Wextra  -Wshadow -Wpedantic -g
 
 TARGET = sakk.exe
 SRC_DIR = source
@@ -15,14 +16,18 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(OBJS) -o $@
 
+
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) $(DEBUGFLAGS) -c $< -o $@
+
 
 $(OBJ_DIR):
 	mkdir $(OBJ_DIR)
 
+
 run: $(TARGET)
 	./$(TARGET)
+
 
 clean:
 	-rmdir /S /Q $(OBJ_DIR)
