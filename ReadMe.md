@@ -21,8 +21,8 @@ Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A
 
 ### Projekt elérhetősége
 
-- [GITHUB OLDAL](https://github.com/KaszaZsombor/SAKK)
+- [A projekt github oldala itt elérhető](https://github.com/KaszaZsombor/SAKK)
 
 ### A dokumentáció
 
-- [DOCUMENTÁCIÓ](https://docs.kaszazsombor.hu)
+- [A projekt dokumentációja itt elérhető](https://docs.kaszazsombor.hu)
