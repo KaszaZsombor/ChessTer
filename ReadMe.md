@@ -15,7 +15,7 @@ Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A
 
 - A telepítése lehetséges a sakk.exe fájl letöltésével és futtatásával.
 - A projekt letöltésével source-ból is építhető a projekt, a github oldalról letöltve.
-- A futtatás után az alábbi formátumban lehet a lépéseket megadni: <file><row><file><row><(optional) promotion piece>
+- A futtatás után az alábbi formátumban lehet a lépéseket megadni: filerowfilerow(optional Q N B R)
 
 ### Projekt elérhetősége:
 
