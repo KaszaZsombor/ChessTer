@@ -1,8 +1,0 @@
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-
-.vscode/
