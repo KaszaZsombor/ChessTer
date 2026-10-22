@@ -12,7 +12,6 @@
  */
 #define MVL_MAX 27
 
-
 /**
  * @brief A függvények default visszatérési értékei
  */
@@ -24,12 +23,12 @@ enum{ERROR = -1, SUCCESS};
  */
 typedef enum piece_t {EMPTY, PAWN, ROOK, KNIGHT, BISHOP, QUEEN, KING}piece_t;
 
+
 /**
  * @brief A színeket határozza meg
  * @details A NONE jelöli a nincs színt.
  */
 typedef enum color_t {NONE, WHITE, BLACK}color_t;
-
 
 
 /**
@@ -38,13 +37,22 @@ typedef enum color_t {NONE, WHITE, BLACK}color_t;
  */
 typedef enum move_t {NORMAL, DP, PP, CSTL_L, CSTL_S, EP}move_t;
 
+
 /**
  * @brief A position a 2 egész számot tárol
  * @details Ezek jelölhetnek egy táblapozíciót vagy irányt is.
  */
 typedef struct
 {
+    /**
+     * @brief A pozíció oszlopa.
+     * @details 0 és 7 közötti egész szám
+     */
     int file;
+    /**
+     * @brief A pozíció sora.
+     * @details 0 és 7 közötti egész szám
+     */
     int row;
 } position;
 
@@ -90,24 +98,41 @@ typedef struct
 #define DOWNLEFT (position) {.file =-1, .row = 1}
 
 /**
- * @brief A bábu alapvető adatait tárolja: szín, típus, lépett-e
- * 
+ * @brief A bábu alapvető adatait tárolja.
  */
 typedef struct
 {
+    /**
+     * @brief A bábu típusa. Üres mező esetén EMPTY.
+     */
     piece_t type;
+    /**
+     * @brief A bábu színe, üres mező esetén NONE.
+     */
     color_t col;
+    /**
+     * @brief Lépett-e már az adott bábu. Üres ező esetén 0.
+     * @details Ez a az adatmező segít meghatározni, hogy lehetséges-e a sáncolás egy pozícióban
+     */
     int hasMoved;
 }piece;
 
 /**
  * @brief A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül
- * 
  */
 typedef struct 
 {
+    /**
+     * @brief A lépés kezdőpozíciója
+     */
     position from;
+    /**
+     * @brief A lépés végpozíciója
+     */
     position to;
+    /**
+     * @brief A bábu, amivé átalakul a gyalog. Ha nincs akkor EMPTY.
+     */
     piece_t promotion_piece;
 } move;
 
@@ -115,10 +140,15 @@ typedef struct
  * @brief Ez a legenerált lépéseket tárolja
  * @details A generált lépések biztosan szabályosak, így ezek közül választva csak szabályos lépést tudunk lépni.
  */
-
 typedef struct
 {
+    /**
+     * @brief A generált lépés adatai
+     */
     move move;
+    /**
+     * @brief A generált lépés típusa.
+     */
     move_t type;
 }generated_move;
 
@@ -129,8 +159,17 @@ typedef struct
  */
 typedef struct
 {
+    /**
+     * @brief A tábla bábuit tárolja
+     */
     piece pcs[8][8];
+    /**
+     * @brief Az en-passant pozíció helyét tárolja. Ha nincs NOPOS értékét veszi fe.
+     */
     position ep_pos;
+    /**
+     * @brief A lépő játékos színe.
+     */
     color_t side;
 }board;
 

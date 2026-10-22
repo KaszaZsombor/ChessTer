@@ -6,8 +6,14 @@
 #include "move.h"
 #include "movegenerator.h"
 
+/**
+ * @defgroup piece_help Bábutípus függvényei
+ * @details A bábuk kezelését könnyítő függvények.
+ */
+
 
 /**
+ * @ingroup piece_help
  * @brief Piece gyárfüggvény adott adatok alapján.
  * @param type  
  * @param col   
@@ -22,6 +28,7 @@ piece b_create_piece(piece_t type, color_t col, int hasMoved)
 
 
 /**
+ * @ingroup piece_help
  * @brief Egy üres bábut visszaadó gyárfüggvény.
  * @return piece 
  */
@@ -33,6 +40,15 @@ piece b_create_empty_piece()
 
 
 /**
+ * @defgroup board_help A Tábla függvényei
+ * @brief A tábla kezelését végző függvények.
+ * @details A tábla kezelése minden sakkprogram alapja, a prgoram többi része
+ * ezek a függvények segítségével döntenek a feladatuk végrehajtásával kapcsolatban.
+ */
+ 
+
+/**
+ * @ingroup board_help
  * @brief board gyárfüggvény
  * @return board 
  */
@@ -50,6 +66,7 @@ board b_create()
 
 
 /**
+ * @ingroup board_help
  * @brief Visszaadja, hogy a pozíció a táblán van-e vagy sem.
  * @param pos 
  * @return bool
@@ -61,6 +78,7 @@ int b_ison(position pos)
 
 
 /**
+ * @ingroup board_help
  * @brief Egy piece lekérése egy tábláról.
  * @param brd 
  * @param pos 
@@ -77,7 +95,8 @@ int b_getpiece(board brd, position pos, piece *ppc)
 
 
 /**
- * @brief Beállítja az adott bábut az adott tábálra
+ * @ingroup board_help
+ * @brief Beállítja az adott bábut az adott tábálra.
  * @param pbrd 
  * @param pos 
  * @param pc 
@@ -94,6 +113,7 @@ int b_setpiece(board *pbrd, position pos, piece pc)
 
 
 /**
+ * @ingroup board_help
  * @brief Visszaadja az ellenfél színét.
  * @param color
  * @return color_t az ellemnfél színe.
@@ -108,6 +128,7 @@ color_t b_opponent_col(color_t color)
 
 
 /**
+ * @ingroup board_help
  * @brief Visszaadja egy táblán a király helyzetét.
  * @param brd 
  * @param col 
@@ -128,7 +149,8 @@ position b_get_king_pos(board brd, color_t col)
 
 
 /**
- * @brief Az adott táblát alaphelyzetbe állítja
+ * @ingroup board_help
+ * @brief Az adott táblát alaphelyzetbe állítja.
  * @param pbrd 
  */
 void b_setdefault(board *pbrd)
@@ -158,15 +180,18 @@ void b_setdefault(board *pbrd)
 
 
 /**
+ * @ingroup board_help
  * @brief Megnézi az adott position támadva van-e, egy adott szín által.
  * @param brd 
  * @param pos 
  * @param col   A támadott szín.
  * @return bool
- * @bug A gylogtámadást nem látja
+ * @warning A gyalogtámadást nincs tesztelve
  */
 int b_is_attacked(board brd, position pos, color_t col)
 {
+    if(col == NONE) return 0;
+
     /* megnézi a pozíció támadva van-e, a szín anit támad, NEM a támadó*/
     generated_move rookmove_l[MVL_MAX];
     generated_move bishopmove_l[MVL_MAX];
@@ -213,6 +238,22 @@ int b_is_attacked(board brd, position pos, color_t col)
     {
         (void)b_getpiece(brd, kingmove_l[i].move.to, &pc);
         if(pc.type == KING ) return 1;/* BOOL */
+    }
+    
+    
+    /* gyalogtámadás ellenőrzése */
+    position dirs[2];
+    
+    /* A lehetséges támadási pozíciók */
+    if(col == WHITE){ dirs[0] = UPLEFT; dirs[1] = UPRIGHT;}
+    else{dirs[0] = DOWNLEFT; dirs[1] = DOWNRIGHT;}
+    
+    
+    for(int i = 0; i < 2; i++)
+    {
+        /* Ezeket a lépéseket nem a generálófüggvény generálta, lehetséges hogy nincsenek a táblán*/
+        if(b_getpiece(brd, p_add(pos, dirs[i]), &pc) == ERROR)continue;
+        if(pc.col != col && pc.type == PAWN) return 1;
     }
 
     return 0;
