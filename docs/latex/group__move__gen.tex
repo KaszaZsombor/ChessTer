@@ -1,0 +1,223 @@
+\doxysection{Lépésgeneráló függvények }
+\hypertarget{group__move__gen}{}\label{group__move__gen}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+
+
+Ezek a függvények a bábuk lépéseit generálják.  
+
+
+\doxysubsubsection*{Függvények}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \doxymbox{\hyperlink{group__move__gen_ga94d8ab6741eecd2e9e7efb131285571b}{mg\+\_\+create\+\_\+generatedmove}} (\doxymbox{\hyperlink{structposition}{position}} from, \doxymbox{\hyperlink{structposition}{position}} to, \doxymbox{\hyperlink{types_8h_ab9be55f539b97c45fb9f57efded733c2}{piece\+\_\+t}} ppt, \doxymbox{\hyperlink{types_8h_a48717c18c6e17b2a7fb7830e88115b83}{move\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em A generatedmove gyárfüggvény. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__move__gen_ga02e3c6e8f4d2fd06564d995b1dde4e95}{mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+\+RBQ}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structposition}{position}} from, \doxymbox{\hyperlink{structpiece}{piece}} pc, \doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}size)
+\begin{DoxyCompactList}\small\item\em Legenerálja az összes szabályos lépést, egy bástyára, futóra vagy vezérre. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__move__gen_ga33dc27ba2ac50615a408ad7837d9a114}{mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+P}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structmove}{move}} mv, \doxymbox{\hyperlink{structpiece}{piece}} pc, \doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}size)
+\begin{DoxyCompactList}\small\item\em Az összes gyaloglépés generálása egy adott pozícióból. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__move__gen_ga1e10916ac5b4c66b0b7d2b33e7c88396}{canshortcstl}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structposition}{position}} pos, \doxymbox{\hyperlink{structpiece}{piece}} pc)
+\begin{DoxyCompactList}\small\item\em Egy adott király tud-\/e sáncolni rövidre. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__move__gen_ga20b8913dc7e3f221f5ca9322d22972e7}{canlongcstl}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structposition}{position}} from, \doxymbox{\hyperlink{structpiece}{piece}} pc)
+\begin{DoxyCompactList}\small\item\em Egy adott király tud-\/e sáncolni hosszúra. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__move__gen_gaf5f947bdb763f64ea4dc046fb576ba51}{mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+K}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structposition}{position}} from, \doxymbox{\hyperlink{structpiece}{piece}} pc, \doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}size)
+\begin{DoxyCompactList}\small\item\em A király lépéseinek generálása. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__move__gen_gad4cf6d8d388cf7733c44b4f48e0f52d7}{mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+N}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structposition}{position}} from, \doxymbox{\hyperlink{structpiece}{piece}} pc, \doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}size)
+\begin{DoxyCompactList}\small\item\em A huszár lépéseinek generálása. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__move__gen_gaaccc2b26cc5eac60be2caeb9eba227d1}{mg\+\_\+generate\+\_\+all\+\_\+moves}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structmove}{move}} mv, \doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}size)
+\begin{DoxyCompactList}\small\item\em Az érkező lépésprototípust adja a megfelelő lépésgenerátornak, a bábu typusa alapján. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+Ezek a függvények a bábuk lépéseit generálják. 
+
+A lépésgeneráló függvények az egyik legfontosabb és központibb része a programnak. Ezek a függvények felelősek a megadott lépés-\/szándék alapján, az összes lehetséges lépés előállításáért. A legtöbb hiba és bug is itt keletkezett. 
+
+\label{group__move__gen_doc-func-members}
+\Hypertarget{group__move__gen_doc-func-members}
+\doxysubsection{Függvények dokumentációja}
+\Hypertarget{group__move__gen_ga20b8913dc7e3f221f5ca9322d22972e7}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!canlongcstl@{canlongcstl}}
+\index{canlongcstl@{canlongcstl}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{canlongcstl()}{canlongcstl()}}
+{\footnotesize\ttfamily \label{group__move__gen_ga20b8913dc7e3f221f5ca9322d22972e7} 
+int canlongcstl (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{from}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}}}]{pc}{}\end{DoxyParamCaption})}
+
+
+
+Egy adott király tud-\/e sáncolni hosszúra. 
+
+Ez a függvény segít megállapítani a királylépés generáló függvénynek, hogy lehet hosszúra sáncolni. Ennek is több különböző eltétele van, amit ellenőrizni kell. 
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em pc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+bool 
+\end{DoxyReturn}
+\Hypertarget{group__move__gen_ga1e10916ac5b4c66b0b7d2b33e7c88396}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!canshortcstl@{canshortcstl}}
+\index{canshortcstl@{canshortcstl}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{canshortcstl()}{canshortcstl()}}
+{\footnotesize\ttfamily \label{group__move__gen_ga1e10916ac5b4c66b0b7d2b33e7c88396} 
+int canshortcstl (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}}}]{pc}{}\end{DoxyParamCaption})}
+
+
+
+Egy adott király tud-\/e sáncolni rövidre. 
+
+Ez a függvény segít megállapítani a királylépés generáló függvénynek, hogy lehet rövidre sáncolni. Ennek is több különböző eltétele van, amit ellenőrizni kell. 
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em pc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+bool 
+\end{DoxyReturn}
+\Hypertarget{group__move__gen_ga94d8ab6741eecd2e9e7efb131285571b}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!mg\_create\_generatedmove@{mg\_create\_generatedmove}}
+\index{mg\_create\_generatedmove@{mg\_create\_generatedmove}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{mg\_create\_generatedmove()}{mg\_create\_generatedmove()}}
+{\footnotesize\ttfamily \label{group__move__gen_ga94d8ab6741eecd2e9e7efb131285571b} 
+\doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} mg\+\_\+create\+\_\+generatedmove (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structposition}{position}}}]{from}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{to}{, }\item[{\doxymbox{\hyperlink{types_8h_ab9be55f539b97c45fb9f57efded733c2}{piece\+\_\+t}}}]{ppt}{, }\item[{\doxymbox{\hyperlink{types_8h_a48717c18c6e17b2a7fb7830e88115b83}{move\+\_\+t}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+A generatedmove gyárfüggvény. 
+
+Egyszerűbbé teszi a \doxylink{structgenerated__move}{generated\+\_\+move} típusú változók létrehozását. 
+\begin{DoxyParams}{Paraméterek}
+{\em from} & \\
+\hline
+{\em to} & \\
+\hline
+{\em ppt} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+\doxylink{structgenerated__move}{generated\+\_\+move} 
+\end{DoxyReturn}
+\Hypertarget{group__move__gen_gaaccc2b26cc5eac60be2caeb9eba227d1}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!mg\_generate\_all\_moves@{mg\_generate\_all\_moves}}
+\index{mg\_generate\_all\_moves@{mg\_generate\_all\_moves}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{mg\_generate\_all\_moves()}{mg\_generate\_all\_moves()}}
+{\footnotesize\ttfamily \label{group__move__gen_gaaccc2b26cc5eac60be2caeb9eba227d1} 
+int mg\+\_\+generate\+\_\+all\+\_\+moves (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structmove}{move}}}]{mv}{, }\item[{\doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Az érkező lépésprototípust adja a megfelelő lépésgenerátornak, a bábu typusa alapján. 
+
+Ez a fő lépésgeneráló függvény. Az érkező lépés-\/prototípus alapján legeneráltatja a megfelelő generálófüggvénnyel az összes lehetséges lépést, majd visszaküldi azt a hívónak. 
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em mv} & \\
+\hline
+{\em list} & Ebbe a tömbbe másolja a generált lépéseket a függvény. \\
+\hline
+{\em size} & Ebbe az intbe írja bele a visszaadott lista hosszát. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+SUCCESS vagy ERROR a sikerességtől függően 
+\end{DoxyReturn}
+\Hypertarget{group__move__gen_gaf5f947bdb763f64ea4dc046fb576ba51}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!mg\_generate\_all\_moves\_K@{mg\_generate\_all\_moves\_K}}
+\index{mg\_generate\_all\_moves\_K@{mg\_generate\_all\_moves\_K}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{mg\_generate\_all\_moves\_K()}{mg\_generate\_all\_moves\_K()}}
+{\footnotesize\ttfamily \label{group__move__gen_gaf5f947bdb763f64ea4dc046fb576ba51} 
+void mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+K (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{from}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}}}]{pc}{, }\item[{\doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+A király lépéseinek generálása. 
+
+A királynak több különleges lépése van. Ezek a 2 sánc. Ezeknek az ellenőrzését segédfüggvények hatják végre. A függvény nem ellenőrzi, hogy a király lépés után támadott mezőn van-\/e. Ez azért van, mert nem csak királylépés után kerülhet a király sakkba. A sakkokat egy próbatáblán ellenőrzi, a lépésvégrehajtó függvény. 
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em from} & \\
+\hline
+{\em pcs} & \\
+\hline
+{\em list} & Ebbe a tömbbe másolja a generált lépéseket a függvény. \\
+\hline
+{\em size} & Ebbe az intbe írja bele a visszaadott lista hosszát. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__move__gen_gad4cf6d8d388cf7733c44b4f48e0f52d7}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!mg\_generate\_all\_moves\_N@{mg\_generate\_all\_moves\_N}}
+\index{mg\_generate\_all\_moves\_N@{mg\_generate\_all\_moves\_N}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{mg\_generate\_all\_moves\_N()}{mg\_generate\_all\_moves\_N()}}
+{\footnotesize\ttfamily \label{group__move__gen_gad4cf6d8d388cf7733c44b4f48e0f52d7} 
+void mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+N (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{from}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}}}]{pc}{, }\item[{\doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+A huszár lépéseinek generálása. 
+
+A huszárléppések generálása viszonylag egyszerűbb. Csak a lehetséges veégpozíciók ellenőrzése szükséges, ugyanis a huszár át tudja ugrani a többi bábut. 
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em from} & \\
+\hline
+{\em pc} & \\
+\hline
+{\em list} & Ebbe a tömbbe másolja a generált lépéseket a függvény. \\
+\hline
+{\em size} & Ebbe az intbe írja bele a visszaadott lista hosszát. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+int 
+\end{DoxyReturn}
+\Hypertarget{group__move__gen_ga33dc27ba2ac50615a408ad7837d9a114}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!mg\_generate\_all\_moves\_P@{mg\_generate\_all\_moves\_P}}
+\index{mg\_generate\_all\_moves\_P@{mg\_generate\_all\_moves\_P}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{mg\_generate\_all\_moves\_P()}{mg\_generate\_all\_moves\_P()}}
+{\footnotesize\ttfamily \label{group__move__gen_ga33dc27ba2ac50615a408ad7837d9a114} 
+void mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+P (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structmove}{move}}}]{mv}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}}}]{pc}{, }\item[{\doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Az összes gyaloglépés generálása egy adott pozícióból. 
+
+A gyloglépések generálása is összetettebb. Ellenőrizni kell az en-\/passant lehetőségét, a dupla-\/lépés lehetőségét, az ütéseket. És ezek alapján megfelelő lépéstípusú lépéseket létrehozni. 
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em mv} & \\
+\hline
+{\em pc} & \\
+\hline
+{\em list} & Ebbe a tömbbe másolja a generált lépéseket a függvény. \\
+\hline
+{\em size} & Ebbe az intbe írja bele a visszaadott lista hosszát. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__move__gen_ga02e3c6e8f4d2fd06564d995b1dde4e95}\index{Lépésgeneráló függvények@{Lépésgeneráló függvények}!mg\_generate\_all\_moves\_RBQ@{mg\_generate\_all\_moves\_RBQ}}
+\index{mg\_generate\_all\_moves\_RBQ@{mg\_generate\_all\_moves\_RBQ}!Lépésgeneráló függvények@{Lépésgeneráló függvények}}
+\doxysubsubsection{\texorpdfstring{mg\_generate\_all\_moves\_RBQ()}{mg\_generate\_all\_moves\_RBQ()}}
+{\footnotesize\ttfamily \label{group__move__gen_ga02e3c6e8f4d2fd06564d995b1dde4e95} 
+void mg\+\_\+generate\+\_\+all\+\_\+moves\+\_\+\+RBQ (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{from}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}}}]{pc}{, }\item[{\doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Legenerálja az összes szabályos lépést, egy bástyára, futóra vagy vezérre. 
+
+Ez a hárum bábutípus hasonló logika szerint lép. Elindulunk az összes bábu által látható irányba, majd egyesével haladunk a tábla pozícióin az egyes irányokba. Ha a talált mező üres, akkor megfelel és folytatjuk a keresést. Ha a talált bábu ellenséges, az megfelel, vizsont továbbb nem tudunk menni abba az irányba, ezért megyünk a következőre. Ha a talált bábu saját, már az a mező sem jó, és jöhet a következő irány. És ha leérünk a tábláról, akkor is jöhet a következő irány. 
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em from} & \\
+\hline
+{\em pc} & \\
+\hline
+{\em list} & Ebbe a tömbbe másolja a generált lépéseket a függvény. \\
+\hline
+{\em size} & Ebbe az intbe írja bele a visszaadott lista hosszát. \\
+\hline
+\end{DoxyParams}

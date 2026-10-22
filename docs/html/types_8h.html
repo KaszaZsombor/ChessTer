@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SAKK: include/types.h fájlreferencia</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">SAKK<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Prog nagyházi</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('types_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">types.h fájlreferencia</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Alapvető típusokat és globális konstansokat határozza meg.  
+<a href="#details">Részletek...</a></p>
+
+<p><a href="types_8h_source.html">Ugrás a fájl forráskódjához.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Adatszerkezetek</h2></td></tr>
+<tr class="memitem:position" id="r_position"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structposition.html">position</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A position a 2 egész számot tárol.  <a href="structposition.html#details">Részletek...</a><br /></td></tr>
+<tr class="memitem:piece" id="r_piece"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpiece.html">piece</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábu alapvető adatait tárolja: szín, típus, lépett-e.  <a href="structpiece.html#details">Részletek...</a><br /></td></tr>
+<tr class="memitem:move" id="r_move"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structmove.html">move</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül.  <a href="structmove.html#details">Részletek...</a><br /></td></tr>
+<tr class="memitem:generated_5Fmove" id="r_generated_5Fmove"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgenerated__move.html">generated_move</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ez a legenerált lépéseket tárolja.  <a href="structgenerated__move.html#details">Részletek...</a><br /></td></tr>
+<tr class="memitem:board" id="r_board"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structboard.html">board</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A játék alapvető adatai tárolja.  <a href="structboard.html#details">Részletek...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Makródefiníciók</h2></td></tr>
+<tr class="memitem:abab8eba31653a87ad285827d4f26d02d" id="r_abab8eba31653a87ad285827d4f26d02d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abab8eba31653a87ad285827d4f26d02d">MVL_MAX</a>&#160;&#160;&#160;27</td></tr>
+<tr class="memdesc:abab8eba31653a87ad285827d4f26d02d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A maximum mennyiségű lépés ami generálódhat.  <br /></td></tr>
+<tr class="memitem:a8bf26fa110355d8d50593ea4b4a8b061" id="r_a8bf26fa110355d8d50593ea4b4a8b061"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8bf26fa110355d8d50593ea4b4a8b061">NOPOS</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>) { .file = -1, .row = -1}</td></tr>
+<tr class="memdesc:a8bf26fa110355d8d50593ea4b4a8b061"><td class="mdescLeft">&#160;</td><td class="mdescRight">A nincs position jelölése.  <br /></td></tr>
+<tr class="memitem:a1965eaca47dbf3f87acdafc2208f04eb" id="r_a1965eaca47dbf3f87acdafc2208f04eb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1965eaca47dbf3f87acdafc2208f04eb">UP</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)     {.file = 0, .row =-1}</td></tr>
+<tr class="memdesc:a1965eaca47dbf3f87acdafc2208f04eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans fel irány.  <br /></td></tr>
+<tr class="memitem:a4193cd1c8c2e6ebd0e056fa2364a663f" id="r_a4193cd1c8c2e6ebd0e056fa2364a663f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4193cd1c8c2e6ebd0e056fa2364a663f">DOWN</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)   {.file = 0, .row = 1}</td></tr>
+<tr class="memdesc:a4193cd1c8c2e6ebd0e056fa2364a663f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans le irány.  <br /></td></tr>
+<tr class="memitem:a437ef08681e7210d6678427030446a54" id="r_a437ef08681e7210d6678427030446a54"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a437ef08681e7210d6678427030446a54">LEFT</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)   {.file =-1, .row = 0}</td></tr>
+<tr class="memdesc:a437ef08681e7210d6678427030446a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans balra irány.  <br /></td></tr>
+<tr class="memitem:a80fb826a684cf3f0d306b22aa100ddac" id="r_a80fb826a684cf3f0d306b22aa100ddac"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)  {.file = 1, .row = 0}</td></tr>
+<tr class="memdesc:a80fb826a684cf3f0d306b22aa100ddac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans jobbra irány.  <br /></td></tr>
+<tr class="memitem:a2ffebd89a41cf812e734ceb2616d5b1e" id="r_a2ffebd89a41cf812e734ceb2616d5b1e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2ffebd89a41cf812e734ceb2616d5b1e">UPRIGHT</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>){.file = 1, .row =-1}</td></tr>
+<tr class="memdesc:a2ffebd89a41cf812e734ceb2616d5b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans jobbra-fel irány.  <br /></td></tr>
+<tr class="memitem:a8fc837524fc70969e95bb80d0d149638" id="r_a8fc837524fc70969e95bb80d0d149638"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8fc837524fc70969e95bb80d0d149638">UPLEFT</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)   {.file =-1, .row =-1}</td></tr>
+<tr class="memdesc:a8fc837524fc70969e95bb80d0d149638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans balra-fel irány.  <br /></td></tr>
+<tr class="memitem:ae5b8a00dc42f0c93b87067e018a87a9f" id="r_ae5b8a00dc42f0c93b87067e018a87a9f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae5b8a00dc42f0c93b87067e018a87a9f">DOWNRIGHT</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>){.file = 1, .row = 1}</td></tr>
+<tr class="memdesc:ae5b8a00dc42f0c93b87067e018a87a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans jobbra-le irány.  <br /></td></tr>
+<tr class="memitem:ab63766430cef30c6d15054c8d31d660e" id="r_ab63766430cef30c6d15054c8d31d660e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab63766430cef30c6d15054c8d31d660e">DOWNLEFT</a>&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>) {.file =-1, .row = 1}</td></tr>
+<tr class="memdesc:ab63766430cef30c6d15054c8d31d660e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstans balra-le irány.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Típusdefiníciók</h2></td></tr>
+<tr class="memitem:a48019591f18918e160c54f23b0cfe380" id="r_a48019591f18918e160c54f23b0cfe380"><td class="memItemLeft">typedef enum <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2">piece_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a48019591f18918e160c54f23b0cfe380">piece_t</a></td></tr>
+<tr class="memdesc:a48019591f18918e160c54f23b0cfe380"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábutípusokat határozza meg.  <br /></td></tr>
+<tr class="memitem:a6ffaf4c694899d6c10868e176a17550d" id="r_a6ffaf4c694899d6c10868e176a17550d"><td class="memItemLeft">typedef enum <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6ffaf4c694899d6c10868e176a17550d">color_t</a></td></tr>
+<tr class="memdesc:a6ffaf4c694899d6c10868e176a17550d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A színeket határozza meg.  <br /></td></tr>
+<tr class="memitem:a1568cb70d9628a60f73434e75217bca4" id="r_a1568cb70d9628a60f73434e75217bca4"><td class="memItemLeft">typedef enum <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83">move_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1568cb70d9628a60f73434e75217bca4">move_t</a></td></tr>
+<tr class="memdesc:a1568cb70d9628a60f73434e75217bca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépéstípusokat tárolja.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerációk</h2></td></tr>
+<tr class="memitem:acb29ebc8e42e610a88c92446ff9a1ae7" id="r_acb29ebc8e42e610a88c92446ff9a1ae7"><td class="memItemLeft"><a class="el" href="#acb29ebc8e42e610a88c92446ff9a1ae7">enum </a>&#160;</td><td class="memItemRight">{ <a class="el" href="#acb29ebc8e42e610a88c92446ff9a1ae7a2fd6f336d08340583bd620a7f5694c90">ERROR</a> = -1
+, <a class="el" href="#acb29ebc8e42e610a88c92446ff9a1ae7ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>
+ }</td></tr>
+<tr class="memdesc:acb29ebc8e42e610a88c92446ff9a1ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A függvények default visszatérési értékei.  <a href="#acb29ebc8e42e610a88c92446ff9a1ae7">Részletek...</a><br /></td></tr>
+<tr class="memitem:ab9be55f539b97c45fb9f57efded733c2" id="r_ab9be55f539b97c45fb9f57efded733c2"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> { <br />
+&#160;&#160;<a class="el" href="#ab9be55f539b97c45fb9f57efded733c2a2f0d18fc0d0fa4a6cd92dc328501874d">EMPTY</a>
+, <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2a1f189a15a64c7c4a1553e876b56c6bf2">PAWN</a>
+, <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2a49b75ad9a5137e805c60f32ed9cc2820">ROOK</a>
+, <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2ad4a86ac7d51335fcb5756203a88612d6">KNIGHT</a>
+, <br />
+&#160;&#160;<a class="el" href="#ab9be55f539b97c45fb9f57efded733c2a6bc4b5ac244475b6bd2595d608f18814">BISHOP</a>
+, <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2a58561257be7e2f96f82c0fdb51d7f964">QUEEN</a>
+, <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2a157524408d6f0fc4b7dc5e52f3dd3b80">KING</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ab9be55f539b97c45fb9f57efded733c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábutípusokat határozza meg.  <a href="#ab9be55f539b97c45fb9f57efded733c2">Részletek...</a><br /></td></tr>
+<tr class="memitem:a0a8ef1b5e1941b7257e545cc33405ff1" id="r_a0a8ef1b5e1941b7257e545cc33405ff1"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> { <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>
+, <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50">WHITE</a>
+, <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3">BLACK</a>
+ }</td></tr>
+<tr class="memdesc:a0a8ef1b5e1941b7257e545cc33405ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A színeket határozza meg.  <a href="#a0a8ef1b5e1941b7257e545cc33405ff1">Részletek...</a><br /></td></tr>
+<tr class="memitem:a48717c18c6e17b2a7fb7830e88115b83" id="r_a48717c18c6e17b2a7fb7830e88115b83"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83">move_t</a> { <br />
+&#160;&#160;<a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83a50d1448013c6f17125caee18aa418af7">NORMAL</a>
+, <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83ad7952717003d90fc1d54ccecbcbfa00a">DP</a>
+, <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83a6950076e5ba177055e1b6687118e4c2a">PP</a>
+, <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83ab09dfc8a430a02a3e5a7d27d4413f9ea">CSTL_L</a>
+, <br />
+&#160;&#160;<a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83ae2f656cd1327ec8e2992528e9a4c2f29">CSTL_S</a>
+, <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83a4f198ad72454e2a5e925b4973a1f1a01">EP</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a48717c18c6e17b2a7fb7830e88115b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépéstípusokat tárolja.  <a href="#a48717c18c6e17b2a7fb7830e88115b83">Részletek...</a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Alapvető típusokat és globális konstansokat határozza meg. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Makródefiníciók dokumentációja</h2>
+<a id="a4193cd1c8c2e6ebd0e056fa2364a663f" name="a4193cd1c8c2e6ebd0e056fa2364a663f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4193cd1c8c2e6ebd0e056fa2364a663f">&#9670;&#160;</a></span>DOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOWN&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)   {.file = 0, .row = 1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans le irány. </p>
+
+</div>
+</div>
+<a id="ab63766430cef30c6d15054c8d31d660e" name="ab63766430cef30c6d15054c8d31d660e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab63766430cef30c6d15054c8d31d660e">&#9670;&#160;</a></span>DOWNLEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOWNLEFT&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>) {.file =-1, .row = 1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans balra-le irány. </p>
+
+</div>
+</div>
+<a id="ae5b8a00dc42f0c93b87067e018a87a9f" name="ae5b8a00dc42f0c93b87067e018a87a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b8a00dc42f0c93b87067e018a87a9f">&#9670;&#160;</a></span>DOWNRIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOWNRIGHT&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>){.file = 1, .row = 1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans jobbra-le irány. </p>
+
+</div>
+</div>
+<a id="a437ef08681e7210d6678427030446a54" name="a437ef08681e7210d6678427030446a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437ef08681e7210d6678427030446a54">&#9670;&#160;</a></span>LEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFT&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)   {.file =-1, .row = 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans balra irány. </p>
+
+</div>
+</div>
+<a id="abab8eba31653a87ad285827d4f26d02d" name="abab8eba31653a87ad285827d4f26d02d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab8eba31653a87ad285827d4f26d02d">&#9670;&#160;</a></span>MVL_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MVL_MAX&#160;&#160;&#160;27</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A maximum mennyiségű lépés ami generálódhat. </p>
+<p>Ez a vezér lépéseinek száma, egy üres táblán. </p>
+
+</div>
+</div>
+<a id="a8bf26fa110355d8d50593ea4b4a8b061" name="a8bf26fa110355d8d50593ea4b4a8b061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf26fa110355d8d50593ea4b4a8b061">&#9670;&#160;</a></span>NOPOS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NOPOS&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>) { .file = -1, .row = -1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A nincs position jelölése. </p>
+
+</div>
+</div>
+<a id="a80fb826a684cf3f0d306b22aa100ddac" name="a80fb826a684cf3f0d306b22aa100ddac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fb826a684cf3f0d306b22aa100ddac">&#9670;&#160;</a></span>RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHT&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)  {.file = 1, .row = 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans jobbra irány. </p>
+
+</div>
+</div>
+<a id="a1965eaca47dbf3f87acdafc2208f04eb" name="a1965eaca47dbf3f87acdafc2208f04eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1965eaca47dbf3f87acdafc2208f04eb">&#9670;&#160;</a></span>UP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UP&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)     {.file = 0, .row =-1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans fel irány. </p>
+
+</div>
+</div>
+<a id="a8fc837524fc70969e95bb80d0d149638" name="a8fc837524fc70969e95bb80d0d149638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc837524fc70969e95bb80d0d149638">&#9670;&#160;</a></span>UPLEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UPLEFT&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>)   {.file =-1, .row =-1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans balra-fel irány. </p>
+
+</div>
+</div>
+<a id="a2ffebd89a41cf812e734ceb2616d5b1e" name="a2ffebd89a41cf812e734ceb2616d5b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffebd89a41cf812e734ceb2616d5b1e">&#9670;&#160;</a></span>UPRIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UPRIGHT&#160;&#160;&#160;(<a class="el" href="structposition.html">position</a>){.file = 1, .row =-1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstans jobbra-fel irány. </p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Típusdefiníciók dokumentációja</h2>
+<a id="a6ffaf4c694899d6c10868e176a17550d" name="a6ffaf4c694899d6c10868e176a17550d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ffaf4c694899d6c10868e176a17550d">&#9670;&#160;</a></span>color_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A színeket határozza meg. </p>
+<p>A NONE jelöli a nincs színt. </p>
+
+</div>
+</div>
+<a id="a1568cb70d9628a60f73434e75217bca4" name="a1568cb70d9628a60f73434e75217bca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1568cb70d9628a60f73434e75217bca4">&#9670;&#160;</a></span>move_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83">move_t</a> <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83">move_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A lépéstípusokat tárolja. </p>
+<p>A lépéstípusok tárolása lehetővé teszi a szétválogatásukat, és az egyes típusok különböző kezelési módját </p>
+
+</div>
+</div>
+<a id="a48019591f18918e160c54f23b0cfe380" name="a48019591f18918e160c54f23b0cfe380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48019591f18918e160c54f23b0cfe380">&#9670;&#160;</a></span>piece_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2">piece_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A bábutípusokat határozza meg. </p>
+<p>Az EMPTY jelöli a nincs bábut. </p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumerációk dokumentációja</h2>
+<a id="acb29ebc8e42e610a88c92446ff9a1ae7" name="acb29ebc8e42e610a88c92446ff9a1ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb29ebc8e42e610a88c92446ff9a1ae7">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A függvények default visszatérési értékei. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a id="acb29ebc8e42e610a88c92446ff9a1ae7a2fd6f336d08340583bd620a7f5694c90" name="acb29ebc8e42e610a88c92446ff9a1ae7a2fd6f336d08340583bd620a7f5694c90"></a>ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acb29ebc8e42e610a88c92446ff9a1ae7ac7f69f7c9e5aea9b8f54cf02870e2bf8" name="acb29ebc8e42e610a88c92446ff9a1ae7ac7f69f7c9e5aea9b8f54cf02870e2bf8"></a>SUCCESS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a0a8ef1b5e1941b7257e545cc33405ff1" name="a0a8ef1b5e1941b7257e545cc33405ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8ef1b5e1941b7257e545cc33405ff1">&#9670;&#160;</a></span>color_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A színeket határozza meg. </p>
+<p>A NONE jelöli a nincs színt. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2" name="a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50" name="a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50"></a>WHITE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3" name="a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3"></a>BLACK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a48717c18c6e17b2a7fb7830e88115b83" name="a48717c18c6e17b2a7fb7830e88115b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48717c18c6e17b2a7fb7830e88115b83">&#9670;&#160;</a></span>move_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83">move_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A lépéstípusokat tárolja. </p>
+<p>A lépéstípusok tárolása lehetővé teszi a szétválogatásukat, és az egyes típusok különböző kezelési módját </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a id="a48717c18c6e17b2a7fb7830e88115b83a50d1448013c6f17125caee18aa418af7" name="a48717c18c6e17b2a7fb7830e88115b83a50d1448013c6f17125caee18aa418af7"></a>NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48717c18c6e17b2a7fb7830e88115b83ad7952717003d90fc1d54ccecbcbfa00a" name="a48717c18c6e17b2a7fb7830e88115b83ad7952717003d90fc1d54ccecbcbfa00a"></a>DP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48717c18c6e17b2a7fb7830e88115b83a6950076e5ba177055e1b6687118e4c2a" name="a48717c18c6e17b2a7fb7830e88115b83a6950076e5ba177055e1b6687118e4c2a"></a>PP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48717c18c6e17b2a7fb7830e88115b83ab09dfc8a430a02a3e5a7d27d4413f9ea" name="a48717c18c6e17b2a7fb7830e88115b83ab09dfc8a430a02a3e5a7d27d4413f9ea"></a>CSTL_L&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48717c18c6e17b2a7fb7830e88115b83ae2f656cd1327ec8e2992528e9a4c2f29" name="a48717c18c6e17b2a7fb7830e88115b83ae2f656cd1327ec8e2992528e9a4c2f29"></a>CSTL_S&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a48717c18c6e17b2a7fb7830e88115b83a4f198ad72454e2a5e925b4973a1f1a01" name="a48717c18c6e17b2a7fb7830e88115b83a4f198ad72454e2a5e925b4973a1f1a01"></a>EP&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ab9be55f539b97c45fb9f57efded733c2" name="ab9be55f539b97c45fb9f57efded733c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9be55f539b97c45fb9f57efded733c2">&#9670;&#160;</a></span>piece_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2">piece_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A bábutípusokat határozza meg. </p>
+<p>Az EMPTY jelöli a nincs bábut. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a id="ab9be55f539b97c45fb9f57efded733c2a2f0d18fc0d0fa4a6cd92dc328501874d" name="ab9be55f539b97c45fb9f57efded733c2a2f0d18fc0d0fa4a6cd92dc328501874d"></a>EMPTY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9be55f539b97c45fb9f57efded733c2a1f189a15a64c7c4a1553e876b56c6bf2" name="ab9be55f539b97c45fb9f57efded733c2a1f189a15a64c7c4a1553e876b56c6bf2"></a>PAWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9be55f539b97c45fb9f57efded733c2a49b75ad9a5137e805c60f32ed9cc2820" name="ab9be55f539b97c45fb9f57efded733c2a49b75ad9a5137e805c60f32ed9cc2820"></a>ROOK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9be55f539b97c45fb9f57efded733c2ad4a86ac7d51335fcb5756203a88612d6" name="ab9be55f539b97c45fb9f57efded733c2ad4a86ac7d51335fcb5756203a88612d6"></a>KNIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9be55f539b97c45fb9f57efded733c2a6bc4b5ac244475b6bd2595d608f18814" name="ab9be55f539b97c45fb9f57efded733c2a6bc4b5ac244475b6bd2595d608f18814"></a>BISHOP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9be55f539b97c45fb9f57efded733c2a58561257be7e2f96f82c0fdb51d7f964" name="ab9be55f539b97c45fb9f57efded733c2a58561257be7e2f96f82c0fdb51d7f964"></a>QUEEN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9be55f539b97c45fb9f57efded733c2a157524408d6f0fc4b7dc5e52f3dd3b80" name="ab9be55f539b97c45fb9f57efded733c2a157524408d6f0fc4b7dc5e52f3dd3b80"></a>KING&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="types_8h.html">types.h</a></li>
+    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+\doxysection{Position függvények }
+\hypertarget{group__pos__func}{}\label{group__pos__func}\index{Position függvények@{Position függvények}}
+
+
+A position fügvények egyszerűbbé és lehetővé teszik a position típusú változókkal történő műveleteket.  
+
+
+\doxysubsubsection*{Függvények}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structposition}{position}} \doxymbox{\hyperlink{group__pos__func_ga4c02827411b066729251fa1334bc7403}{p\+\_\+createpos}} (int file, int row)
+\begin{DoxyCompactList}\small\item\em A position gyárfüggvény. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{group__pos__func_ga2ffc7f64a601b49630b31efa511f4c7a}{p\+\_\+isequal}} (\doxymbox{\hyperlink{structposition}{position}} pos1, \doxymbox{\hyperlink{structposition}{position}} pos2)
+\begin{DoxyCompactList}\small\item\em A két megadott pozíció egyenlőségét vizsgálja. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structposition}{position}} \doxymbox{\hyperlink{group__pos__func_ga9bef2a1af9bd1a0b0e4cb43f4519fb3a}{p\+\_\+add}} (\doxymbox{\hyperlink{structposition}{position}} pos1, \doxymbox{\hyperlink{structposition}{position}} pos2)
+\begin{DoxyCompactList}\small\item\em Összead 2 pozíciót. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structposition}{position}} \doxymbox{\hyperlink{group__pos__func_ga4ff85461365822434107b4874e346094}{p\+\_\+times}} (\doxymbox{\hyperlink{structposition}{position}} pos, int i)
+\begin{DoxyCompactList}\small\item\em Egész szám és pozíció szorzata. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+A position fügvények egyszerűbbé és lehetővé teszik a position típusú változókkal történő műveleteket. 
+
+A nekünk szükséges position-\/aritmetika az összeadás, szorzás és egyenlőség vizsgálat. Ezen kívül a gyárfüggvény segítségével könnyen kezelhetővé válik ez a típus. 
+
+\label{group__pos__func_doc-func-members}
+\Hypertarget{group__pos__func_doc-func-members}
+\doxysubsection{Függvények dokumentációja}
+\Hypertarget{group__pos__func_ga9bef2a1af9bd1a0b0e4cb43f4519fb3a}\index{Position függvények@{Position függvények}!p\_add@{p\_add}}
+\index{p\_add@{p\_add}!Position függvények@{Position függvények}}
+\doxysubsubsection{\texorpdfstring{p\_add()}{p\_add()}}
+{\footnotesize\ttfamily \label{group__pos__func_ga9bef2a1af9bd1a0b0e4cb43f4519fb3a} 
+\doxymbox{\hyperlink{structposition}{position}} p\+\_\+add (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos1}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos2}{}\end{DoxyParamCaption})}
+
+
+
+Összead 2 pozíciót. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em pos1} & \\
+\hline
+{\em pos2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+position (pos1 + pos2) 
+\end{DoxyReturn}
+\Hypertarget{group__pos__func_ga4c02827411b066729251fa1334bc7403}\index{Position függvények@{Position függvények}!p\_createpos@{p\_createpos}}
+\index{p\_createpos@{p\_createpos}!Position függvények@{Position függvények}}
+\doxysubsubsection{\texorpdfstring{p\_createpos()}{p\_createpos()}}
+{\footnotesize\ttfamily \label{group__pos__func_ga4c02827411b066729251fa1334bc7403} 
+\doxymbox{\hyperlink{structposition}{position}} p\+\_\+createpos (\begin{DoxyParamCaption}\item[{int}]{file}{, }\item[{int}]{row}{}\end{DoxyParamCaption})}
+
+
+
+A position gyárfüggvény. 
+
+A position típusú változók egyszerűbb létrehozásáéra. 
+\begin{DoxyParams}{Paraméterek}
+{\em file} & (0-\/7) \\
+\hline
+{\em row} & (0-\/7) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+position 
+\end{DoxyReturn}
+\Hypertarget{group__pos__func_ga2ffc7f64a601b49630b31efa511f4c7a}\index{Position függvények@{Position függvények}!p\_isequal@{p\_isequal}}
+\index{p\_isequal@{p\_isequal}!Position függvények@{Position függvények}}
+\doxysubsubsection{\texorpdfstring{p\_isequal()}{p\_isequal()}}
+{\footnotesize\ttfamily \label{group__pos__func_ga2ffc7f64a601b49630b31efa511f4c7a} 
+int p\+\_\+isequal (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos1}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos2}{}\end{DoxyParamCaption})}
+
+
+
+A két megadott pozíció egyenlőségét vizsgálja. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em pos1} & \\
+\hline
+{\em pos2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+bool (pos1 == pos2) 
+\end{DoxyReturn}
+\Hypertarget{group__pos__func_ga4ff85461365822434107b4874e346094}\index{Position függvények@{Position függvények}!p\_times@{p\_times}}
+\index{p\_times@{p\_times}!Position függvények@{Position függvények}}
+\doxysubsubsection{\texorpdfstring{p\_times()}{p\_times()}}
+{\footnotesize\ttfamily \label{group__pos__func_ga4ff85461365822434107b4874e346094} 
+\doxymbox{\hyperlink{structposition}{position}} p\+\_\+times (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos}{, }\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Egész szám és pozíció szorzata. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em pos} & \\
+\hline
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+position (a \texorpdfstring{$\ast$}{*} b) 
+\end{DoxyReturn}

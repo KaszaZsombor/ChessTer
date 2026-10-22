@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SAKK: A lépés függvényei.</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">SAKK<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Prog nagyházi</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__play__helper.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">A lépés függvényei. </div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ezek a függvények lépik meg a megadott lépést a megadott táblán.  
+<a href="#details">Részletek...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Függvények</h2></td></tr>
+<tr class="memitem:gaf426556df93c62ac9051785ab43c3c77" id="r_gaf426556df93c62ac9051785ab43c3c77"><td class="memItemLeft"><a class="el" href="structmove.html">move</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaf426556df93c62ac9051785ab43c3c77">m_createmove</a> (<a class="el" href="structposition.html">position</a> from, <a class="el" href="structposition.html">position</a> to, <a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> pp)</td></tr>
+<tr class="memdesc:gaf426556df93c62ac9051785ab43c3c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lépés gyárfüggvény.  <br /></td></tr>
+<tr class="memitem:ga38c7b61ff6c2e66c3d70d0376df6b85b" id="r_ga38c7b61ff6c2e66c3d70d0376df6b85b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga38c7b61ff6c2e66c3d70d0376df6b85b">play_normal_move</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
+<tr class="memdesc:ga38c7b61ff6c2e66c3d70d0376df6b85b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy normál lépés megtétele a táblán.  <br /></td></tr>
+<tr class="memitem:ga33219f38654fb2ec5aa892c4056843e8" id="r_ga33219f38654fb2ec5aa892c4056843e8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga33219f38654fb2ec5aa892c4056843e8">play_shortcstl</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
+<tr class="memdesc:ga33219f38654fb2ec5aa892c4056843e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A rövidsánc végrehajtása az adott táblán.  <br /></td></tr>
+<tr class="memitem:gaaab62f9ad65e106710b2dbbf714d69cc" id="r_gaaab62f9ad65e106710b2dbbf714d69cc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaaab62f9ad65e106710b2dbbf714d69cc">play_longcstl</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
+<tr class="memdesc:gaaab62f9ad65e106710b2dbbf714d69cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A hosszúsánc végrehajtása adott táblán.  <br /></td></tr>
+<tr class="memitem:gadcce71b63d008f49d78cb462d37a621b" id="r_gadcce71b63d008f49d78cb462d37a621b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gadcce71b63d008f49d78cb462d37a621b">play_pp_move</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
+<tr class="memdesc:gadcce71b63d008f49d78cb462d37a621b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A promotion lépés kezelése az adott táblán.  <br /></td></tr>
+<tr class="memitem:gacd92e03fb865bcc216ee50dd6559565c" id="r_gacd92e03fb865bcc216ee50dd6559565c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gacd92e03fb865bcc216ee50dd6559565c">play_dp_move</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
+<tr class="memdesc:gacd92e03fb865bcc216ee50dd6559565c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dupla gyaloglépés kezelése az adott táblán.  <br /></td></tr>
+<tr class="memitem:gaf8493f781cbcbea3e63b5c7d212dea3a" id="r_gaf8493f781cbcbea3e63b5c7d212dea3a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaf8493f781cbcbea3e63b5c7d212dea3a">play_ep_move</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
+<tr class="memdesc:gaf8493f781cbcbea3e63b5c7d212dea3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az en-passant lépés kezelése, adott táblán.  <br /></td></tr>
+<tr class="memitem:ga8a88abb17616b3ee2d31366ebf1d597d" id="r_ga8a88abb17616b3ee2d31366ebf1d597d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8a88abb17616b3ee2d31366ebf1d597d">m_play_generatedmove</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structgenerated__move.html">generated_move</a> gmv)</td></tr>
+<tr class="memdesc:ga8a88abb17616b3ee2d31366ebf1d597d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy a program által generált lépést oszt szét a segédfüggvényeknek. Amik aztán a lépés típusától függően végrehajtják a lépést. Így tudja a program kezelni a különleges lépéseket.  <br /></td></tr>
+<tr class="memitem:gae45395e81360801c5369ef37ab263f96" id="r_gae45395e81360801c5369ef37ab263f96"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#gae45395e81360801c5369ef37ab263f96">m_play_move</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
+<tr class="memdesc:gae45395e81360801c5369ef37ab263f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">A default lépéshvégrehajtó függvény.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Ezek a függvények lépik meg a megadott lépést a megadott táblán. </p>
+<p>A m_play_generatedmove függvény ezeknek a függvényeknek osztja szét a generált lépéseket, azok típusa szerint. Ezeknek a függvényeknek a lépés végrehatásának kezelése a feladatuk, és annak a táblának az információinak frissítése, amin a lépést lépték. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Függvények dokumentációja</h2>
+<a id="gaf426556df93c62ac9051785ab43c3c77" name="gaf426556df93c62ac9051785ab43c3c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf426556df93c62ac9051785ab43c3c77">&#9670;&#160;</a></span>m_createmove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmove.html">move</a> m_createmove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a></td>          <td class="paramname"><span class="paramname"><em>pp</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lépés gyárfüggvény. </p>
+<p>A lépés gyárfüggvény egyszerűbbé teszi a move típusú változók létrehozását. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td></td></tr>
+    <tr><td class="paramname">to</td><td></td></tr>
+    <tr><td class="paramname">pp</td><td>A promotion-bábu típusa ha van, egyébként EMPTY. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>move </dd></dl>
+
+</div>
+</div>
+<a id="ga8a88abb17616b3ee2d31366ebf1d597d" name="ga8a88abb17616b3ee2d31366ebf1d597d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a88abb17616b3ee2d31366ebf1d597d">&#9670;&#160;</a></span>m_play_generatedmove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void m_play_generatedmove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgenerated__move.html">generated_move</a></td>          <td class="paramname"><span class="paramname"><em>gmv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Egy a program által generált lépést oszt szét a segédfüggvényeknek. Amik aztán a lépés típusától függően végrehajtják a lépést. Így tudja a program kezelni a különleges lépéseket. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">gmv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae45395e81360801c5369ef37ab263f96" name="gae45395e81360801c5369ef37ab263f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae45395e81360801c5369ef37ab263f96">&#9670;&#160;</a></span>m_play_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int m_play_move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A default lépéshvégrehajtó függvény. </p>
+<p>A függvény a beolvasott lépésszándék alapján legenáráltattja az összes lehetséges lépést a szándék kezdeti pozíciójából, majd meghatározza hogy megtalálható-e ezek között a szándék, ha igen, akkor a lépést meglépteti a táblán. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>SUCCESS vagy ERROR attól függően hogy sikerült-e </dd></dl>
+
+</div>
+</div>
+<a id="gacd92e03fb865bcc216ee50dd6559565c" name="gacd92e03fb865bcc216ee50dd6559565c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd92e03fb865bcc216ee50dd6559565c">&#9670;&#160;</a></span>play_dp_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_dp_move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A dupla gyaloglépés kezelése az adott táblán. </p>
+<p>A dupla gyaloglépés során létrejön egy olyan postition a táblán, ahova az ellenfél egyik gyalogja En-passant tud ütni. Ezt a positiont a táblán tárolni kell pontosan 1 lépésig, amég az ütési lehetőség fennáll az ellenfélnek. <a href="https://en.wikipedia.org/wiki/Pawn_(chess)#Placement_and_movement">https://en.wikipedia.org/wiki/Pawn_(chess)#Placement_and_movement</a> </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaf8493f781cbcbea3e63b5c7d212dea3a" name="gaf8493f781cbcbea3e63b5c7d212dea3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8493f781cbcbea3e63b5c7d212dea3a">&#9670;&#160;</a></span>play_ep_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_ep_move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Az en-passant lépés kezelése, adott táblán. </p>
+<p>Az En-Passant lépés azért igényel különleges kezelést, mert nem az ütő bábu nem a leütött bábu helyét eszi át, hanem az a mögötti mezőre kerül. <a href="https://en.wikipedia.org/wiki/Pawn_(chess)#En_passant">https://en.wikipedia.org/wiki/Pawn_(chess)#En_passant</a> </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaaab62f9ad65e106710b2dbbf714d69cc" name="gaaab62f9ad65e106710b2dbbf714d69cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaab62f9ad65e106710b2dbbf714d69cc">&#9670;&#160;</a></span>play_longcstl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_longcstl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A hosszúsánc végrehajtása adott táblán. </p>
+<p>A hosszúsánc során a király 2 lépéssel a távolabbi oldalon található bástya felé lép, majd az a bástya a másik oldalára kerül. Ennek is különleges a kezelési igénye. <a href="https://en.wikipedia.org/wiki/Castling#Rules">https://en.wikipedia.org/wiki/Castling#Rules</a> </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga38c7b61ff6c2e66c3d70d0376df6b85b" name="ga38c7b61ff6c2e66c3d70d0376df6b85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga38c7b61ff6c2e66c3d70d0376df6b85b">&#9670;&#160;</a></span>play_normal_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_normal_move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Egy normál lépés megtétele a táblán. </p>
+<p>Ezek a lépések nem igényelnek különleges kezelést. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadcce71b63d008f49d78cb462d37a621b" name="gadcce71b63d008f49d78cb462d37a621b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadcce71b63d008f49d78cb462d37a621b">&#9670;&#160;</a></span>play_pp_move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_pp_move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A promotion lépés kezelése az adott táblán. </p>
+<p>A promotion lépésnél, vagy átváltozásnál a belépő gyalog egy tetszőleges tisztté változik át, ami szintén különleges kezelést igényel. <a href="https://en.wikipedia.org/wiki/Pawn_(chess)#Promotion">https://en.wikipedia.org/wiki/Pawn_(chess)#Promotion</a> </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga33219f38654fb2ec5aa892c4056843e8" name="ga33219f38654fb2ec5aa892c4056843e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33219f38654fb2ec5aa892c4056843e8">&#9670;&#160;</a></span>play_shortcstl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_shortcstl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A rövidsánc végrehajtása az adott táblán. </p>
+<p>A hosszúsánc során a király 2 lépéssel közelebbi oldalon található bástya felé lép, majd az a bástya a másik oldalára kerül. Ennek is különleges a kezelési igénye. <a href="https://en.wikipedia.org/wiki/Castling#Rules">https://en.wikipedia.org/wiki/Castling#Rules</a> </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

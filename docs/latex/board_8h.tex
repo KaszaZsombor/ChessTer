@@ -1,0 +1,221 @@
+\doxysection{include/\+board.h fájlreferencia}
+\hypertarget{board_8h}{}\label{board_8h}\index{include/board.h@{include/board.h}}
+{\ttfamily \+\#include "{}types.\+h"{}}\newline
+\doxysubsubsection*{Függvények}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structboard}{board}} \doxymbox{\hyperlink{board_8h_aa686eb3d76b82a9b59bc743dc1ec9563}{b\+\_\+create}} ()
+\begin{DoxyCompactList}\small\item\em board gyárfüggvény \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{board_8h_a66b9896e9724f9f9375f6c30f83c8d4c}{b\+\_\+setdefault}} (\doxymbox{\hyperlink{structboard}{board}} \texorpdfstring{$\ast$}{*}pbrd)
+\begin{DoxyCompactList}\small\item\em Az adott táblát alaphelyzetbe állítja. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} \doxymbox{\hyperlink{board_8h_a1d099ed0e5acac0adc863ab62ec12cda}{b\+\_\+opponent\+\_\+col}} (\doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} color)
+\begin{DoxyCompactList}\small\item\em Visszaadja az ellenfél színét. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{board_8h_a7e6cb8400bc2c677ee9d1120ef1cd71d}{b\+\_\+getpiece}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structposition}{position}} pos, \doxymbox{\hyperlink{structpiece}{piece}} \texorpdfstring{$\ast$}{*}pcs)
+\begin{DoxyCompactList}\small\item\em Egy piece lekérése egy tábláról. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{board_8h_a2fb3f2aae0c6e0545c6ef368262a73c1}{b\+\_\+setpiece}} (\doxymbox{\hyperlink{structboard}{board}} \texorpdfstring{$\ast$}{*}pbrd, \doxymbox{\hyperlink{structposition}{position}} pos, \doxymbox{\hyperlink{structpiece}{piece}} pcs)
+\begin{DoxyCompactList}\small\item\em Beállítja az adott bábut az adott tábálra. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{board_8h_a9193b46af362531bf7334622e60d7cb7}{b\+\_\+ison}} (\doxymbox{\hyperlink{structposition}{position}} pos)
+\begin{DoxyCompactList}\small\item\em Visszaadja, hogy a pozíció a táblán van-\/e vagy sem. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structpiece}{piece}} \doxymbox{\hyperlink{board_8h_ad9ab86ec5a6bf0ae3d25cedae3e457d9}{b\+\_\+create\+\_\+piece}} (\doxymbox{\hyperlink{types_8h_ab9be55f539b97c45fb9f57efded733c2}{piece\+\_\+t}} type, \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} col, int has\+Moved)
+\begin{DoxyCompactList}\small\item\em Piece gyárfüggvény adott adatok alapján. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structpiece}{piece}} \doxymbox{\hyperlink{board_8h_a5fdcf9d90a2b2cb98708bc4a88f82359}{b\+\_\+create\+\_\+empty\+\_\+piece}} ()
+\begin{DoxyCompactList}\small\item\em Egy üres bábut visszaadó gyárfüggvény. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{board_8h_a68e48836b74749c0896cfd02111c7cee}{b\+\_\+is\+\_\+attacked}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{structposition}{position}} pos, \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} col)
+\begin{DoxyCompactList}\small\item\em Megnézi az adott position támadva van-\/e, egy adott szín által. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structposition}{position}} \doxymbox{\hyperlink{board_8h_ab1950583414fdc7eb8c49409f4b9405b}{b\+\_\+get\+\_\+king\+\_\+pos}} (\doxymbox{\hyperlink{structboard}{board}} brd, \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} col)
+\begin{DoxyCompactList}\small\item\em Visszaadja egy táblán a király helyzetét. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{board_8h_doc-func-members}
+\Hypertarget{board_8h_doc-func-members}
+\doxysubsection{Függvények dokumentációja}
+\Hypertarget{board_8h_aa686eb3d76b82a9b59bc743dc1ec9563}\index{board.h@{board.h}!b\_create@{b\_create}}
+\index{b\_create@{b\_create}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_create()}{b\_create()}}
+{\footnotesize\ttfamily \label{board_8h_aa686eb3d76b82a9b59bc743dc1ec9563} 
+\doxymbox{\hyperlink{structboard}{board}} b\+\_\+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+board gyárfüggvény 
+
+\begin{DoxyReturn}{Visszatérési érték}
+board 
+\end{DoxyReturn}
+\Hypertarget{board_8h_a5fdcf9d90a2b2cb98708bc4a88f82359}\index{board.h@{board.h}!b\_create\_empty\_piece@{b\_create\_empty\_piece}}
+\index{b\_create\_empty\_piece@{b\_create\_empty\_piece}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_create\_empty\_piece()}{b\_create\_empty\_piece()}}
+{\footnotesize\ttfamily \label{board_8h_a5fdcf9d90a2b2cb98708bc4a88f82359} 
+\doxymbox{\hyperlink{structpiece}{piece}} b\+\_\+create\+\_\+empty\+\_\+piece (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Egy üres bábut visszaadó gyárfüggvény. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+piece 
+\end{DoxyReturn}
+\Hypertarget{board_8h_ad9ab86ec5a6bf0ae3d25cedae3e457d9}\index{board.h@{board.h}!b\_create\_piece@{b\_create\_piece}}
+\index{b\_create\_piece@{b\_create\_piece}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_create\_piece()}{b\_create\_piece()}}
+{\footnotesize\ttfamily \label{board_8h_ad9ab86ec5a6bf0ae3d25cedae3e457d9} 
+\doxymbox{\hyperlink{structpiece}{piece}} b\+\_\+create\+\_\+piece (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{types_8h_ab9be55f539b97c45fb9f57efded733c2}{piece\+\_\+t}}}]{type}{, }\item[{\doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}}}]{col}{, }\item[{int}]{has\+Moved}{}\end{DoxyParamCaption})}
+
+
+
+Piece gyárfüggvény adott adatok alapján. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em type} & ~\newline
+ \\
+\hline
+{\em col} & ~\newline
+ \\
+\hline
+{\em has\+Moved} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+piece 
+\end{DoxyReturn}
+\Hypertarget{board_8h_ab1950583414fdc7eb8c49409f4b9405b}\index{board.h@{board.h}!b\_get\_king\_pos@{b\_get\_king\_pos}}
+\index{b\_get\_king\_pos@{b\_get\_king\_pos}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_get\_king\_pos()}{b\_get\_king\_pos()}}
+{\footnotesize\ttfamily \label{board_8h_ab1950583414fdc7eb8c49409f4b9405b} 
+\doxymbox{\hyperlink{structposition}{position}} b\+\_\+get\+\_\+king\+\_\+pos (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}}}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Visszaadja egy táblán a király helyzetét. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em col} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+position NOPOS ha nincs a táblán 
+\end{DoxyReturn}
+\Hypertarget{board_8h_a7e6cb8400bc2c677ee9d1120ef1cd71d}\index{board.h@{board.h}!b\_getpiece@{b\_getpiece}}
+\index{b\_getpiece@{b\_getpiece}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_getpiece()}{b\_getpiece()}}
+{\footnotesize\ttfamily \label{board_8h_a7e6cb8400bc2c677ee9d1120ef1cd71d} 
+int b\+\_\+getpiece (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}} \texorpdfstring{$\ast$}{*}}]{ppc}{}\end{DoxyParamCaption})}
+
+
+
+Egy piece lekérése egy tábláról. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em ppc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+SUCCESS VAGY ERROR attól függően, hogy a táblán van-\/e a position. 
+\end{DoxyReturn}
+\Hypertarget{board_8h_a68e48836b74749c0896cfd02111c7cee}\index{board.h@{board.h}!b\_is\_attacked@{b\_is\_attacked}}
+\index{b\_is\_attacked@{b\_is\_attacked}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_is\_attacked()}{b\_is\_attacked()}}
+{\footnotesize\ttfamily \label{board_8h_a68e48836b74749c0896cfd02111c7cee} 
+int b\+\_\+is\+\_\+attacked (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}}}]{brd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos}{, }\item[{\doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}}}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Megnézi az adott position támadva van-\/e, egy adott szín által. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em brd} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em col} & A támadott szín. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+bool
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Hiba}
+\item[\doxymbox{\hyperlink{bug__bug000001}{Hiba}}]Gyalog és király támadását nem nézi \end{DoxyRefDesc}
+\Hypertarget{board_8h_a9193b46af362531bf7334622e60d7cb7}\index{board.h@{board.h}!b\_ison@{b\_ison}}
+\index{b\_ison@{b\_ison}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_ison()}{b\_ison()}}
+{\footnotesize\ttfamily \label{board_8h_a9193b46af362531bf7334622e60d7cb7} 
+int b\+\_\+ison (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Visszaadja, hogy a pozíció a táblán van-\/e vagy sem. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+bool 
+\end{DoxyReturn}
+\Hypertarget{board_8h_a1d099ed0e5acac0adc863ab62ec12cda}\index{board.h@{board.h}!b\_opponent\_col@{b\_opponent\_col}}
+\index{b\_opponent\_col@{b\_opponent\_col}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_opponent\_col()}{b\_opponent\_col()}}
+{\footnotesize\ttfamily \label{board_8h_a1d099ed0e5acac0adc863ab62ec12cda} 
+\doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} b\+\_\+opponent\+\_\+col (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}}}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Visszaadja az ellenfél színét. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+\doxylink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t} az ellemnfél színe. 
+\end{DoxyReturn}
+\Hypertarget{board_8h_a66b9896e9724f9f9375f6c30f83c8d4c}\index{board.h@{board.h}!b\_setdefault@{b\_setdefault}}
+\index{b\_setdefault@{b\_setdefault}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_setdefault()}{b\_setdefault()}}
+{\footnotesize\ttfamily \label{board_8h_a66b9896e9724f9f9375f6c30f83c8d4c} 
+void b\+\_\+setdefault (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}} \texorpdfstring{$\ast$}{*}}]{pbrd}{}\end{DoxyParamCaption})}
+
+
+
+Az adott táblát alaphelyzetbe állítja. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em pbrd} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{board_8h_a2fb3f2aae0c6e0545c6ef368262a73c1}\index{board.h@{board.h}!b\_setpiece@{b\_setpiece}}
+\index{b\_setpiece@{b\_setpiece}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{b\_setpiece()}{b\_setpiece()}}
+{\footnotesize\ttfamily \label{board_8h_a2fb3f2aae0c6e0545c6ef368262a73c1} 
+int b\+\_\+setpiece (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structboard}{board}} \texorpdfstring{$\ast$}{*}}]{pbrd}{, }\item[{\doxymbox{\hyperlink{structposition}{position}}}]{pos}{, }\item[{\doxymbox{\hyperlink{structpiece}{piece}}}]{pc}{}\end{DoxyParamCaption})}
+
+
+
+Beállítja az adott bábut az adott tábálra. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em pbrd} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em pc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+ERROR vagy SUCCESS, attól függően hogy a pos a táblán van-\/e. 
+\end{DoxyReturn}
