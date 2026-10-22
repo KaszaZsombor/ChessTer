@@ -16,12 +16,19 @@ var types_8h =
     [ "UPLEFT", "types_8h.html#a8fc837524fc70969e95bb80d0d149638", null ],
     [ "UPRIGHT", "types_8h.html#a2ffebd89a41cf812e734ceb2616d5b1e", null ],
     [ "color_t", "types_8h.html#a6ffaf4c694899d6c10868e176a17550d", null ],
+    [ "gamestate_t", "types_8h.html#af48c66521f2e3e048fa9952128f4208b", null ],
     [ "move_t", "types_8h.html#a1568cb70d9628a60f73434e75217bca4", null ],
     [ "piece_t", "types_8h.html#a48019591f18918e160c54f23b0cfe380", null ],
     [ "color_t", "types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1", [
       [ "NONE", "types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2", null ],
       [ "WHITE", "types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50", null ],
       [ "BLACK", "types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3", null ]
+    ] ],
+    [ "gamestate_t", "types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0", [
+      [ "PLAYING", "types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0af095245f5cebc27a97a124345269fed8", null ],
+      [ "WW", "types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0a382ee855180652976e01061da0a7e5d8", null ],
+      [ "BW", "types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0adf5c2c2ac9b8451bc03c0b0d2623d22e", null ],
+      [ "DRAW", "types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0a61f3c57b6943c85413975507aede78cd", null ]
     ] ],
     [ "move_t", "types_8h.html#a48717c18c6e17b2a7fb7830e88115b83", [
       [ "NORMAL", "types_8h.html#a48717c18c6e17b2a7fb7830e88115b83a50d1448013c6f17125caee18aa418af7", null ],

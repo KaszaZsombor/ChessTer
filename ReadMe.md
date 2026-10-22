@@ -1,6 +1,6 @@
-# Főoldal
+# Sakk program
 
-## Sakk program - 2026/27 őszi félév
+## 2026/27 őszi félév, sakk program dokumentáció
 
 Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A projekt egy sakkjáték. A játék a stdin-ről lépéseket olvas be, lefordítja, majd a szabályosság ellenőrzése után a stdout -ra lerajzolja a lépés utáni sakktábla állását.
 

@@ -23,6 +23,11 @@ enum{ERROR = -1, SUCCESS};
  */
 typedef enum piece_t {EMPTY, PAWN, ROOK, KNIGHT, BISHOP, QUEEN, KING}piece_t;
 
+/**
+ * @brief A játékállapotot tárolja
+ */
+ typedef enum gamestate_t{ PLAYING, WW, BW, DRAW }gamestate_t;
+
 
 /**
  * @brief A színeket határozza meg
@@ -152,6 +157,7 @@ typedef struct
     move_t type;
 }generated_move;
 
+
 /**
  * @brief A játék alapvető adatai tárolja
  * @details A board tárol egy 8x8-as táblát, ami a bábukat tartalmazza. Tartalmaz még egy en-passant positiont és
@@ -171,6 +177,9 @@ typedef struct
      * @brief A lépő játékos színe.
      */
     color_t side;
+    gamestate_t state;
 }board;
+
+
 
 #endif

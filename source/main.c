@@ -14,13 +14,31 @@
  * @brief A főprogram, a játékciklus itt fut
  * @return int 
  */
-int main(void){
+int main(void)
+{
     board main_brd = b_create();
     b_setdefault(&main_brd);
     ui_drawboard(main_brd);
 
     while (1)
     {
+        if(main_brd.state == WW)
+        {
+            printf("Vilagos gyozott\n");
+            break;
+        }
+        if(main_brd.state == BW)
+        {
+            printf("Sotet gyozott\n");
+            break;
+        }
+        if(main_brd.state == DRAW)
+        {
+            printf("Dontetlen\n");
+            break;
+        }
+
+
         int usrin_result;
         int size = 6;
         char buffer[6];
@@ -46,6 +64,9 @@ int main(void){
             printf("A lepes nem szabalyos\n");
             continue;
         }
+
+
+
 
         ui_drawboard(main_brd);
     }

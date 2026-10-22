@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAKK: piece struktúrareferencia</title>
+<title>Sakk program: piece struktúrareferencia</title>
 <link rel="icon" href="king.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
@@ -24,9 +24,8 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SAKK<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">Prog nagyházi</div>
   </td>
  </tr>
  </tbody>
@@ -78,7 +77,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structpiece.ht
 </div><!--header-->
 <div class="contents">
 
-<p>A bábu alapvető adatait tárolja: szín, típus, lépett-e.  
+<p>A bábu alapvető adatait tárolja.  
  <a href="#details">Részletek...</a></p>
 
 <p><code>#include &lt;<a class="el" href="types_8h_source.html">types.h</a>&gt;</code></p>
@@ -86,11 +85,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structpiece.ht
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Adatmezők</h2></td></tr>
 <tr class="memitem:a91f468696ef3715504cae5c6629db384" id="r_a91f468696ef3715504cae5c6629db384"><td class="memItemLeft"><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a91f468696ef3715504cae5c6629db384">type</a></td></tr>
+<tr class="memdesc:a91f468696ef3715504cae5c6629db384"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábu típusa. Üres mező esetén EMPTY.  <br /></td></tr>
 <tr class="memitem:aaeb831e7837c1f84c49685266e1c3723" id="r_aaeb831e7837c1f84c49685266e1c3723"><td class="memItemLeft"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaeb831e7837c1f84c49685266e1c3723">col</a></td></tr>
+<tr class="memdesc:aaeb831e7837c1f84c49685266e1c3723"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábu színe, üres mező esetén NONE.  <br /></td></tr>
 <tr class="memitem:a5849a680495b395c75c2269657d5d4a5" id="r_a5849a680495b395c75c2269657d5d4a5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5849a680495b395c75c2269657d5d4a5">hasMoved</a></td></tr>
+<tr class="memdesc:a5849a680495b395c75c2269657d5d4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lépett-e már az adott bábu. Üres ező esetén 0.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
-<div class="textblock"><p>A bábu alapvető adatait tárolja: szín, típus, lépett-e. </p>
+<div class="textblock"><p>A bábu alapvető adatait tárolja. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Adatmezők dokumentációja</h2>
 <a id="aaeb831e7837c1f84c49685266e1c3723" name="aaeb831e7837c1f84c49685266e1c3723"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaeb831e7837c1f84c49685266e1c3723">&#9670;&#160;</a></span>col</h2>
@@ -103,6 +105,8 @@ Adatmezők</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A bábu színe, üres mező esetén NONE. </p>
 
 </div>
 </div>
@@ -118,6 +122,9 @@ Adatmezők</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Lépett-e már az adott bábu. Üres ező esetén 0. </p>
+<p>Ez a az adatmező segít meghatározni, hogy lehetséges-e a sáncolás egy pozícióban </p>
+
 </div>
 </div>
 <a id="a91f468696ef3715504cae5c6629db384" name="a91f468696ef3715504cae5c6629db384"></a>
@@ -131,6 +138,8 @@ Adatmezők</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A bábu típusa. Üres mező esetén EMPTY. </p>
 
 </div>
 </div>

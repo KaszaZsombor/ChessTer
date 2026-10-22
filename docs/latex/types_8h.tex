@@ -11,7 +11,7 @@ Alapvető típusokat és globális konstansokat határozza meg.
 struct \doxymbox{\hyperlink{structposition}{position}}
 \begin{DoxyCompactList}\small\item\em A position a 2 egész számot tárol. \end{DoxyCompactList}\item 
 struct \doxymbox{\hyperlink{structpiece}{piece}}
-\begin{DoxyCompactList}\small\item\em A bábu alapvető adatait tárolja: szín, típus, lépett-\/e. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A bábu alapvető adatait tárolja. \end{DoxyCompactList}\item 
 struct \doxymbox{\hyperlink{structmove}{move}}
 \begin{DoxyCompactList}\small\item\em A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül. \end{DoxyCompactList}\item 
 struct \doxymbox{\hyperlink{structgenerated__move}{generated\+\_\+move}}
@@ -46,6 +46,8 @@ struct \doxymbox{\hyperlink{structboard}{board}}
 \item 
 typedef enum \doxymbox{\hyperlink{types_8h_ab9be55f539b97c45fb9f57efded733c2}{piece\+\_\+t}} \doxymbox{\hyperlink{types_8h_a48019591f18918e160c54f23b0cfe380}{piece\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em A bábutípusokat határozza meg. \end{DoxyCompactList}\item 
+typedef enum \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0}{gamestate\+\_\+t}} \doxymbox{\hyperlink{types_8h_af48c66521f2e3e048fa9952128f4208b}{gamestate\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A játékállapotot tárolja. \end{DoxyCompactList}\item 
 typedef enum \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} \doxymbox{\hyperlink{types_8h_a6ffaf4c694899d6c10868e176a17550d}{color\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em A színeket határozza meg. \end{DoxyCompactList}\item 
 typedef enum \doxymbox{\hyperlink{types_8h_a48717c18c6e17b2a7fb7830e88115b83}{move\+\_\+t}} \doxymbox{\hyperlink{types_8h_a1568cb70d9628a60f73434e75217bca4}{move\+\_\+t}}
@@ -68,6 +70,12 @@ enum \doxymbox{\hyperlink{types_8h_ab9be55f539b97c45fb9f57efded733c2}{piece\+\_\
 , \doxymbox{\hyperlink{types_8h_ab9be55f539b97c45fb9f57efded733c2a157524408d6f0fc4b7dc5e52f3dd3b80}{KING}}
  \}
 \begin{DoxyCompactList}\small\item\em A bábutípusokat határozza meg. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0}{gamestate\+\_\+t}} \{ \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0af095245f5cebc27a97a124345269fed8}{PLAYING}}
+, \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0a382ee855180652976e01061da0a7e5d8}{WW}}
+, \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0adf5c2c2ac9b8451bc03c0b0d2623d22e}{BW}}
+, \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0a61f3c57b6943c85413975507aede78cd}{DRAW}}
+ \}
+\begin{DoxyCompactList}\small\item\em A játékállapotot tárolja. \end{DoxyCompactList}\item 
 enum \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{color\+\_\+t}} \{ \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}
 , \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50}{WHITE}}
 , \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3}{BLACK}}
@@ -208,7 +216,17 @@ typedef enum \doxymbox{\hyperlink{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1}{co
 
 A színeket határozza meg. 
 
-A NONE jelöli a nincs színt. \Hypertarget{types_8h_a1568cb70d9628a60f73434e75217bca4}\index{types.h@{types.h}!move\_t@{move\_t}}
+A NONE jelöli a nincs színt. \Hypertarget{types_8h_af48c66521f2e3e048fa9952128f4208b}\index{types.h@{types.h}!gamestate\_t@{gamestate\_t}}
+\index{gamestate\_t@{gamestate\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{gamestate\_t}{gamestate\_t}}
+{\footnotesize\ttfamily \label{types_8h_af48c66521f2e3e048fa9952128f4208b} 
+typedef enum \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0}{gamestate\+\_\+t}} \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0}{gamestate\+\_\+t}}}
+
+
+
+A játékállapotot tárolja. 
+
+\Hypertarget{types_8h_a1568cb70d9628a60f73434e75217bca4}\index{types.h@{types.h}!move\_t@{move\_t}}
 \index{move\_t@{move\_t}!types.h@{types.h}}
 \doxysubsubsection{\texorpdfstring{move\_t}{move\_t}}
 {\footnotesize\ttfamily \label{types_8h_a1568cb70d9628a60f73434e75217bca4} 
@@ -282,6 +300,42 @@ WHITE&\\
 \index{types.h@{types.h}!BLACK@{BLACK}}
 }\Hypertarget{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3}\label{types_8h_a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3} 
 BLACK&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0}\index{types.h@{types.h}!gamestate\_t@{gamestate\_t}}
+\index{gamestate\_t@{gamestate\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{gamestate\_t}{gamestate\_t}}
+{\footnotesize\ttfamily \label{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0} 
+enum \doxymbox{\hyperlink{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0}{gamestate\+\_\+t}}}
+
+
+
+A játékállapotot tárolja. 
+
+\begin{DoxyEnumFields}[2]{Enumeráció-értékek}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYING@{PLAYING}!types.h@{types.h}}
+\index{types.h@{types.h}!PLAYING@{PLAYING}}
+}\Hypertarget{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0af095245f5cebc27a97a124345269fed8}\label{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0af095245f5cebc27a97a124345269fed8} 
+PLAYING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WW@{WW}!types.h@{types.h}}
+\index{types.h@{types.h}!WW@{WW}}
+}\Hypertarget{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0a382ee855180652976e01061da0a7e5d8}\label{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0a382ee855180652976e01061da0a7e5d8} 
+WW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BW@{BW}!types.h@{types.h}}
+\index{types.h@{types.h}!BW@{BW}}
+}\Hypertarget{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0adf5c2c2ac9b8451bc03c0b0d2623d22e}\label{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0adf5c2c2ac9b8451bc03c0b0d2623d22e} 
+BW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRAW@{DRAW}!types.h@{types.h}}
+\index{types.h@{types.h}!DRAW@{DRAW}}
+}\Hypertarget{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0a61f3c57b6943c85413975507aede78cd}\label{types_8h_aa3df7fce134ae5843a2bd6cdcd5796d0a61f3c57b6943c85413975507aede78cd} 
+DRAW&\\
 \hline
 
 \end{DoxyEnumFields}

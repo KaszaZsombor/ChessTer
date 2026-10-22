@@ -7,6 +7,7 @@
 #include "move.h"
 #include "board.h"
 #include "movegenerator.h"
+#include <stdio.h>
 
 /**
  * @defgroup pos_func Position függvények
@@ -239,6 +240,34 @@ void m_play_generatedmove(board *pbrd, generated_move gmv)
 }
 
 
+int has_moves(board brd, color_t color)
+{
+    int count = 0;
+    if(color == NONE) return 0;
+    for(int i = 0; i < 8; i++)
+    {
+        for(int j = 0; j < 8; j++)
+        {
+            piece pc;
+            (void)b_getpiece(brd, p_createpos(j, i), &pc);
+            if(pc.col == color)
+            {
+                generated_move list[MVL_MAX];
+                int size = 0;
+                (void)mg_generate_all_moves(brd, m_createmove(p_createpos(j, i), NOPOS, EMPTY), list, &size);
+                for(int k = 0; k < size; k++)
+                {
+                    board testbrd = brd;
+                    m_play_generatedmove(&testbrd, list[k]);
+                    if(!b_is_attacked(testbrd, b_get_king_pos(testbrd, color), color))return 1;
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+
 /**
  * @ingroup play_helper
  * @brief A default lépéshvégrehajtó függvény
@@ -252,7 +281,10 @@ void m_play_generatedmove(board *pbrd, generated_move gmv)
 int m_play_move(board *pbrd, move mv)
 {
     /* Ha nincs a táblán a kezdő vagy végpozíció kidobjuk */
-    if(!b_ison(mv.from) || !b_ison(mv.from))return ERROR;
+    if(!b_ison(mv.from) || !b_ison(mv.to))return ERROR;
+    
+    /* Ha a tábla nem játék állapotban van kilépünk*/
+    if(pbrd->state != PLAYING) return ERROR;
 
     /* Azért 27 hosszú a töb, mert 27 a vezér összes lépésése üres táblán
     ennél csak kevesebb lépése lehet egy bábunak*/
@@ -271,11 +303,28 @@ int m_play_move(board *pbrd, move mv)
         {
             board testboard = *pbrd;
             m_play_generatedmove(&testboard, list[i]);
+            
+            /* Sakkban van a király? */
             if(b_is_attacked(testboard, b_get_king_pos(testboard, pbrd->side), pbrd->side))return ERROR;
             m_play_generatedmove(pbrd, list[i]);
+
             pbrd->side = b_opponent_col(pbrd->side);
+            
+            /* Vége van-e a meccsnek? */
+            if(!has_moves(*pbrd, pbrd->side))
+            {
+                if(b_is_attacked(*pbrd, b_get_king_pos(*pbrd, pbrd->side), pbrd->side))
+                {
+                    if(pbrd->side == WHITE) pbrd->state = BW;
+                    else pbrd->state = WW;
+                }
+                else pbrd->state = DRAW;
+            }
+
             return SUCCESS;
         }
+
+
     }
     /* Ha valahogyan ide jutunk, biztosan rossz valami*/
     return ERROR;

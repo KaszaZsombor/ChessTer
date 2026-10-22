@@ -8,7 +8,7 @@
 
 /**
  * @defgroup piece_help Bábutípus függvényei
- * @details A bábuk kezelését könnyítő függvények.
+ * @brief A bábuk kezelését könnyítő függvények.
  */
 
 
@@ -32,7 +32,7 @@ piece b_create_piece(piece_t type, color_t col, int hasMoved)
  * @brief Egy üres bábut visszaadó gyárfüggvény.
  * @return piece 
  */
-piece b_create_empty_piece()
+piece b_create_empty_piece(void)
 {
     /*empty piece gyárfüggvény*/
     return (piece){.col = NONE, .hasMoved = 0, .type = EMPTY};
@@ -52,7 +52,7 @@ piece b_create_empty_piece()
  * @brief board gyárfüggvény
  * @return board 
  */
-board b_create()
+board b_create(void)
 {
     /* Visszaad egy memóriaszemét nélküli táblát, ami teljesen üres*/
     board brd = 
@@ -60,6 +60,7 @@ board b_create()
         .pcs = {0},
         .ep_pos = NOPOS,
         .side = NONE,
+        .state = PLAYING,
     };
     return brd;
 }
@@ -158,6 +159,7 @@ void b_setdefault(board *pbrd)
     /* A táblát alaphelyzetbe állítja */
     pbrd->ep_pos = NOPOS;
     pbrd->side = WHITE;
+    pbrd->state = PLAYING;
     /* A gyalogokat rakjuk a táblára*/
     for(int i = 0; i < 8; i++)
     {

@@ -1,5 +1,5 @@
 CC = gcc
-FLAGS = -Iinclude 
+FLAGS = -Iinclude -std=c99
 DEBUGFLAGS = -Wall -Wextra  -Wshadow -Wpedantic -g
 
 TARGET = sakk.exe

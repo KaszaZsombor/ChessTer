@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAKK: include/movegenerator.h Forrásfájl</title>
+<title>Sakk program: include/movegenerator.h Forrásfájl</title>
 <link rel="icon" href="king.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
@@ -24,9 +24,8 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SAKK<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">Prog nagyházi</div>
   </td>
  </tr>
  </tbody>
@@ -84,16 +83,18 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('movegenerator_
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__move__gen.html#gaaccc2b26cc5eac60be2caeb9eba227d1">mg_generate_all_moves</a>(<a class="code hl_struct" href="structboard.html">board</a> brd, <a class="code hl_struct" href="structmove.html">move</a> mv, <a class="code hl_struct" href="structgenerated__move.html">generated_move</a> *list, <span class="keywordtype">int</span> *size);</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__move__gen.html#ga02e3c6e8f4d2fd06564d995b1dde4e95">mg_generate_all_moves_RBQ</a>(<a class="code hl_struct" href="structboard.html">board</a> brd, <a class="code hl_struct" href="structposition.html">position</a> from, <a class="code hl_struct" href="structpiece.html">piece</a> pcs, <a class="code hl_struct" href="structgenerated__move.html">generated_move</a> *list, <span class="keywordtype">int</span> *size);</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__move__gen.html#gad4cf6d8d388cf7733c44b4f48e0f52d7">mg_generate_all_moves_N</a>(<a class="code hl_struct" href="structboard.html">board</a> brd, <a class="code hl_struct" href="structposition.html">position</a> from, <a class="code hl_struct" href="structpiece.html">piece</a> pcs, <a class="code hl_struct" href="structgenerated__move.html">generated_move</a> *list, <span class="keywordtype">int</span> *size);</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__move__gen.html#gaf5f947bdb763f64ea4dc046fb576ba51">mg_generate_all_moves_K</a>(<a class="code hl_struct" href="structboard.html">board</a> brd, <a class="code hl_struct" href="structposition.html">position</a> from, <a class="code hl_struct" href="structpiece.html">piece</a> pc, <a class="code hl_struct" href="structgenerated__move.html">generated_move</a> *list, <span class="keywordtype">int</span> *size);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__move__gen_html_ga02e3c6e8f4d2fd06564d995b1dde4e95"><div class="ttname"><a href="group__move__gen.html#ga02e3c6e8f4d2fd06564d995b1dde4e95">mg_generate_all_moves_RBQ</a></div><div class="ttdeci">void mg_generate_all_moves_RBQ(board brd, position from, piece pcs, generated_move *list, int *size)</div><div class="ttdoc">Legenerálja az összes szabályos lépést, egy bástyára, futóra vagy vezérre.</div><div class="ttdef"><b>Definition</b> movegenerator.c:49</div></div>
 <div class="ttc" id="agroup__move__gen_html_gaaccc2b26cc5eac60be2caeb9eba227d1"><div class="ttname"><a href="group__move__gen.html#gaaccc2b26cc5eac60be2caeb9eba227d1">mg_generate_all_moves</a></div><div class="ttdeci">int mg_generate_all_moves(board brd, move mv, generated_move *list, int *size)</div><div class="ttdoc">Az érkező lépésprototípust adja a megfelelő lépésgenerátornak, a bábu typusa alapján.</div><div class="ttdef"><b>Definition</b> movegenerator.c:358</div></div>
 <div class="ttc" id="agroup__move__gen_html_gad4cf6d8d388cf7733c44b4f48e0f52d7"><div class="ttname"><a href="group__move__gen.html#gad4cf6d8d388cf7733c44b4f48e0f52d7">mg_generate_all_moves_N</a></div><div class="ttdeci">void mg_generate_all_moves_N(board brd, position from, piece pcs, generated_move *list, int *size)</div><div class="ttdoc">A huszár lépéseinek generálása.</div><div class="ttdef"><b>Definition</b> movegenerator.c:323</div></div>
-<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdoc">A játék alapvető adatai tárolja.</div><div class="ttdef"><b>Definition</b> types.h:131</div></div>
-<div class="ttc" id="astructgenerated__move_html"><div class="ttname"><a href="structgenerated__move.html">generated_move</a></div><div class="ttdoc">Ez a legenerált lépéseket tárolja.</div><div class="ttdef"><b>Definition</b> types.h:120</div></div>
-<div class="ttc" id="astructmove_html"><div class="ttname"><a href="structmove.html">move</a></div><div class="ttdoc">A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül.</div><div class="ttdef"><b>Definition</b> types.h:108</div></div>
-<div class="ttc" id="astructpiece_html"><div class="ttname"><a href="structpiece.html">piece</a></div><div class="ttdoc">A bábu alapvető adatait tárolja: szín, típus, lépett-e.</div><div class="ttdef"><b>Definition</b> types.h:97</div></div>
-<div class="ttc" id="astructposition_html"><div class="ttname"><a href="structposition.html">position</a></div><div class="ttdoc">A position a 2 egész számot tárol.</div><div class="ttdef"><b>Definition</b> types.h:46</div></div>
+<div class="ttc" id="agroup__move__gen_html_gaf5f947bdb763f64ea4dc046fb576ba51"><div class="ttname"><a href="group__move__gen.html#gaf5f947bdb763f64ea4dc046fb576ba51">mg_generate_all_moves_K</a></div><div class="ttdeci">void mg_generate_all_moves_K(board brd, position from, piece pc, generated_move *list, int *size)</div><div class="ttdoc">A király lépéseinek generálása.</div><div class="ttdef"><b>Definition</b> movegenerator.c:273</div></div>
+<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdoc">A játék alapvető adatai tárolja.</div><div class="ttdef"><b>Definition</b> types.h:167</div></div>
+<div class="ttc" id="astructgenerated__move_html"><div class="ttname"><a href="structgenerated__move.html">generated_move</a></div><div class="ttdoc">Ez a legenerált lépéseket tárolja.</div><div class="ttdef"><b>Definition</b> types.h:149</div></div>
+<div class="ttc" id="astructmove_html"><div class="ttname"><a href="structmove.html">move</a></div><div class="ttdoc">A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül.</div><div class="ttdef"><b>Definition</b> types.h:129</div></div>
+<div class="ttc" id="astructpiece_html"><div class="ttname"><a href="structpiece.html">piece</a></div><div class="ttdoc">A bábu alapvető adatait tárolja.</div><div class="ttdef"><b>Definition</b> types.h:109</div></div>
+<div class="ttc" id="astructposition_html"><div class="ttname"><a href="structposition.html">position</a></div><div class="ttdoc">A position a 2 egész számot tárol.</div><div class="ttdef"><b>Definition</b> types.h:51</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Alapvető típusokat és globális konstansokat határozza meg.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

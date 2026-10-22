@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAKK: move struktúrareferencia</title>
+<title>Sakk program: move struktúrareferencia</title>
 <link rel="icon" href="king.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
@@ -24,9 +24,8 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SAKK<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">Prog nagyházi</div>
   </td>
  </tr>
  </tbody>
@@ -86,8 +85,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structmove.htm
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Adatmezők</h2></td></tr>
 <tr class="memitem:ac65a3ce7a9ead1ca9a5f2e92df350bcd" id="r_ac65a3ce7a9ead1ca9a5f2e92df350bcd"><td class="memItemLeft"><a class="el" href="structposition.html">position</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac65a3ce7a9ead1ca9a5f2e92df350bcd">from</a></td></tr>
+<tr class="memdesc:ac65a3ce7a9ead1ca9a5f2e92df350bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépés kezdőpozíciója.  <br /></td></tr>
 <tr class="memitem:abff311edf48f30520a028b3189465c47" id="r_abff311edf48f30520a028b3189465c47"><td class="memItemLeft"><a class="el" href="structposition.html">position</a>&#160;</td><td class="memItemRight"><a class="el" href="#abff311edf48f30520a028b3189465c47">to</a></td></tr>
+<tr class="memdesc:abff311edf48f30520a028b3189465c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépés végpozíciója.  <br /></td></tr>
 <tr class="memitem:a23f96ffe03be89e826b32836ca46eefd" id="r_a23f96ffe03be89e826b32836ca46eefd"><td class="memItemLeft"><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a23f96ffe03be89e826b32836ca46eefd">promotion_piece</a></td></tr>
+<tr class="memdesc:a23f96ffe03be89e826b32836ca46eefd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábu, amivé átalakul a gyalog. Ha nincs akkor EMPTY.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül. </p>
@@ -104,6 +106,8 @@ Adatmezők</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A lépés kezdőpozíciója. </p>
+
 </div>
 </div>
 <a id="a23f96ffe03be89e826b32836ca46eefd" name="a23f96ffe03be89e826b32836ca46eefd"></a>
@@ -118,6 +122,8 @@ Adatmezők</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A bábu, amivé átalakul a gyalog. Ha nincs akkor EMPTY. </p>
+
 </div>
 </div>
 <a id="abff311edf48f30520a028b3189465c47" name="abff311edf48f30520a028b3189465c47"></a>
@@ -131,6 +137,8 @@ Adatmezők</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A lépés végpozíciója. </p>
 
 </div>
 </div>

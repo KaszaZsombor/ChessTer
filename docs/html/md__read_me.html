@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAKK: README.md fájlreferencia</title>
+<title>Sakk: Sakk</title>
 <link rel="icon" href="king.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
@@ -24,7 +24,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SAKK<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sakk<span id="projectnumber">&#160;1.0.0</span>
    </div>
    <div id="projectbrief">Prog nagyházi</div>
   </td>
@@ -69,15 +69,47 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('_r_e_a_d_m_e_8md.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('md__read_me.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
-<div class="header">
-  <div class="headertitle"><div class="title">README.md fájlreferencia</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Sakk </div></div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+2026/27 őszi félév, sakk program dokumentáció</h1>
+<p>Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A projekt egy sakkjáték. A játék a stdin-ről lépéseket olvas be, lefordítja, majd a szabályosság ellenőrzése után a stdout -ra lerajzolja a lépés utáni sakktábla állását.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Mit tud</h2>
+<ul>
+<li>A program figyel az éppen következő játékosra, kétszer ugyanaz a szín nem léphet.</li>
+<li>A program figyel a sáncolási szabályokra és a sakkokra. Lépés után nem maradhat sakkban a lépő szín királya.</li>
+<li>A szabályos lépések betartatásán kívül az átalakulás során meg lehet adni, milyen bábuvá alakuljon át a gyalog. Amennyiben nem volt ilyen megadva, automatikusan vezérré alakul.</li>
+<li>A játszmát egyszerűen meg lehet szakítani a stdin EOF karakterrel. Windowson ez Crtl + z.</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Telepítés és használat</h2>
+<ul>
+<li>A telepítése lehetséges a sakk.exe fájl letöltésével és futtatásával.</li>
+<li>A projekt letöltésével source-ból is építhető a projekt, a github oldalról letöltve.</li>
+<li>A futtatás után az alábbi formátumban lehet a lépéseket megadni: filerowfilerow(optional Q N B R).</li>
+<li>Például: e2e4 vagy e7e8Q. Ha átváltozásnál nincs megadva bábu, automatikusan vezérré változik a gyalog.</li>
+<li>Minden lépés után ENTER kell a helyes működéshez</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Projekt elérhetősége</h2>
+<ul>
+<li><a href="https://github.com/KaszaZsombor/SAKK">A projekt github oldala itt elérhető</a></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+A dokumentáció</h2>
+<ul>
+<li><a href="https://docs.kaszazsombor.hu">A projekt dokumentációja itt elérhető</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -90,7 +122,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_r_e_a_d_m_e_8
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="_r_e_a_d_m_e_8md.html">README.md</a></li>
     <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

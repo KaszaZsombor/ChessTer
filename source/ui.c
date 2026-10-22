@@ -44,7 +44,7 @@ int ui_getusrin(int *size, char *msg)
     }
     *size = i + 1;
     /* A stdin letisztítása ha túl sok karakter volt az input */
-    char c;
+    int c;
     while ((c = getchar()) != '\n' && c != EOF) { }
     return ERROR;
 }

@@ -159,10 +159,8 @@ void mg_generate_all_moves_P(board brd, move mv, piece pc, generated_move *list,
     searchpos = p_add(searchpos, forward);
 
     piece foundpcs;
-    /*biztosan a táblán van, ha szélső mezőre ér promotion miatt már nem galog*/
-    (void)b_getpiece(brd, searchpos, &foundpcs);
 
-    if(foundpcs.type == EMPTY)
+    if( b_getpiece(brd, searchpos, &foundpcs) != ERROR && foundpcs.type == EMPTY)
     {
         if(searchpos.row == 0 || searchpos.row == 7)
         {
@@ -361,9 +359,9 @@ int mg_generate_all_moves(board brd, move mv, generated_move *list, int *size)
     /*Ide átmásoljuk a táblát, a generálás során véletlenül sem akarunk az eredetin változtatni
     a board, position a lépésehatározáshoz szükséges*/
     piece mvpcs;
-    /* biztosan nem lesz error a visszatérése ennek, mert a mg_make_move-bane már leellenőriztük
-    hogy a tálán van a position. Ha már itt megvan, átadjuk a lépésgenerálóknak is*/
-    (void)b_getpiece(brd, mv.from, &mvpcs);
+
+    if(b_getpiece(brd, mv.from, &mvpcs) == ERROR){*size = 0; return ERROR;}
+
     if(mvpcs.col != brd.side)return ERROR;
     switch(mvpcs.type)
     {
@@ -379,5 +377,3 @@ int mg_generate_all_moves(board brd, move mv, generated_move *list, int *size)
     }
     return SUCCESS;
 }
-
-

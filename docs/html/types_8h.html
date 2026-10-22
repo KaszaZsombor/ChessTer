@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAKK: include/types.h fájlreferencia</title>
+<title>Sakk program: include/types.h fájlreferencia</title>
 <link rel="icon" href="king.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
@@ -24,9 +24,8 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SAKK<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">Prog nagyházi</div>
   </td>
  </tr>
  </tbody>
@@ -88,7 +87,7 @@ Adatszerkezetek</h2></td></tr>
 <tr class="memitem:position" id="r_position"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structposition.html">position</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A position a 2 egész számot tárol.  <a href="structposition.html#details">Részletek...</a><br /></td></tr>
 <tr class="memitem:piece" id="r_piece"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpiece.html">piece</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábu alapvető adatait tárolja: szín, típus, lépett-e.  <a href="structpiece.html#details">Részletek...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábu alapvető adatait tárolja.  <a href="structpiece.html#details">Részletek...</a><br /></td></tr>
 <tr class="memitem:move" id="r_move"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structmove.html">move</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül.  <a href="structmove.html#details">Részletek...</a><br /></td></tr>
 <tr class="memitem:generated_5Fmove" id="r_generated_5Fmove"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgenerated__move.html">generated_move</a></td></tr>
@@ -123,6 +122,8 @@ Makródefiníciók</h2></td></tr>
 Típusdefiníciók</h2></td></tr>
 <tr class="memitem:a48019591f18918e160c54f23b0cfe380" id="r_a48019591f18918e160c54f23b0cfe380"><td class="memItemLeft">typedef enum <a class="el" href="#ab9be55f539b97c45fb9f57efded733c2">piece_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a48019591f18918e160c54f23b0cfe380">piece_t</a></td></tr>
 <tr class="memdesc:a48019591f18918e160c54f23b0cfe380"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábutípusokat határozza meg.  <br /></td></tr>
+<tr class="memitem:af48c66521f2e3e048fa9952128f4208b" id="r_af48c66521f2e3e048fa9952128f4208b"><td class="memItemLeft">typedef enum <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#af48c66521f2e3e048fa9952128f4208b">gamestate_t</a></td></tr>
+<tr class="memdesc:af48c66521f2e3e048fa9952128f4208b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A játékállapotot tárolja.  <br /></td></tr>
 <tr class="memitem:a6ffaf4c694899d6c10868e176a17550d" id="r_a6ffaf4c694899d6c10868e176a17550d"><td class="memItemLeft">typedef enum <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6ffaf4c694899d6c10868e176a17550d">color_t</a></td></tr>
 <tr class="memdesc:a6ffaf4c694899d6c10868e176a17550d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A színeket határozza meg.  <br /></td></tr>
 <tr class="memitem:a1568cb70d9628a60f73434e75217bca4" id="r_a1568cb70d9628a60f73434e75217bca4"><td class="memItemLeft">typedef enum <a class="el" href="#a48717c18c6e17b2a7fb7830e88115b83">move_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1568cb70d9628a60f73434e75217bca4">move_t</a></td></tr>
@@ -146,6 +147,12 @@ Enumerációk</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:ab9be55f539b97c45fb9f57efded733c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bábutípusokat határozza meg.  <a href="#ab9be55f539b97c45fb9f57efded733c2">Részletek...</a><br /></td></tr>
+<tr class="memitem:aa3df7fce134ae5843a2bd6cdcd5796d0" id="r_aa3df7fce134ae5843a2bd6cdcd5796d0"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a> { <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0af095245f5cebc27a97a124345269fed8">PLAYING</a>
+, <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0a382ee855180652976e01061da0a7e5d8">WW</a>
+, <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0adf5c2c2ac9b8451bc03c0b0d2623d22e">BW</a>
+, <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0a61f3c57b6943c85413975507aede78cd">DRAW</a>
+ }</td></tr>
+<tr class="memdesc:aa3df7fce134ae5843a2bd6cdcd5796d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A játékállapotot tárolja.  <a href="#aa3df7fce134ae5843a2bd6cdcd5796d0">Részletek...</a><br /></td></tr>
 <tr class="memitem:a0a8ef1b5e1941b7257e545cc33405ff1" id="r_a0a8ef1b5e1941b7257e545cc33405ff1"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> { <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>
 , <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50">WHITE</a>
 , <a class="el" href="#a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3">BLACK</a>
@@ -345,6 +352,22 @@ Enumerációk</h2></td></tr>
 
 </div>
 </div>
+<a id="af48c66521f2e3e048fa9952128f4208b" name="af48c66521f2e3e048fa9952128f4208b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48c66521f2e3e048fa9952128f4208b">&#9670;&#160;</a></span>gamestate_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a> <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A játékállapotot tárolja. </p>
+
+</div>
+</div>
 <a id="a1568cb70d9628a60f73434e75217bca4" name="a1568cb70d9628a60f73434e75217bca4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1568cb70d9628a60f73434e75217bca4">&#9670;&#160;</a></span>move_t</h2>
 
@@ -418,6 +441,28 @@ Enumerációk</h2></td></tr>
 <tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2" name="a0a8ef1b5e1941b7257e545cc33405ff1ac157bdf0b85a40d2619cbc8bc1ae5fe2"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50" name="a0a8ef1b5e1941b7257e545cc33405ff1a283fc479650da98250635b9c3c0e7e50"></a>WHITE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3" name="a0a8ef1b5e1941b7257e545cc33405ff1af77fb67151d0c18d397069ad8c271ba3"></a>BLACK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aa3df7fce134ae5843a2bd6cdcd5796d0" name="aa3df7fce134ae5843a2bd6cdcd5796d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3df7fce134ae5843a2bd6cdcd5796d0">&#9670;&#160;</a></span>gamestate_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A játékállapotot tárolja. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeráció-értékek</th></tr><tr><td class="fieldname"><a id="aa3df7fce134ae5843a2bd6cdcd5796d0af095245f5cebc27a97a124345269fed8" name="aa3df7fce134ae5843a2bd6cdcd5796d0af095245f5cebc27a97a124345269fed8"></a>PLAYING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa3df7fce134ae5843a2bd6cdcd5796d0a382ee855180652976e01061da0a7e5d8" name="aa3df7fce134ae5843a2bd6cdcd5796d0a382ee855180652976e01061da0a7e5d8"></a>WW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa3df7fce134ae5843a2bd6cdcd5796d0adf5c2c2ac9b8451bc03c0b0d2623d22e" name="aa3df7fce134ae5843a2bd6cdcd5796d0adf5c2c2ac9b8451bc03c0b0d2623d22e"></a>BW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa3df7fce134ae5843a2bd6cdcd5796d0a61f3c57b6943c85413975507aede78cd" name="aa3df7fce134ae5843a2bd6cdcd5796d0a61f3c57b6943c85413975507aede78cd"></a>DRAW&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
