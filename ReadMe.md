@@ -19,9 +19,9 @@ Ez a projekt a programozás alapjai 1 tantárgy nagy házifeladatra készült. A
 
 ### Projekt elérhetősége:
 
-- https://github.com/KaszaZsombor/prog_hazi_v3
+- https://github.com/KaszaZsombor/SAKK
 
 
 ### A dokumentáció:
 
-- https://kaszazsombor.hu 
+- https://docs.kaszazsombor.hu/
