@@ -129,8 +129,6 @@ A program a sakk szabályai alapján ellenőrzi a lehetséges lépéseket.
 
 ### 4. További funkciók
 
-A további megvalósított funkciók itt sorolhatók fel, például:
-
 - Sakk és sakk-matt felismerése.
 - Patthelyzet felismerése.
 - Gyalogátváltozás kezelése.
