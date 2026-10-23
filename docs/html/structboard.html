@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakk program: board struktúrareferencia</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Adatmezők</a>  </div>
+  <div class="headertitle"><div class="title">board struktúrareferencia</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A játék alapvető adatai tárolja.  
+ <a href="#details">Részletek...</a></p>
+
+<p><code>#include &lt;<a class="el" href="types_8h_source.html">types.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Adatmezők</h2></td></tr>
+<tr class="memitem:a545b83b1d5521fb4871d9045bd1ac00c" id="r_a545b83b1d5521fb4871d9045bd1ac00c"><td class="memItemLeft"><a class="el" href="structpiece.html">piece</a>&#160;</td><td class="memItemRight"><a class="el" href="#a545b83b1d5521fb4871d9045bd1ac00c">pcs</a> [8][8]</td></tr>
+<tr class="memdesc:a545b83b1d5521fb4871d9045bd1ac00c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tábla bábuit tárolja.  <br /></td></tr>
+<tr class="memitem:a8f2dd97398d2e5cf2541a4926a0d2170" id="r_a8f2dd97398d2e5cf2541a4926a0d2170"><td class="memItemLeft"><a class="el" href="structposition.html">position</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8f2dd97398d2e5cf2541a4926a0d2170">ep_pos</a></td></tr>
+<tr class="memdesc:a8f2dd97398d2e5cf2541a4926a0d2170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az en-passant pozíció helyét tárolja. Ha nincs NOPOS értékét veszi fe.  <br /></td></tr>
+<tr class="memitem:a943bc2feac347f8fec9e3ea8849222d2" id="r_a943bc2feac347f8fec9e3ea8849222d2"><td class="memItemLeft"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a943bc2feac347f8fec9e3ea8849222d2">side</a></td></tr>
+<tr class="memdesc:a943bc2feac347f8fec9e3ea8849222d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépő játékos színe.  <br /></td></tr>
+<tr class="memitem:a0418a3e8e2a417bbdc90a1b88a2c75d4" id="r_a0418a3e8e2a417bbdc90a1b88a2c75d4"><td class="memItemLeft"><a class="el" href="types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0418a3e8e2a417bbdc90a1b88a2c75d4">state</a></td></tr>
+<tr class="memdesc:a0418a3e8e2a417bbdc90a1b88a2c75d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A meccs állapota.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>A játék alapvető adatai tárolja. </p>
+<p>A board tárol egy 8x8-as táblát, ami a bábukat tartalmazza. Tartalmaz még egy en-passant positiont és a lépő oldal színét. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Adatmezők dokumentációja</h2>
+<a id="a8f2dd97398d2e5cf2541a4926a0d2170" name="a8f2dd97398d2e5cf2541a4926a0d2170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2dd97398d2e5cf2541a4926a0d2170">&#9670;&#160;</a></span>ep_pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structposition.html">position</a> ep_pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Az en-passant pozíció helyét tárolja. Ha nincs NOPOS értékét veszi fe. </p>
+
+</div>
+</div>
+<a id="a545b83b1d5521fb4871d9045bd1ac00c" name="a545b83b1d5521fb4871d9045bd1ac00c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545b83b1d5521fb4871d9045bd1ac00c">&#9670;&#160;</a></span>pcs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpiece.html">piece</a> pcs[8][8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A tábla bábuit tárolja. </p>
+
+</div>
+</div>
+<a id="a943bc2feac347f8fec9e3ea8849222d2" name="a943bc2feac347f8fec9e3ea8849222d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943bc2feac347f8fec9e3ea8849222d2">&#9670;&#160;</a></span>side</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> side</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A lépő játékos színe. </p>
+
+</div>
+</div>
+<a id="a0418a3e8e2a417bbdc90a1b88a2c75d4" name="a0418a3e8e2a417bbdc90a1b88a2c75d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0418a3e8e2a417bbdc90a1b88a2c75d4">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a> state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A meccs állapota. </p>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció a struktúráról a következő fájl alapján készült:<ul>
+<li>include/<a class="el" href="types_8h_source.html">types.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

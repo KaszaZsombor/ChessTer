@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakk program: include/board.h Forrásfájl</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">board.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="board_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BOARD_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BOARD_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/*GYÁR*/</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><a class="code hl_struct" href="structboard.html">board</a> <a class="code hl_function" href="group__board__help.html#ga92c564dad1d18330eeca3ae036077904">b_create</a>();</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><a class="code hl_struct" href="structpiece.html">piece</a> <a class="code hl_function" href="group__piece__help.html#gad9ab86ec5a6bf0ae3d25cedae3e457d9">b_create_piece</a>(<a class="code hl_enumeration" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> type, <a class="code hl_enumeration" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col, <span class="keywordtype">int</span> hasMoved);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><a class="code hl_struct" href="structpiece.html">piece</a> <a class="code hl_function" href="group__piece__help.html#ga91ba2e6798967317b81bfb557d43f80a">b_create_empty_piece</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/*SET*/</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__board__help.html#ga66b9896e9724f9f9375f6c30f83c8d4c">b_setdefault</a>(<a class="code hl_struct" href="structboard.html">board</a> *pbrd);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__board__help.html#ga83db7a4eb83c00f5e6b2a834fa165703">b_setpiece</a>(<a class="code hl_struct" href="structboard.html">board</a> *pbrd, <a class="code hl_struct" href="structposition.html">position</a> pos, <a class="code hl_struct" href="structpiece.html">piece</a> pcs);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/*BOOl*/</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__board__help.html#ga9193b46af362531bf7334622e60d7cb7">b_ison</a>(<a class="code hl_struct" href="structposition.html">position</a> pos);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__board__help.html#ga68e48836b74749c0896cfd02111c7cee">b_is_attacked</a>(<a class="code hl_struct" href="structboard.html">board</a> brd, <a class="code hl_struct" href="structposition.html">position</a> pos, <a class="code hl_enumeration" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/*GET*/</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__board__help.html#ga9cf43fd41d2a82ebacc682660633b631">b_getpiece</a>(<a class="code hl_struct" href="structboard.html">board</a> brd, <a class="code hl_struct" href="structposition.html">position</a> pos, <a class="code hl_struct" href="structpiece.html">piece</a> *pcs);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><a class="code hl_enumeration" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> <a class="code hl_function" href="group__board__help.html#ga1d099ed0e5acac0adc863ab62ec12cda">b_opponent_col</a>(<a class="code hl_enumeration" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> color);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_function" href="group__board__help.html#gab1950583414fdc7eb8c49409f4b9405b">b_get_king_pos</a>(<a class="code hl_struct" href="structboard.html">board</a> brd, <a class="code hl_enumeration" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__board__help_html_ga1d099ed0e5acac0adc863ab62ec12cda"><div class="ttname"><a href="group__board__help.html#ga1d099ed0e5acac0adc863ab62ec12cda">b_opponent_col</a></div><div class="ttdeci">color_t b_opponent_col(color_t color)</div><div class="ttdoc">Visszaadja az ellenfél színét.</div><div class="ttdef"><b>Definition</b> board.c:122</div></div>
+<div class="ttc" id="agroup__board__help_html_ga66b9896e9724f9f9375f6c30f83c8d4c"><div class="ttname"><a href="group__board__help.html#ga66b9896e9724f9f9375f6c30f83c8d4c">b_setdefault</a></div><div class="ttdeci">void b_setdefault(board *pbrd)</div><div class="ttdoc">Az adott táblát alaphelyzetbe állítja.</div><div class="ttdef"><b>Definition</b> board.c:157</div></div>
+<div class="ttc" id="agroup__board__help_html_ga68e48836b74749c0896cfd02111c7cee"><div class="ttname"><a href="group__board__help.html#ga68e48836b74749c0896cfd02111c7cee">b_is_attacked</a></div><div class="ttdeci">int b_is_attacked(board brd, position pos, color_t col)</div><div class="ttdoc">Megnézi az adott position támadva van-e, egy adott szín által.</div><div class="ttdef"><b>Definition</b> board.c:193</div></div>
+<div class="ttc" id="agroup__board__help_html_ga83db7a4eb83c00f5e6b2a834fa165703"><div class="ttname"><a href="group__board__help.html#ga83db7a4eb83c00f5e6b2a834fa165703">b_setpiece</a></div><div class="ttdeci">int b_setpiece(board *pbrd, position pos, piece pcs)</div><div class="ttdoc">Beállítja az adott bábut az adott tábálra.</div><div class="ttdef"><b>Definition</b> board.c:106</div></div>
+<div class="ttc" id="agroup__board__help_html_ga9193b46af362531bf7334622e60d7cb7"><div class="ttname"><a href="group__board__help.html#ga9193b46af362531bf7334622e60d7cb7">b_ison</a></div><div class="ttdeci">int b_ison(position pos)</div><div class="ttdoc">Visszaadja, hogy a pozíció a táblán van-e vagy sem.</div><div class="ttdef"><b>Definition</b> board.c:75</div></div>
+<div class="ttc" id="agroup__board__help_html_ga92c564dad1d18330eeca3ae036077904"><div class="ttname"><a href="group__board__help.html#ga92c564dad1d18330eeca3ae036077904">b_create</a></div><div class="ttdeci">board b_create()</div><div class="ttdoc">board gyárfüggvény</div><div class="ttdef"><b>Definition</b> board.c:55</div></div>
+<div class="ttc" id="agroup__board__help_html_ga9cf43fd41d2a82ebacc682660633b631"><div class="ttname"><a href="group__board__help.html#ga9cf43fd41d2a82ebacc682660633b631">b_getpiece</a></div><div class="ttdeci">int b_getpiece(board brd, position pos, piece *pcs)</div><div class="ttdoc">Egy piece lekérése egy tábláról.</div><div class="ttdef"><b>Definition</b> board.c:89</div></div>
+<div class="ttc" id="agroup__board__help_html_gab1950583414fdc7eb8c49409f4b9405b"><div class="ttname"><a href="group__board__help.html#gab1950583414fdc7eb8c49409f4b9405b">b_get_king_pos</a></div><div class="ttdeci">position b_get_king_pos(board brd, color_t col)</div><div class="ttdoc">Visszaadja egy táblán a király helyzetét.</div><div class="ttdef"><b>Definition</b> board.c:138</div></div>
+<div class="ttc" id="agroup__piece__help_html_ga91ba2e6798967317b81bfb557d43f80a"><div class="ttname"><a href="group__piece__help.html#ga91ba2e6798967317b81bfb557d43f80a">b_create_empty_piece</a></div><div class="ttdeci">piece b_create_empty_piece()</div><div class="ttdoc">Egy üres bábut visszaadó gyárfüggvény.</div><div class="ttdef"><b>Definition</b> board.c:35</div></div>
+<div class="ttc" id="agroup__piece__help_html_gad9ab86ec5a6bf0ae3d25cedae3e457d9"><div class="ttname"><a href="group__piece__help.html#gad9ab86ec5a6bf0ae3d25cedae3e457d9">b_create_piece</a></div><div class="ttdeci">piece b_create_piece(piece_t type, color_t col, int hasMoved)</div><div class="ttdoc">Piece gyárfüggvény adott adatok alapján.</div><div class="ttdef"><b>Definition</b> board.c:23</div></div>
+<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdoc">A játék alapvető adatai tárolja.</div><div class="ttdef"><b>Definition</b> types.h:167</div></div>
+<div class="ttc" id="astructpiece_html"><div class="ttname"><a href="structpiece.html">piece</a></div><div class="ttdoc">A bábu alapvető adatait tárolja.</div><div class="ttdef"><b>Definition</b> types.h:109</div></div>
+<div class="ttc" id="astructposition_html"><div class="ttname"><a href="structposition.html">position</a></div><div class="ttdoc">A position a 2 egész számot tárol.</div><div class="ttdef"><b>Definition</b> types.h:51</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Alapvető típusokat és globális konstansokat határozza meg.</div></div>
+<div class="ttc" id="atypes_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1"><div class="ttname"><a href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></div><div class="ttdeci">color_t</div><div class="ttdoc">A színeket határozza meg.</div><div class="ttdef"><b>Definition</b> types.h:36</div></div>
+<div class="ttc" id="atypes_8h_html_ab9be55f539b97c45fb9f57efded733c2"><div class="ttname"><a href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a></div><div class="ttdeci">piece_t</div><div class="ttdoc">A bábutípusokat határozza meg.</div><div class="ttdef"><b>Definition</b> types.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakk program: include/move.h Forrásfájl</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">move.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="move_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MOVE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MOVE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="board_8h.html">board.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*POSITION*/</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_function" href="group__pos__func.html#ga4c02827411b066729251fa1334bc7403">p_createpos</a>(<span class="keywordtype">int</span> file, <span class="keywordtype">int</span> row);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__pos__func.html#ga2ffc7f64a601b49630b31efa511f4c7a">p_isequal</a>(<a class="code hl_struct" href="structposition.html">position</a> a, <a class="code hl_struct" href="structposition.html">position</a> b);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_function" href="group__pos__func.html#ga4ff85461365822434107b4874e346094">p_times</a>(<a class="code hl_struct" href="structposition.html">position</a> a, <span class="keywordtype">int</span> b);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_function" href="group__pos__func.html#ga9bef2a1af9bd1a0b0e4cb43f4519fb3a">p_add</a>(<a class="code hl_struct" href="structposition.html">position</a> a, <a class="code hl_struct" href="structposition.html">position</a> b);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/*MOVE*/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><a class="code hl_struct" href="structmove.html">move</a> <a class="code hl_function" href="group__play__helper.html#gaf426556df93c62ac9051785ab43c3c77">m_createmove</a>(<a class="code hl_struct" href="structposition.html">position</a> from, <a class="code hl_struct" href="structposition.html">position</a> to, <a class="code hl_enumeration" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> pp);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">int</span> <a class="code hl_function" href="group__play__helper.html#gae45395e81360801c5369ef37ab263f96">m_play_move</a>(<a class="code hl_struct" href="structboard.html">board</a> *pbrd, <a class="code hl_struct" href="structmove.html">move</a> mv);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aboard_8h_html"><div class="ttname"><a href="board_8h.html">board.h</a></div></div>
+<div class="ttc" id="agroup__play__helper_html_gae45395e81360801c5369ef37ab263f96"><div class="ttname"><a href="group__play__helper.html#gae45395e81360801c5369ef37ab263f96">m_play_move</a></div><div class="ttdeci">int m_play_move(board *pbrd, move mv)</div><div class="ttdoc">A default lépéshvégrehajtó függvény.</div><div class="ttdef"><b>Definition</b> move.c:299</div></div>
+<div class="ttc" id="agroup__play__helper_html_gaf426556df93c62ac9051785ab43c3c77"><div class="ttname"><a href="group__play__helper.html#gaf426556df93c62ac9051785ab43c3c77">m_createmove</a></div><div class="ttdeci">move m_createmove(position from, position to, piece_t pp)</div><div class="ttdoc">Lépés gyárfüggvény.</div><div class="ttdef"><b>Definition</b> move.c:77</div></div>
+<div class="ttc" id="agroup__pos__func_html_ga2ffc7f64a601b49630b31efa511f4c7a"><div class="ttname"><a href="group__pos__func.html#ga2ffc7f64a601b49630b31efa511f4c7a">p_isequal</a></div><div class="ttdeci">int p_isequal(position a, position b)</div><div class="ttdoc">A két megadott pozíció egyenlőségét vizsgálja.</div><div class="ttdef"><b>Definition</b> move.c:38</div></div>
+<div class="ttc" id="agroup__pos__func_html_ga4c02827411b066729251fa1334bc7403"><div class="ttname"><a href="group__pos__func.html#ga4c02827411b066729251fa1334bc7403">p_createpos</a></div><div class="ttdeci">position p_createpos(int file, int row)</div><div class="ttdoc">A position gyárfüggvény.</div><div class="ttdef"><b>Definition</b> move.c:29</div></div>
+<div class="ttc" id="agroup__pos__func_html_ga4ff85461365822434107b4874e346094"><div class="ttname"><a href="group__pos__func.html#ga4ff85461365822434107b4874e346094">p_times</a></div><div class="ttdeci">position p_times(position a, int b)</div><div class="ttdoc">Egész szám és pozíció szorzata.</div><div class="ttdef"><b>Definition</b> move.c:56</div></div>
+<div class="ttc" id="agroup__pos__func_html_ga9bef2a1af9bd1a0b0e4cb43f4519fb3a"><div class="ttname"><a href="group__pos__func.html#ga9bef2a1af9bd1a0b0e4cb43f4519fb3a">p_add</a></div><div class="ttdeci">position p_add(position a, position b)</div><div class="ttdoc">Összead 2 pozíciót.</div><div class="ttdef"><b>Definition</b> move.c:47</div></div>
+<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdoc">A játék alapvető adatai tárolja.</div><div class="ttdef"><b>Definition</b> types.h:167</div></div>
+<div class="ttc" id="astructmove_html"><div class="ttname"><a href="structmove.html">move</a></div><div class="ttdoc">A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül.</div><div class="ttdef"><b>Definition</b> types.h:129</div></div>
+<div class="ttc" id="astructposition_html"><div class="ttname"><a href="structposition.html">position</a></div><div class="ttdoc">A position a 2 egész számot tárol.</div><div class="ttdef"><b>Definition</b> types.h:51</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Alapvető típusokat és globális konstansokat határozza meg.</div></div>
+<div class="ttc" id="atypes_8h_html_ab9be55f539b97c45fb9f57efded733c2"><div class="ttname"><a href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a></div><div class="ttdeci">piece_t</div><div class="ttdoc">A bábutípusokat határozza meg.</div><div class="ttdef"><b>Definition</b> types.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

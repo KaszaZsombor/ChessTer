@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakk program: source/board.c fájlreferencia</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Függvények</a>  </div>
+  <div class="headertitle"><div class="title">board.c fájlreferencia</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A tábla kezelését szolgáló függvények.  
+<a href="#details">Részletek...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="move_8h_source.html">move.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="movegenerator_8h_source.html">movegenerator.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Függvények</h2></td></tr>
+<tr class="memitem:gad9ab86ec5a6bf0ae3d25cedae3e457d9" id="r_gad9ab86ec5a6bf0ae3d25cedae3e457d9"><td class="memItemLeft"><a class="el" href="structpiece.html">piece</a>&#160;</td><td class="memItemRight"><a class="el" href="group__piece__help.html#gad9ab86ec5a6bf0ae3d25cedae3e457d9">b_create_piece</a> (<a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> type, <a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col, int hasMoved)</td></tr>
+<tr class="memdesc:gad9ab86ec5a6bf0ae3d25cedae3e457d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Piece gyárfüggvény adott adatok alapján.  <br /></td></tr>
+<tr class="memitem:ga91ba2e6798967317b81bfb557d43f80a" id="r_ga91ba2e6798967317b81bfb557d43f80a"><td class="memItemLeft"><a class="el" href="structpiece.html">piece</a>&#160;</td><td class="memItemRight"><a class="el" href="group__piece__help.html#ga91ba2e6798967317b81bfb557d43f80a">b_create_empty_piece</a> (void)</td></tr>
+<tr class="memdesc:ga91ba2e6798967317b81bfb557d43f80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy üres bábut visszaadó gyárfüggvény.  <br /></td></tr>
+<tr class="memitem:ga92c564dad1d18330eeca3ae036077904" id="r_ga92c564dad1d18330eeca3ae036077904"><td class="memItemLeft"><a class="el" href="structboard.html">board</a>&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#ga92c564dad1d18330eeca3ae036077904">b_create</a> (void)</td></tr>
+<tr class="memdesc:ga92c564dad1d18330eeca3ae036077904"><td class="mdescLeft">&#160;</td><td class="mdescRight">board gyárfüggvény  <br /></td></tr>
+<tr class="memitem:ga9193b46af362531bf7334622e60d7cb7" id="r_ga9193b46af362531bf7334622e60d7cb7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#ga9193b46af362531bf7334622e60d7cb7">b_ison</a> (<a class="el" href="structposition.html">position</a> pos)</td></tr>
+<tr class="memdesc:ga9193b46af362531bf7334622e60d7cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja, hogy a pozíció a táblán van-e vagy sem.  <br /></td></tr>
+<tr class="memitem:ga9cf43fd41d2a82ebacc682660633b631" id="r_ga9cf43fd41d2a82ebacc682660633b631"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#ga9cf43fd41d2a82ebacc682660633b631">b_getpiece</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> pos, <a class="el" href="structpiece.html">piece</a> *ppc)</td></tr>
+<tr class="memdesc:ga9cf43fd41d2a82ebacc682660633b631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy piece lekérése egy tábláról.  <br /></td></tr>
+<tr class="memitem:ga83db7a4eb83c00f5e6b2a834fa165703" id="r_ga83db7a4eb83c00f5e6b2a834fa165703"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#ga83db7a4eb83c00f5e6b2a834fa165703">b_setpiece</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structposition.html">position</a> pos, <a class="el" href="structpiece.html">piece</a> pc)</td></tr>
+<tr class="memdesc:ga83db7a4eb83c00f5e6b2a834fa165703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Beállítja az adott bábut az adott tábálra.  <br /></td></tr>
+<tr class="memitem:ga1d099ed0e5acac0adc863ab62ec12cda" id="r_ga1d099ed0e5acac0adc863ab62ec12cda"><td class="memItemLeft"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#ga1d099ed0e5acac0adc863ab62ec12cda">b_opponent_col</a> (<a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> color)</td></tr>
+<tr class="memdesc:ga1d099ed0e5acac0adc863ab62ec12cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja az ellenfél színét.  <br /></td></tr>
+<tr class="memitem:gab1950583414fdc7eb8c49409f4b9405b" id="r_gab1950583414fdc7eb8c49409f4b9405b"><td class="memItemLeft"><a class="el" href="structposition.html">position</a>&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#gab1950583414fdc7eb8c49409f4b9405b">b_get_king_pos</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col)</td></tr>
+<tr class="memdesc:gab1950583414fdc7eb8c49409f4b9405b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja egy táblán a király helyzetét.  <br /></td></tr>
+<tr class="memitem:ga66b9896e9724f9f9375f6c30f83c8d4c" id="r_ga66b9896e9724f9f9375f6c30f83c8d4c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#ga66b9896e9724f9f9375f6c30f83c8d4c">b_setdefault</a> (<a class="el" href="structboard.html">board</a> *pbrd)</td></tr>
+<tr class="memdesc:ga66b9896e9724f9f9375f6c30f83c8d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az adott táblát alaphelyzetbe állítja.  <br /></td></tr>
+<tr class="memitem:ga68e48836b74749c0896cfd02111c7cee" id="r_ga68e48836b74749c0896cfd02111c7cee"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__board__help.html#ga68e48836b74749c0896cfd02111c7cee">b_is_attacked</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> pos, <a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col)</td></tr>
+<tr class="memdesc:ga68e48836b74749c0896cfd02111c7cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Megnézi az adott position támadva van-e, egy adott szín által.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>A tábla kezelését szolgáló függvények. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

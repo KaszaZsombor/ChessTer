@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakk program: A user interface</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Függvények</a>  </div>
+  <div class="headertitle"><div class="title">A user interface </div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A program felhasználója és a program sakk-logikája között álló fordító réteg.  
+<a href="#details">Részletek...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Függvények</h2></td></tr>
+<tr class="memitem:gaa6103e421055139a6e98a64cc529ae41" id="r_gaa6103e421055139a6e98a64cc529ae41"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#gaa6103e421055139a6e98a64cc529ae41">ui_getusrin</a> (int *size, char *msg)</td></tr>
+<tr class="memdesc:gaa6103e421055139a6e98a64cc529ae41"><td class="mdescLeft">&#160;</td><td class="mdescRight">A user által beadott szöveg feldolgozása.  <br /></td></tr>
+<tr class="memitem:ga2cb5cb0d9b8311a10778282ef36dc86a" id="r_ga2cb5cb0d9b8311a10778282ef36dc86a"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#ga2cb5cb0d9b8311a10778282ef36dc86a">to_lower</a> (char c)</td></tr>
+<tr class="memdesc:ga2cb5cb0d9b8311a10778282ef36dc86a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A karakterek kisbetűssé változtatása.  <br /></td></tr>
+<tr class="memitem:ga203b92809b9067fc2c329d1b5cc796c7" id="r_ga203b92809b9067fc2c329d1b5cc796c7"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#ga203b92809b9067fc2c329d1b5cc796c7">getc_p</a> (<a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> pc_t)</td></tr>
+<tr class="memdesc:ga203b92809b9067fc2c329d1b5cc796c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja a megfelelő kiírandó karakert egy adott bábutípushoz.  <br /></td></tr>
+<tr class="memitem:ga3602b8fc0fbf177ea31bd99da5ae67ac" id="r_ga3602b8fc0fbf177ea31bd99da5ae67ac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga3602b8fc0fbf177ea31bd99da5ae67ac">ui_drawboard</a> (<a class="el" href="structboard.html">board</a> brd)</td></tr>
+<tr class="memdesc:ga3602b8fc0fbf177ea31bd99da5ae67ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kirajzolja az adott táblát a konzolra.  <br /></td></tr>
+<tr class="memitem:ga95dc497831100206246bbaf7ee341310" id="r_ga95dc497831100206246bbaf7ee341310"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga95dc497831100206246bbaf7ee341310">get_file_c</a> (char c, int *out)</td></tr>
+<tr class="memdesc:ga95dc497831100206246bbaf7ee341310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy adott karakter file-számmá alakítása.  <br /></td></tr>
+<tr class="memitem:gae8e56d235fc356cddf70155f040fb1c2" id="r_gae8e56d235fc356cddf70155f040fb1c2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#gae8e56d235fc356cddf70155f040fb1c2">get_row_c</a> (char c, int *out)</td></tr>
+<tr class="memdesc:gae8e56d235fc356cddf70155f040fb1c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy adott karakter row-számmá alakítása.  <br /></td></tr>
+<tr class="memitem:gaa18ab8f7b3709879096a410dbe2e1fe9" id="r_gaa18ab8f7b3709879096a410dbe2e1fe9"><td class="memItemLeft"><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaa18ab8f7b3709879096a410dbe2e1fe9">get_piece_c</a> (char c)</td></tr>
+<tr class="memdesc:gaa18ab8f7b3709879096a410dbe2e1fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A promotion bábu typusának megállapítása.  <br /></td></tr>
+<tr class="memitem:ga26775395b006fdedb502c337b1120244" id="r_ga26775395b006fdedb502c337b1120244"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga26775395b006fdedb502c337b1120244">ui_parse_str</a> (<a class="el" href="structmove.html">move</a> *pmv, char *buff, int size)</td></tr>
+<tr class="memdesc:ga26775395b006fdedb502c337b1120244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feldolgozza a ui_getusrin által beolvasott szöveget.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>A program felhasználója és a program sakk-logikája között álló fordító réteg. </p>
+<p>A projektben képességeim szerint megpróbáltam a lehető legjobban szétválasztani a UI-t a program többi részétől. Ennek oka az, ha később grafikus megjelenítést szeretnék készíteni a programhoz, akkor magával a logikával nem kell foglalkoznom. Elég megírni ezt a köztes réteget, a grafikus megjelenítést, majd hozzá lehet kötni ugyanazt a kódot. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Függvények dokumentációja</h2>
+<a id="ga95dc497831100206246bbaf7ee341310" name="ga95dc497831100206246bbaf7ee341310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95dc497831100206246bbaf7ee341310">&#9670;&#160;</a></span>get_file_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_file_c </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Egy adott karakter file-számmá alakítása. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramname">out</td><td>Az átalakított szám. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>ERROR vagy SUCCESS attól függően, hogy sikerült-e. </dd></dl>
+
+</div>
+</div>
+<a id="gaa18ab8f7b3709879096a410dbe2e1fe9" name="gaa18ab8f7b3709879096a410dbe2e1fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa18ab8f7b3709879096a410dbe2e1fe9">&#9670;&#160;</a></span>get_piece_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> get_piece_c </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A promotion bábu typusának megállapítása. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2" title="A bábutípusokat határozza meg.">piece_t</a> </dd></dl>
+
+</div>
+</div>
+<a id="gae8e56d235fc356cddf70155f040fb1c2" name="gae8e56d235fc356cddf70155f040fb1c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8e56d235fc356cddf70155f040fb1c2">&#9670;&#160;</a></span>get_row_c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_row_c </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Egy adott karakter row-számmá alakítása. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramname">out</td><td>Az átalakított szám. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>ERROR vagy SUCCESS attól függően, hogy sikerült-e. </dd></dl>
+
+</div>
+</div>
+<a id="ga203b92809b9067fc2c329d1b5cc796c7" name="ga203b92809b9067fc2c329d1b5cc796c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga203b92809b9067fc2c329d1b5cc796c7">&#9670;&#160;</a></span>getc_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char getc_p </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a></td>          <td class="paramname"><span class="paramname"><em>pc_t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszaadja a megfelelő kiírandó karakert egy adott bábutípushoz. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pc_t</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>char </dd></dl>
+
+</div>
+</div>
+<a id="ga2cb5cb0d9b8311a10778282ef36dc86a" name="ga2cb5cb0d9b8311a10778282ef36dc86a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2cb5cb0d9b8311a10778282ef36dc86a">&#9670;&#160;</a></span>to_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char to_lower </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A karakterek kisbetűssé változtatása. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>char </dd></dl>
+
+</div>
+</div>
+<a id="ga3602b8fc0fbf177ea31bd99da5ae67ac" name="ga3602b8fc0fbf177ea31bd99da5ae67ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3602b8fc0fbf177ea31bd99da5ae67ac">&#9670;&#160;</a></span>ui_drawboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ui_drawboard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Kirajzolja az adott táblát a konzolra. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa6103e421055139a6e98a64cc529ae41" name="gaa6103e421055139a6e98a64cc529ae41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6103e421055139a6e98a64cc529ae41">&#9670;&#160;</a></span>ui_getusrin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ui_getusrin </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A user által beadott szöveg feldolgozása. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>A feldolgozott szöveg hossza. </td></tr>
+    <tr><td class="paramname">msg</td><td>A feldolgozott szöveg. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>ERROR, SUCCESS vagy END. ERROR ha sikertelen, SUCCESS ha sikeres, END ha végjelet kapott. </dd></dl>
+
+</div>
+</div>
+<a id="ga26775395b006fdedb502c337b1120244" name="ga26775395b006fdedb502c337b1120244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26775395b006fdedb502c337b1120244">&#9670;&#160;</a></span>ui_parse_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ui_parse_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a> *</td>          <td class="paramname"><span class="paramname"><em>pmv</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Feldolgozza a ui_getusrin által beolvasott szöveget. </p>
+<p>A függvény a karaktersorozatból egy lépésprototípust hoz létre. Csak 5 vagy 6 hosszú karaktersorozatokat fogad el. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmv</td><td>Ide másolja a létrehozott adatokat. </td></tr>
+    <tr><td class="paramname">buff</td><td>A karaktersorozat.(elejére mutató pointer) </td></tr>
+    <tr><td class="paramname">size</td><td>A karaktersorozat hossza </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>ERROR vagy SUCCESS attól függőe, hogy sikeres volt-e. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

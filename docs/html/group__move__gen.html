@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakk program: Lépésgeneráló függvények</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Függvények</a>  </div>
+  <div class="headertitle"><div class="title">Lépésgeneráló függvények </div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ezek a függvények a bábuk lépéseit generálják.  
+<a href="#details">Részletek...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Függvények</h2></td></tr>
+<tr class="memitem:ga94d8ab6741eecd2e9e7efb131285571b" id="r_ga94d8ab6741eecd2e9e7efb131285571b"><td class="memItemLeft"><a class="el" href="structgenerated__move.html">generated_move</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga94d8ab6741eecd2e9e7efb131285571b">mg_create_generatedmove</a> (<a class="el" href="structposition.html">position</a> from, <a class="el" href="structposition.html">position</a> to, <a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> ppt, <a class="el" href="types_8h.html#a48717c18c6e17b2a7fb7830e88115b83">move_t</a> type)</td></tr>
+<tr class="memdesc:ga94d8ab6741eecd2e9e7efb131285571b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generatedmove gyárfüggvény.  <br /></td></tr>
+<tr class="memitem:ga02e3c6e8f4d2fd06564d995b1dde4e95" id="r_ga02e3c6e8f4d2fd06564d995b1dde4e95"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga02e3c6e8f4d2fd06564d995b1dde4e95">mg_generate_all_moves_RBQ</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> from, <a class="el" href="structpiece.html">piece</a> pc, <a class="el" href="structgenerated__move.html">generated_move</a> *list, int *size)</td></tr>
+<tr class="memdesc:ga02e3c6e8f4d2fd06564d995b1dde4e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legenerálja az összes szabályos lépést, egy bástyára, futóra vagy vezérre.  <br /></td></tr>
+<tr class="memitem:ga33dc27ba2ac50615a408ad7837d9a114" id="r_ga33dc27ba2ac50615a408ad7837d9a114"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga33dc27ba2ac50615a408ad7837d9a114">mg_generate_all_moves_P</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structmove.html">move</a> mv, <a class="el" href="structpiece.html">piece</a> pc, <a class="el" href="structgenerated__move.html">generated_move</a> *list, int *size)</td></tr>
+<tr class="memdesc:ga33dc27ba2ac50615a408ad7837d9a114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az összes gyaloglépés generálása egy adott pozícióból.  <br /></td></tr>
+<tr class="memitem:ga1e10916ac5b4c66b0b7d2b33e7c88396" id="r_ga1e10916ac5b4c66b0b7d2b33e7c88396"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga1e10916ac5b4c66b0b7d2b33e7c88396">canshortcstl</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> pos, <a class="el" href="structpiece.html">piece</a> pc)</td></tr>
+<tr class="memdesc:ga1e10916ac5b4c66b0b7d2b33e7c88396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy adott király tud-e sáncolni rövidre.  <br /></td></tr>
+<tr class="memitem:ga20b8913dc7e3f221f5ca9322d22972e7" id="r_ga20b8913dc7e3f221f5ca9322d22972e7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga20b8913dc7e3f221f5ca9322d22972e7">canlongcstl</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> from, <a class="el" href="structpiece.html">piece</a> pc)</td></tr>
+<tr class="memdesc:ga20b8913dc7e3f221f5ca9322d22972e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy adott király tud-e sáncolni hosszúra.  <br /></td></tr>
+<tr class="memitem:gaf5f947bdb763f64ea4dc046fb576ba51" id="r_gaf5f947bdb763f64ea4dc046fb576ba51"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaf5f947bdb763f64ea4dc046fb576ba51">mg_generate_all_moves_K</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> from, <a class="el" href="structpiece.html">piece</a> pc, <a class="el" href="structgenerated__move.html">generated_move</a> *list, int *size)</td></tr>
+<tr class="memdesc:gaf5f947bdb763f64ea4dc046fb576ba51"><td class="mdescLeft">&#160;</td><td class="mdescRight">A király lépéseinek generálása.  <br /></td></tr>
+<tr class="memitem:gad4cf6d8d388cf7733c44b4f48e0f52d7" id="r_gad4cf6d8d388cf7733c44b4f48e0f52d7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gad4cf6d8d388cf7733c44b4f48e0f52d7">mg_generate_all_moves_N</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> from, <a class="el" href="structpiece.html">piece</a> pc, <a class="el" href="structgenerated__move.html">generated_move</a> *list, int *size)</td></tr>
+<tr class="memdesc:gad4cf6d8d388cf7733c44b4f48e0f52d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A huszár lépéseinek generálása.  <br /></td></tr>
+<tr class="memitem:gaaccc2b26cc5eac60be2caeb9eba227d1" id="r_gaaccc2b26cc5eac60be2caeb9eba227d1"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#gaaccc2b26cc5eac60be2caeb9eba227d1">mg_generate_all_moves</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structmove.html">move</a> mv, <a class="el" href="structgenerated__move.html">generated_move</a> *list, int *size)</td></tr>
+<tr class="memdesc:gaaccc2b26cc5eac60be2caeb9eba227d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az érkező lépésprototípust adja a megfelelő lépésgenerátornak, a bábu typusa alapján.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Ezek a függvények a bábuk lépéseit generálják. </p>
+<p>A lépésgeneráló függvények az egyik legfontosabb és központibb része a programnak. Ezek a függvények felelősek a megadott lépés-szándék alapján, az összes lehetséges lépés előállításáért. A legtöbb hiba és bug is itt keletkezett. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Függvények dokumentációja</h2>
+<a id="ga20b8913dc7e3f221f5ca9322d22972e7" name="ga20b8913dc7e3f221f5ca9322d22972e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20b8913dc7e3f221f5ca9322d22972e7">&#9670;&#160;</a></span>canlongcstl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int canlongcstl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a></td>          <td class="paramname"><span class="paramname"><em>pc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Egy adott király tud-e sáncolni hosszúra. </p>
+<p>Ez a függvény segít megállapítani a királylépés generáló függvénynek, hogy lehet hosszúra sáncolni. Ennek is több különböző eltétele van, amit ellenőrizni kell. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">pc</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="ga1e10916ac5b4c66b0b7d2b33e7c88396" name="ga1e10916ac5b4c66b0b7d2b33e7c88396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e10916ac5b4c66b0b7d2b33e7c88396">&#9670;&#160;</a></span>canshortcstl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int canshortcstl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a></td>          <td class="paramname"><span class="paramname"><em>pc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Egy adott király tud-e sáncolni rövidre. </p>
+<p>Ez a függvény segít megállapítani a királylépés generáló függvénynek, hogy lehet rövidre sáncolni. Ennek is több különböző eltétele van, amit ellenőrizni kell. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">pc</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="ga94d8ab6741eecd2e9e7efb131285571b" name="ga94d8ab6741eecd2e9e7efb131285571b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94d8ab6741eecd2e9e7efb131285571b">&#9670;&#160;</a></span>mg_create_generatedmove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgenerated__move.html">generated_move</a> mg_create_generatedmove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a></td>          <td class="paramname"><span class="paramname"><em>ppt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a48717c18c6e17b2a7fb7830e88115b83">move_t</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A generatedmove gyárfüggvény. </p>
+<p>Egyszerűbbé teszi a <a class="el" href="structgenerated__move.html" title="Ez a legenerált lépéseket tárolja.">generated_move</a> típusú változók létrehozását. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td></td></tr>
+    <tr><td class="paramname">to</td><td></td></tr>
+    <tr><td class="paramname">ppt</td><td></td></tr>
+    <tr><td class="paramname">type</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd><a class="el" href="structgenerated__move.html" title="Ez a legenerált lépéseket tárolja.">generated_move</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaaccc2b26cc5eac60be2caeb9eba227d1" name="gaaccc2b26cc5eac60be2caeb9eba227d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaccc2b26cc5eac60be2caeb9eba227d1">&#9670;&#160;</a></span>mg_generate_all_moves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mg_generate_all_moves </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgenerated__move.html">generated_move</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Az érkező lépésprototípust adja a megfelelő lépésgenerátornak, a bábu typusa alapján. </p>
+<p>Ez a fő lépésgeneráló függvény. Az érkező lépés-prototípus alapján legeneráltatja a megfelelő generálófüggvénnyel az összes lehetséges lépést, majd visszaküldi azt a hívónak. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+    <tr><td class="paramname">list</td><td>Ebbe a tömbbe másolja a generált lépéseket a függvény. </td></tr>
+    <tr><td class="paramname">size</td><td>Ebbe az intbe írja bele a visszaadott lista hosszát. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>SUCCESS vagy ERROR a sikerességtől függően </dd></dl>
+
+</div>
+</div>
+<a id="gaf5f947bdb763f64ea4dc046fb576ba51" name="gaf5f947bdb763f64ea4dc046fb576ba51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5f947bdb763f64ea4dc046fb576ba51">&#9670;&#160;</a></span>mg_generate_all_moves_K()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mg_generate_all_moves_K </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a></td>          <td class="paramname"><span class="paramname"><em>pc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgenerated__move.html">generated_move</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A király lépéseinek generálása. </p>
+<p>A királynak több különleges lépése van. Ezek a 2 sánc. Ezeknek az ellenőrzését segédfüggvények hatják végre. A függvény nem ellenőrzi, hogy a király lépés után támadott mezőn van-e. Ez azért van, mert nem csak királylépés után kerülhet a király sakkba. A sakkokat egy próbatáblán ellenőrzi, a lépésvégrehajtó függvény. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">from</td><td></td></tr>
+    <tr><td class="paramname">pcs</td><td></td></tr>
+    <tr><td class="paramname">list</td><td>Ebbe a tömbbe másolja a generált lépéseket a függvény. </td></tr>
+    <tr><td class="paramname">size</td><td>Ebbe az intbe írja bele a visszaadott lista hosszát. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad4cf6d8d388cf7733c44b4f48e0f52d7" name="gad4cf6d8d388cf7733c44b4f48e0f52d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4cf6d8d388cf7733c44b4f48e0f52d7">&#9670;&#160;</a></span>mg_generate_all_moves_N()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mg_generate_all_moves_N </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a></td>          <td class="paramname"><span class="paramname"><em>pc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgenerated__move.html">generated_move</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A huszár lépéseinek generálása. </p>
+<p>A huszárléppések generálása viszonylag egyszerűbb. Csak a lehetséges veégpozíciók ellenőrzése szükséges, ugyanis a huszár át tudja ugrani a többi bábut. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">from</td><td></td></tr>
+    <tr><td class="paramname">pc</td><td></td></tr>
+    <tr><td class="paramname">list</td><td>Ebbe a tömbbe másolja a generált lépéseket a függvény. </td></tr>
+    <tr><td class="paramname">size</td><td>Ebbe az intbe írja bele a visszaadott lista hosszát. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ga33dc27ba2ac50615a408ad7837d9a114" name="ga33dc27ba2ac50615a408ad7837d9a114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33dc27ba2ac50615a408ad7837d9a114">&#9670;&#160;</a></span>mg_generate_all_moves_P()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mg_generate_all_moves_P </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmove.html">move</a></td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a></td>          <td class="paramname"><span class="paramname"><em>pc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgenerated__move.html">generated_move</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Az összes gyaloglépés generálása egy adott pozícióból. </p>
+<p>A gyloglépések generálása is összetettebb. Ellenőrizni kell az en-passant lehetőségét, a dupla-lépés lehetőségét, az ütéseket. És ezek alapján megfelelő lépéstípusú lépéseket létrehozni. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">mv</td><td></td></tr>
+    <tr><td class="paramname">pc</td><td></td></tr>
+    <tr><td class="paramname">list</td><td>Ebbe a tömbbe másolja a generált lépéseket a függvény. </td></tr>
+    <tr><td class="paramname">size</td><td>Ebbe az intbe írja bele a visszaadott lista hosszát. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga02e3c6e8f4d2fd06564d995b1dde4e95" name="ga02e3c6e8f4d2fd06564d995b1dde4e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga02e3c6e8f4d2fd06564d995b1dde4e95">&#9670;&#160;</a></span>mg_generate_all_moves_RBQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mg_generate_all_moves_RBQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a></td>          <td class="paramname"><span class="paramname"><em>pc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgenerated__move.html">generated_move</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Legenerálja az összes szabályos lépést, egy bástyára, futóra vagy vezérre. </p>
+<p>Ez a hárum bábutípus hasonló logika szerint lép. Elindulunk az összes bábu által látható irányba, majd egyesével haladunk a tábla pozícióin az egyes irányokba. Ha a talált mező üres, akkor megfelel és folytatjuk a keresést. Ha a talált bábu ellenséges, az megfelel, vizsont továbbb nem tudunk menni abba az irányba, ezért megyünk a következőre. Ha a talált bábu saját, már az a mező sem jó, és jöhet a következő irány. És ha leérünk a tábláról, akkor is jöhet a következő irány. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">from</td><td></td></tr>
+    <tr><td class="paramname">pc</td><td></td></tr>
+    <tr><td class="paramname">list</td><td>Ebbe a tömbbe másolja a generált lépéseket a függvény. </td></tr>
+    <tr><td class="paramname">size</td><td>Ebbe az intbe írja bele a visszaadott lista hosszát. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

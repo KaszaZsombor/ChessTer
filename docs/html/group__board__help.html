@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sakk program: A Tábla függvényei</title>
+<link rel="icon" href="king.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.18.0 -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": false,
+  "searchEngine": false,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Függvények</a>  </div>
+  <div class="headertitle"><div class="title">A Tábla függvényei </div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A tábla kezelését végző függvények.  
+<a href="#details">Részletek...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Függvények</h2></td></tr>
+<tr class="memitem:ga92c564dad1d18330eeca3ae036077904" id="r_ga92c564dad1d18330eeca3ae036077904"><td class="memItemLeft"><a class="el" href="structboard.html">board</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga92c564dad1d18330eeca3ae036077904">b_create</a> (void)</td></tr>
+<tr class="memdesc:ga92c564dad1d18330eeca3ae036077904"><td class="mdescLeft">&#160;</td><td class="mdescRight">board gyárfüggvény  <br /></td></tr>
+<tr class="memitem:ga9193b46af362531bf7334622e60d7cb7" id="r_ga9193b46af362531bf7334622e60d7cb7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga9193b46af362531bf7334622e60d7cb7">b_ison</a> (<a class="el" href="structposition.html">position</a> pos)</td></tr>
+<tr class="memdesc:ga9193b46af362531bf7334622e60d7cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja, hogy a pozíció a táblán van-e vagy sem.  <br /></td></tr>
+<tr class="memitem:ga9cf43fd41d2a82ebacc682660633b631" id="r_ga9cf43fd41d2a82ebacc682660633b631"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga9cf43fd41d2a82ebacc682660633b631">b_getpiece</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> pos, <a class="el" href="structpiece.html">piece</a> *ppc)</td></tr>
+<tr class="memdesc:ga9cf43fd41d2a82ebacc682660633b631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy piece lekérése egy tábláról.  <br /></td></tr>
+<tr class="memitem:ga83db7a4eb83c00f5e6b2a834fa165703" id="r_ga83db7a4eb83c00f5e6b2a834fa165703"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga83db7a4eb83c00f5e6b2a834fa165703">b_setpiece</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structposition.html">position</a> pos, <a class="el" href="structpiece.html">piece</a> pc)</td></tr>
+<tr class="memdesc:ga83db7a4eb83c00f5e6b2a834fa165703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Beállítja az adott bábut az adott tábálra.  <br /></td></tr>
+<tr class="memitem:ga1d099ed0e5acac0adc863ab62ec12cda" id="r_ga1d099ed0e5acac0adc863ab62ec12cda"><td class="memItemLeft"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga1d099ed0e5acac0adc863ab62ec12cda">b_opponent_col</a> (<a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> color)</td></tr>
+<tr class="memdesc:ga1d099ed0e5acac0adc863ab62ec12cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja az ellenfél színét.  <br /></td></tr>
+<tr class="memitem:gab1950583414fdc7eb8c49409f4b9405b" id="r_gab1950583414fdc7eb8c49409f4b9405b"><td class="memItemLeft"><a class="el" href="structposition.html">position</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab1950583414fdc7eb8c49409f4b9405b">b_get_king_pos</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col)</td></tr>
+<tr class="memdesc:gab1950583414fdc7eb8c49409f4b9405b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja egy táblán a király helyzetét.  <br /></td></tr>
+<tr class="memitem:ga66b9896e9724f9f9375f6c30f83c8d4c" id="r_ga66b9896e9724f9f9375f6c30f83c8d4c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga66b9896e9724f9f9375f6c30f83c8d4c">b_setdefault</a> (<a class="el" href="structboard.html">board</a> *pbrd)</td></tr>
+<tr class="memdesc:ga66b9896e9724f9f9375f6c30f83c8d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az adott táblát alaphelyzetbe állítja.  <br /></td></tr>
+<tr class="memitem:ga68e48836b74749c0896cfd02111c7cee" id="r_ga68e48836b74749c0896cfd02111c7cee"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga68e48836b74749c0896cfd02111c7cee">b_is_attacked</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="structposition.html">position</a> pos, <a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col)</td></tr>
+<tr class="memdesc:ga68e48836b74749c0896cfd02111c7cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Megnézi az adott position támadva van-e, egy adott szín által.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>A tábla kezelését végző függvények. </p>
+<p>A tábla kezelése minden sakkprogram alapja, a prgoram többi része ezek a függvények segítségével döntenek a feladatuk végrehajtásával kapcsolatban. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Függvények dokumentációja</h2>
+<a id="ga92c564dad1d18330eeca3ae036077904" name="ga92c564dad1d18330eeca3ae036077904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga92c564dad1d18330eeca3ae036077904">&#9670;&#160;</a></span>b_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboard.html">board</a> b_create </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>board gyárfüggvény </p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>board </dd></dl>
+
+</div>
+</div>
+<a id="gab1950583414fdc7eb8c49409f4b9405b" name="gab1950583414fdc7eb8c49409f4b9405b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1950583414fdc7eb8c49409f4b9405b">&#9670;&#160;</a></span>b_get_king_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structposition.html">position</a> b_get_king_pos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszaadja egy táblán a király helyzetét. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">col</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>position NOPOS ha nincs a táblán </dd></dl>
+
+</div>
+</div>
+<a id="ga9cf43fd41d2a82ebacc682660633b631" name="ga9cf43fd41d2a82ebacc682660633b631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9cf43fd41d2a82ebacc682660633b631">&#9670;&#160;</a></span>b_getpiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int b_getpiece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a> *</td>          <td class="paramname"><span class="paramname"><em>ppc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Egy piece lekérése egy tábláról. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">ppc</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>SUCCESS VAGY ERROR attól függően, hogy a táblán van-e a position. </dd></dl>
+
+</div>
+</div>
+<a id="ga68e48836b74749c0896cfd02111c7cee" name="ga68e48836b74749c0896cfd02111c7cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68e48836b74749c0896cfd02111c7cee">&#9670;&#160;</a></span>b_is_attacked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int b_is_attacked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Megnézi az adott position támadva van-e, egy adott szín által. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">col</td><td>A támadott szín. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>bool </dd></dl>
+<dl class="section warning"><dt>Figyelmeztetés</dt><dd>A gyalogtámadást nincs tesztelve </dd></dl>
+
+</div>
+</div>
+<a id="ga9193b46af362531bf7334622e60d7cb7" name="ga9193b46af362531bf7334622e60d7cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9193b46af362531bf7334622e60d7cb7">&#9670;&#160;</a></span>b_ison()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int b_ison </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszaadja, hogy a pozíció a táblán van-e vagy sem. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="ga1d099ed0e5acac0adc863ab62ec12cda" name="ga1d099ed0e5acac0adc863ab62ec12cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d099ed0e5acac0adc863ab62ec12cda">&#9670;&#160;</a></span>b_opponent_col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> b_opponent_col </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszaadja az ellenfél színét. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1" title="A színeket határozza meg.">color_t</a> az ellemnfél színe. </dd></dl>
+
+</div>
+</div>
+<a id="ga66b9896e9724f9f9375f6c30f83c8d4c" name="ga66b9896e9724f9f9375f6c30f83c8d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66b9896e9724f9f9375f6c30f83c8d4c">&#9670;&#160;</a></span>b_setdefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void b_setdefault </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Az adott táblát alaphelyzetbe állítja. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga83db7a4eb83c00f5e6b2a834fa165703" name="ga83db7a4eb83c00f5e6b2a834fa165703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83db7a4eb83c00f5e6b2a834fa165703">&#9670;&#160;</a></span>b_setpiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int b_setpiece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a> *</td>          <td class="paramname"><span class="paramname"><em>pbrd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structposition.html">position</a></td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpiece.html">piece</a></td>          <td class="paramname"><span class="paramname"><em>pc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Beállítja az adott bábut az adott tábálra. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pbrd</td><td></td></tr>
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">pc</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>ERROR vagy SUCCESS, attól függően hogy a pos a táblán van-e. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
