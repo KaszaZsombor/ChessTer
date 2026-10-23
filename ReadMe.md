@@ -22,9 +22,29 @@ A dokumentáció célja, hogy a felhasználók megismerjék a program működés
 
 ## Telepítési útmutató
 
-### Környezet ellenőrzése
+### 1. A bináris fájl letöltése
 
-Szükséges:
+A releases oldal megnyitása:
+
+![Release image](docs/images/relese1.png)
+
+Válasszon egy verziót, majd töltse le a .exe fájlt.
+
+### 2. Projekt forráskód letöltése
+
+**Az egyik lehetőség a zip-fájl letöltése:**
+
+![source1](docs/images/source1.png)
+
+![source2](docs/images/source2.png)
+
+**Vagy klónozás gitről:**
+
+```bash
+git clone https://github.com/KaszaZsombor/ChessTer.git
+```
+
+### Környezet ellenőrzése
 
 **gcc ellenőrzése:**
 
@@ -32,68 +52,31 @@ Szükséges:
 gcc --version
 ```
 
-Ajánlott:
-
-**git ellenőrzése:**
-
-```bash
-git --version
-```
-
-**make ellenőrzése:**
+**Make ellenőrzése:**
 
 ```bash
 make --version
 ```
 
-### 1. A projekt letöltése
+### Projekt építése forráskódból
 
-Make és git használatával:
-
-```bash
-git clone https://github.com/KaszaZsombor/SAKK.git
-```
-
-Lépjen be a letöltött projekt könyvtárába:
-
-```bash
-cd SAKK
-```
-
-Futtassa az alábbi parancsot:
+Lépjen a kicsomagolt projekt mappájába, majd futtassa:
 
 ```bash
 make
 ```
 
-Ha nincs make és git telepítve:
-
-![A projekt letöltése a GitHub repositoryból](docs/images/download.png)
-
-Nyissa meg a terminált, majd lépjen be a telepítési könyvtárba:
+Ha make nem található:
 
 ```bash
-gcc -Iinclude -std=c99 -c source/board.c -o bin/board.o
-gcc -Iinclude -std=c99 -c source/main.c -o bin/main.o
-gcc -Iinclude -std=c99 -c source/move.c -o bin/move.o
-gcc -Iinclude -std=c99 -c source/movegenerator.c -o bin/movegenerator.o
-gcc -Iinclude -std=c99 -c source/ui.c -o bin/ui.o
+mkdir bin
+gcc -Iinclude -c source/board.c -o bin/board.o
+gcc -Iinclude -c source/main.c -o bin/main.o
+gcc -Iinclude -c source/move.c -o bin/move.o
+gcc -Iinclude -c source/movegenerator.c -o bin/movegenerator.o
+gcc -Iinclude -c source/ui.c -o bin/ui.o
 gcc  bin/board.o  bin/main.o  bin/move.o  bin/movegenerator.o  bin/ui.o -o sakk.exe
 ```
-
-### 2. A program indítása
-
-Lépjen be a telepítési mappába.
-
-**Indítási parancs:**
-
-```bash
-sakk.exe
-```
-
-A futó program:
-
-![A sakkprogram főképernyője](docs/images/game.png)
 
 ---
 
