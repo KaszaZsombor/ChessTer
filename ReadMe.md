@@ -8,6 +8,18 @@ A dokumentáció célja, hogy a felhasználók megismerjék a program működés
 
 ---
 
+## Linkek
+
+### Projekt elérhetősége
+
+[A projekt GitHub-oldala itt elérhető](https://github.com/KaszaZsombor/SAKK)
+
+### A dokumentáció
+
+[A projekt dokumentációja itt elérhető](https://docs.kaszazsombor.hu)
+
+---
+
 ## Telepítési útmutató
 
 ### Környezet ellenőrzése
@@ -57,7 +69,6 @@ make
 Ha nincs make és git telepítve:
 
 ![A projekt letöltése a GitHub repositoryból](docs/images/download.png)
-
 
 Nyissa meg a terminált, majd lépjen be a telepítési könyvtárba:
 
@@ -124,15 +135,3 @@ A további megvalósított funkciók itt sorolhatók fel, például:
 - Patthelyzet felismerése.
 - Gyalogátváltozás kezelése.
 - Lépések és játékállások megjelenítése.
-
----
-
-## Linkek
-
-### Projekt elérhetősége
-
-[A projekt GitHub-oldala itt elérhető](https://github.com/KaszaZsombor/SAKK)
-
-### A dokumentáció
-
-[A projekt dokumentációja itt elérhető](https://docs.kaszazsombor.hu)
