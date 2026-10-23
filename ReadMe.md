@@ -1,6 +1,6 @@
 # Sakk program
 
-## 2026/27 őszi félév
+## 2026/27 őszi félév, sakk program dokumentáció
 
 Ez a dokumentum a Sakk program telepítését, használatát és főbb funkcióit ismerteti.
 
