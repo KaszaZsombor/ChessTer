@@ -1,7 +1,7 @@
 var board_8h =
 [
-    [ "b_create", "group__board__help.html#gaa686eb3d76b82a9b59bc743dc1ec9563", null ],
-    [ "b_create_empty_piece", "group__piece__help.html#ga5fdcf9d90a2b2cb98708bc4a88f82359", null ],
+    [ "b_create", "group__board__help.html#ga92c564dad1d18330eeca3ae036077904", null ],
+    [ "b_create_empty_piece", "group__piece__help.html#ga91ba2e6798967317b81bfb557d43f80a", null ],
     [ "b_create_piece", "group__piece__help.html#gad9ab86ec5a6bf0ae3d25cedae3e457d9", null ],
     [ "b_get_king_pos", "group__board__help.html#gab1950583414fdc7eb8c49409f4b9405b", null ],
     [ "b_getpiece", "group__board__help.html#ga9cf43fd41d2a82ebacc682660633b631", null ],

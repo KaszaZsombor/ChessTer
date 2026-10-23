@@ -5,11 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sakk program: include/types.h Forrásfájl</title>
+<title>ChessTer: include/types.h Forrásfájl</title>
 <link rel="icon" href="king.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -20,7 +24,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="king.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Sakk program<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">ChessTer<span id="projectnumber">&#160;1.0.0-alpha</span>
    </div>
   </td>
  </tr>
@@ -35,7 +39,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": false,
+  "generateTreeView": true,
   "searchEngine": false,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -53,11 +57,20 @@ document.addEventListener('DOMContentLoaded', codefold.init);
     </li>
   </ul>
 </div><!-- main-nav -->
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
-</div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('types_8h_source.html','',''); });
+</script>
+<div id="container">
 <div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">types.h</div></div>
@@ -113,50 +126,51 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="structpiece.html#a5849a680495b395c75c2269657d5d4a5">  122</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structpiece.html#a5849a680495b395c75c2269657d5d4a5">hasMoved</a>;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}<a class="code hl_struct" href="structpiece.html">piece</a>;</div>
 </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
-<div class="foldopen" id="foldopen00128" data-start="{" data-end="};">
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="structmove.html">  128</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="structmove.html#ac65a3ce7a9ead1ca9a5f2e92df350bcd">  133</a></span>    <a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_variable" href="structmove.html#ac65a3ce7a9ead1ca9a5f2e92df350bcd">from</a>;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="structmove.html#abff311edf48f30520a028b3189465c47">  137</a></span>    <a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_variable" href="structmove.html#abff311edf48f30520a028b3189465c47">to</a>;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="structmove.html#a23f96ffe03be89e826b32836ca46eefd">  141</a></span>    <a class="code hl_enumeration" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> <a class="code hl_variable" href="structmove.html#a23f96ffe03be89e826b32836ca46eefd">promotion_piece</a>;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>} <a class="code hl_struct" href="structmove.html">move</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="};">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="structmove.html">  129</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="structmove.html#ac65a3ce7a9ead1ca9a5f2e92df350bcd">  134</a></span>    <a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_variable" href="structmove.html#ac65a3ce7a9ead1ca9a5f2e92df350bcd">from</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="structmove.html#abff311edf48f30520a028b3189465c47">  138</a></span>    <a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_variable" href="structmove.html#abff311edf48f30520a028b3189465c47">to</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="structmove.html#a23f96ffe03be89e826b32836ca46eefd">  142</a></span>    <a class="code hl_enumeration" href="types_8h.html#ab9be55f539b97c45fb9f57efded733c2">piece_t</a> <a class="code hl_variable" href="structmove.html#a23f96ffe03be89e826b32836ca46eefd">promotion_piece</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>} <a class="code hl_struct" href="structmove.html">move</a>;</div>
 </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
-<div class="foldopen" id="foldopen00148" data-start="{" data-end="};">
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="structgenerated__move.html">  148</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>{</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">  153</a></span>    <a class="code hl_variable" href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">move</a> <a class="code hl_variable" href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">move</a>;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="structgenerated__move.html#aeebf06b91da964e44d58e00e1ad9f9f3">  157</a></span>    <a class="code hl_enumeration" href="types_8h.html#a48717c18c6e17b2a7fb7830e88115b83">move_t</a> <a class="code hl_variable" href="structgenerated__move.html#aeebf06b91da964e44d58e00e1ad9f9f3">type</a>;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}<a class="code hl_struct" href="structgenerated__move.html">generated_move</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="};">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="structgenerated__move.html">  149</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">  154</a></span>    <a class="code hl_variable" href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">move</a> <a class="code hl_variable" href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">move</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="structgenerated__move.html#aeebf06b91da964e44d58e00e1ad9f9f3">  158</a></span>    <a class="code hl_enumeration" href="types_8h.html#a48717c18c6e17b2a7fb7830e88115b83">move_t</a> <a class="code hl_variable" href="structgenerated__move.html#aeebf06b91da964e44d58e00e1ad9f9f3">type</a>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}<a class="code hl_struct" href="structgenerated__move.html">generated_move</a>;</div>
 </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
-<div class="foldopen" id="foldopen00166" data-start="{" data-end="};">
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="structboard.html">  166</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>{</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="structboard.html#a545b83b1d5521fb4871d9045bd1ac00c">  171</a></span>    <a class="code hl_struct" href="structpiece.html">piece</a> <a class="code hl_variable" href="structboard.html#a545b83b1d5521fb4871d9045bd1ac00c">pcs</a>[8][8];</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="structboard.html#a8f2dd97398d2e5cf2541a4926a0d2170">  175</a></span>    <a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_variable" href="structboard.html#a8f2dd97398d2e5cf2541a4926a0d2170">ep_pos</a>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="structboard.html#a943bc2feac347f8fec9e3ea8849222d2">  179</a></span>    <a class="code hl_enumeration" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> <a class="code hl_variable" href="structboard.html#a943bc2feac347f8fec9e3ea8849222d2">side</a>;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="structboard.html#a0418a3e8e2a417bbdc90a1b88a2c75d4">  183</a></span>    <a class="code hl_enumeration" href="types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a> <a class="code hl_variable" href="structboard.html#a0418a3e8e2a417bbdc90a1b88a2c75d4">state</a>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}<a class="code hl_struct" href="structboard.html">board</a>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="foldopen" id="foldopen00167" data-start="{" data-end="};">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="structboard.html">  167</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>{</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="structboard.html#a545b83b1d5521fb4871d9045bd1ac00c">  172</a></span>    <a class="code hl_struct" href="structpiece.html">piece</a> <a class="code hl_variable" href="structboard.html#a545b83b1d5521fb4871d9045bd1ac00c">pcs</a>[8][8];</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="structboard.html#a8f2dd97398d2e5cf2541a4926a0d2170">  176</a></span>    <a class="code hl_struct" href="structposition.html">position</a> <a class="code hl_variable" href="structboard.html#a8f2dd97398d2e5cf2541a4926a0d2170">ep_pos</a>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="structboard.html#a943bc2feac347f8fec9e3ea8849222d2">  180</a></span>    <a class="code hl_enumeration" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> <a class="code hl_variable" href="structboard.html#a943bc2feac347f8fec9e3ea8849222d2">side</a>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="structboard.html#a0418a3e8e2a417bbdc90a1b88a2c75d4">  184</a></span>    <a class="code hl_enumeration" href="types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a> <a class="code hl_variable" href="structboard.html#a0418a3e8e2a417bbdc90a1b88a2c75d4">state</a>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}<a class="code hl_struct" href="structboard.html">board</a>;</div>
 </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdoc">A játék alapvető adatai tárolja.</div><div class="ttdef"><b>Definition</b> types.h:167</div></div>
-<div class="ttc" id="astructboard_html_a0418a3e8e2a417bbdc90a1b88a2c75d4"><div class="ttname"><a href="structboard.html#a0418a3e8e2a417bbdc90a1b88a2c75d4">board::state</a></div><div class="ttdeci">gamestate_t state</div><div class="ttdoc">A meccs állapota.</div><div class="ttdef"><b>Definition</b> types.h:183</div></div>
-<div class="ttc" id="astructboard_html_a545b83b1d5521fb4871d9045bd1ac00c"><div class="ttname"><a href="structboard.html#a545b83b1d5521fb4871d9045bd1ac00c">board::pcs</a></div><div class="ttdeci">piece pcs[8][8]</div><div class="ttdoc">A tábla bábuit tárolja.</div><div class="ttdef"><b>Definition</b> types.h:171</div></div>
-<div class="ttc" id="astructboard_html_a8f2dd97398d2e5cf2541a4926a0d2170"><div class="ttname"><a href="structboard.html#a8f2dd97398d2e5cf2541a4926a0d2170">board::ep_pos</a></div><div class="ttdeci">position ep_pos</div><div class="ttdoc">Az en-passant pozíció helyét tárolja. Ha nincs NOPOS értékét veszi fe.</div><div class="ttdef"><b>Definition</b> types.h:175</div></div>
-<div class="ttc" id="astructboard_html_a943bc2feac347f8fec9e3ea8849222d2"><div class="ttname"><a href="structboard.html#a943bc2feac347f8fec9e3ea8849222d2">board::side</a></div><div class="ttdeci">color_t side</div><div class="ttdoc">A lépő játékos színe.</div><div class="ttdef"><b>Definition</b> types.h:179</div></div>
-<div class="ttc" id="astructgenerated__move_html"><div class="ttname"><a href="structgenerated__move.html">generated_move</a></div><div class="ttdoc">Ez a legenerált lépéseket tárolja.</div><div class="ttdef"><b>Definition</b> types.h:149</div></div>
-<div class="ttc" id="astructgenerated__move_html_aea2bf58c6328b497f7bdfa6050dd1128"><div class="ttname"><a href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">generated_move::move</a></div><div class="ttdeci">move move</div><div class="ttdoc">A generált lépés adatai.</div><div class="ttdef"><b>Definition</b> types.h:153</div></div>
-<div class="ttc" id="astructgenerated__move_html_aeebf06b91da964e44d58e00e1ad9f9f3"><div class="ttname"><a href="structgenerated__move.html#aeebf06b91da964e44d58e00e1ad9f9f3">generated_move::type</a></div><div class="ttdeci">move_t type</div><div class="ttdoc">A generált lépés típusa.</div><div class="ttdef"><b>Definition</b> types.h:157</div></div>
-<div class="ttc" id="astructmove_html"><div class="ttname"><a href="structmove.html">move</a></div><div class="ttdoc">A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül.</div><div class="ttdef"><b>Definition</b> types.h:129</div></div>
-<div class="ttc" id="astructmove_html_a23f96ffe03be89e826b32836ca46eefd"><div class="ttname"><a href="structmove.html#a23f96ffe03be89e826b32836ca46eefd">move::promotion_piece</a></div><div class="ttdeci">piece_t promotion_piece</div><div class="ttdoc">A bábu, amivé átalakul a gyalog. Ha nincs akkor EMPTY.</div><div class="ttdef"><b>Definition</b> types.h:141</div></div>
-<div class="ttc" id="astructmove_html_abff311edf48f30520a028b3189465c47"><div class="ttname"><a href="structmove.html#abff311edf48f30520a028b3189465c47">move::to</a></div><div class="ttdeci">position to</div><div class="ttdoc">A lépés végpozíciója.</div><div class="ttdef"><b>Definition</b> types.h:137</div></div>
-<div class="ttc" id="astructmove_html_ac65a3ce7a9ead1ca9a5f2e92df350bcd"><div class="ttname"><a href="structmove.html#ac65a3ce7a9ead1ca9a5f2e92df350bcd">move::from</a></div><div class="ttdeci">position from</div><div class="ttdoc">A lépés kezdőpozíciója.</div><div class="ttdef"><b>Definition</b> types.h:133</div></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdoc">A játék alapvető adatai tárolja.</div><div class="ttdef"><b>Definition</b> types.h:168</div></div>
+<div class="ttc" id="astructboard_html_a0418a3e8e2a417bbdc90a1b88a2c75d4"><div class="ttname"><a href="structboard.html#a0418a3e8e2a417bbdc90a1b88a2c75d4">board::state</a></div><div class="ttdeci">gamestate_t state</div><div class="ttdoc">A meccs állapota.</div><div class="ttdef"><b>Definition</b> types.h:184</div></div>
+<div class="ttc" id="astructboard_html_a545b83b1d5521fb4871d9045bd1ac00c"><div class="ttname"><a href="structboard.html#a545b83b1d5521fb4871d9045bd1ac00c">board::pcs</a></div><div class="ttdeci">piece pcs[8][8]</div><div class="ttdoc">A tábla bábuit tárolja.</div><div class="ttdef"><b>Definition</b> types.h:172</div></div>
+<div class="ttc" id="astructboard_html_a8f2dd97398d2e5cf2541a4926a0d2170"><div class="ttname"><a href="structboard.html#a8f2dd97398d2e5cf2541a4926a0d2170">board::ep_pos</a></div><div class="ttdeci">position ep_pos</div><div class="ttdoc">Az en-passant pozíció helyét tárolja. Ha nincs NOPOS értékét veszi fe.</div><div class="ttdef"><b>Definition</b> types.h:176</div></div>
+<div class="ttc" id="astructboard_html_a943bc2feac347f8fec9e3ea8849222d2"><div class="ttname"><a href="structboard.html#a943bc2feac347f8fec9e3ea8849222d2">board::side</a></div><div class="ttdeci">color_t side</div><div class="ttdoc">A lépő játékos színe.</div><div class="ttdef"><b>Definition</b> types.h:180</div></div>
+<div class="ttc" id="astructgenerated__move_html"><div class="ttname"><a href="structgenerated__move.html">generated_move</a></div><div class="ttdoc">Ez a legenerált lépéseket tárolja.</div><div class="ttdef"><b>Definition</b> types.h:150</div></div>
+<div class="ttc" id="astructgenerated__move_html_aea2bf58c6328b497f7bdfa6050dd1128"><div class="ttname"><a href="structgenerated__move.html#aea2bf58c6328b497f7bdfa6050dd1128">generated_move::move</a></div><div class="ttdeci">move move</div><div class="ttdoc">A generált lépés adatai.</div><div class="ttdef"><b>Definition</b> types.h:154</div></div>
+<div class="ttc" id="astructgenerated__move_html_aeebf06b91da964e44d58e00e1ad9f9f3"><div class="ttname"><a href="structgenerated__move.html#aeebf06b91da964e44d58e00e1ad9f9f3">generated_move::type</a></div><div class="ttdeci">move_t type</div><div class="ttdoc">A generált lépés típusa.</div><div class="ttdef"><b>Definition</b> types.h:158</div></div>
+<div class="ttc" id="astructmove_html"><div class="ttname"><a href="structmove.html">move</a></div><div class="ttdoc">A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül.</div><div class="ttdef"><b>Definition</b> types.h:130</div></div>
+<div class="ttc" id="astructmove_html_a23f96ffe03be89e826b32836ca46eefd"><div class="ttname"><a href="structmove.html#a23f96ffe03be89e826b32836ca46eefd">move::promotion_piece</a></div><div class="ttdeci">piece_t promotion_piece</div><div class="ttdoc">A bábu, amivé átalakul a gyalog. Ha nincs akkor EMPTY.</div><div class="ttdef"><b>Definition</b> types.h:142</div></div>
+<div class="ttc" id="astructmove_html_abff311edf48f30520a028b3189465c47"><div class="ttname"><a href="structmove.html#abff311edf48f30520a028b3189465c47">move::to</a></div><div class="ttdeci">position to</div><div class="ttdoc">A lépés végpozíciója.</div><div class="ttdef"><b>Definition</b> types.h:138</div></div>
+<div class="ttc" id="astructmove_html_ac65a3ce7a9ead1ca9a5f2e92df350bcd"><div class="ttname"><a href="structmove.html#ac65a3ce7a9ead1ca9a5f2e92df350bcd">move::from</a></div><div class="ttdeci">position from</div><div class="ttdoc">A lépés kezdőpozíciója.</div><div class="ttdef"><b>Definition</b> types.h:134</div></div>
 <div class="ttc" id="astructpiece_html"><div class="ttname"><a href="structpiece.html">piece</a></div><div class="ttdoc">A bábu alapvető adatait tárolja.</div><div class="ttdef"><b>Definition</b> types.h:109</div></div>
 <div class="ttc" id="astructpiece_html_a5849a680495b395c75c2269657d5d4a5"><div class="ttname"><a href="structpiece.html#a5849a680495b395c75c2269657d5d4a5">piece::hasMoved</a></div><div class="ttdeci">int hasMoved</div><div class="ttdoc">Lépett-e már az adott bábu. Üres ező esetén 0.</div><div class="ttdef"><b>Definition</b> types.h:122</div></div>
 <div class="ttc" id="astructpiece_html_a91f468696ef3715504cae5c6629db384"><div class="ttname"><a href="structpiece.html#a91f468696ef3715504cae5c6629db384">piece::type</a></div><div class="ttdeci">piece_t type</div><div class="ttdoc">A bábu típusa. Üres mező esetén EMPTY.</div><div class="ttdef"><b>Definition</b> types.h:113</div></div>
@@ -191,10 +205,14 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="ttc" id="atypes_8h_html_acb29ebc8e42e610a88c92446ff9a1ae7a2fd6f336d08340583bd620a7f5694c90"><div class="ttname"><a href="types_8h.html#acb29ebc8e42e610a88c92446ff9a1ae7a2fd6f336d08340583bd620a7f5694c90">ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition</b> types.h:18</div></div>
 <div class="ttc" id="atypes_8h_html_acb29ebc8e42e610a88c92446ff9a1ae7ac7f69f7c9e5aea9b8f54cf02870e2bf8"><div class="ttname"><a href="types_8h.html#acb29ebc8e42e610a88c92446ff9a1ae7ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div><div class="ttdef"><b>Definition</b> types.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
-</small></address>
 </div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="types_8h.html">types.h</a></li>
+    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
 </body>
 </html>

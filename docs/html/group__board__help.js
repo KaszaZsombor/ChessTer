@@ -1,6 +1,6 @@
 var group__board__help =
 [
-    [ "b_create", "group__board__help.html#gaa686eb3d76b82a9b59bc743dc1ec9563", null ],
+    [ "b_create", "group__board__help.html#ga92c564dad1d18330eeca3ae036077904", null ],
     [ "b_get_king_pos", "group__board__help.html#gab1950583414fdc7eb8c49409f4b9405b", null ],
     [ "b_getpiece", "group__board__help.html#ga9cf43fd41d2a82ebacc682660633b631", null ],
     [ "b_is_attacked", "group__board__help.html#ga68e48836b74749c0896cfd02111c7cee", null ],

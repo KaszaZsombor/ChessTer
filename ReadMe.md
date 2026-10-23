@@ -1,4 +1,4 @@
-# Sakk program
+# ChessTer
 
 ## 2026/27 őszi félév, sakk program dokumentáció
 
@@ -10,13 +10,9 @@ A dokumentáció célja, hogy a felhasználók megismerjék a program működés
 
 ## Linkek
 
-### Projekt elérhetősége
+### [Github](https://github.com/KaszaZsombor/SAKK)
 
-[A projekt GitHub-oldala itt elérhető](https://github.com/KaszaZsombor/SAKK)
-
-### A dokumentáció
-
-[A projekt dokumentációja itt elérhető](https://docs.kaszazsombor.hu)
+### [Dokumentáció](https://docs.kaszazsombor.hu)
 
 ---
 

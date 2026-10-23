@@ -1,5 +1,6 @@
 var group__play__helper =
 [
+    [ "has_moves", "group__play__helper.html#ga7bca76aa7d4a1a255f47113c25b3664b", null ],
     [ "m_createmove", "group__play__helper.html#gaf426556df93c62ac9051785ab43c3c77", null ],
     [ "m_play_generatedmove", "group__play__helper.html#ga8a88abb17616b3ee2d31366ebf1d597d", null ],
     [ "m_play_move", "group__play__helper.html#gae45395e81360801c5369ef37ab263f96", null ],
