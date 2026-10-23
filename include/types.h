@@ -177,6 +177,9 @@ typedef struct
      * @brief A lépő játékos színe.
      */
     color_t side;
+    /**
+     * @brief A meccs állapota.
+     */
     gamestate_t state;
 }board;
 

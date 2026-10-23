@@ -10,10 +10,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": true,
+  "generateTreeView": false,
   "searchEngine": false,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -58,21 +54,10 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </ul>
 </div><!-- main-nav -->
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('structboard.html','',''); });
-</script>
-<div id="container">
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Adatmezők</a>  </div>
   <div class="headertitle"><div class="title">board struktúrareferencia</div></div>
 </div><!--header-->
 <div class="contents">
@@ -90,6 +75,8 @@ Adatmezők</h2></td></tr>
 <tr class="memdesc:a8f2dd97398d2e5cf2541a4926a0d2170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az en-passant pozíció helyét tárolja. Ha nincs NOPOS értékét veszi fe.  <br /></td></tr>
 <tr class="memitem:a943bc2feac347f8fec9e3ea8849222d2" id="r_a943bc2feac347f8fec9e3ea8849222d2"><td class="memItemLeft"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a943bc2feac347f8fec9e3ea8849222d2">side</a></td></tr>
 <tr class="memdesc:a943bc2feac347f8fec9e3ea8849222d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lépő játékos színe.  <br /></td></tr>
+<tr class="memitem:a0418a3e8e2a417bbdc90a1b88a2c75d4" id="r_a0418a3e8e2a417bbdc90a1b88a2c75d4"><td class="memItemLeft"><a class="el" href="types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0418a3e8e2a417bbdc90a1b88a2c75d4">state</a></td></tr>
+<tr class="memdesc:a0418a3e8e2a417bbdc90a1b88a2c75d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A meccs állapota.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>A játék alapvető adatai tárolja. </p>
@@ -143,25 +130,30 @@ Adatmezők</h2></td></tr>
 
 </div>
 </div>
+<a id="a0418a3e8e2a417bbdc90a1b88a2c75d4" name="a0418a3e8e2a417bbdc90a1b88a2c75d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0418a3e8e2a417bbdc90a1b88a2c75d4">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa3df7fce134ae5843a2bd6cdcd5796d0">gamestate_t</a> state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A meccs állapota. </p>
+
+</div>
+</div>
 <hr/>Ez a dokumentáció a struktúráról a következő fájl alapján készült:<ul>
 <li>include/<a class="el" href="types_8h_source.html">types.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
-</div><!-- container -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="structboard.html">board</a></li>
-    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

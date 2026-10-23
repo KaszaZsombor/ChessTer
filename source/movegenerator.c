@@ -362,7 +362,9 @@ int mg_generate_all_moves(board brd, move mv, generated_move *list, int *size)
 
     if(b_getpiece(brd, mv.from, &mvpcs) == ERROR){*size = 0; return ERROR;}
 
+    /* Ha a lépő fél nem a soron következő, akkor nincsen lépés*/
     if(mvpcs.col != brd.side)return ERROR;
+    
     switch(mvpcs.type)
     {
         /*mivel a vezér, bástya és futó hasnloó logika szerint lép, egy függvény

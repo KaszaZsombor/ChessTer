@@ -10,10 +10,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": true,
+  "generateTreeView": false,
   "searchEngine": false,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -58,21 +54,10 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </ul>
 </div><!-- main-nav -->
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('group__play__helper.html','',''); });
-</script>
-<div id="container">
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Függvények</a>  </div>
   <div class="headertitle"><div class="title">A lépés függvényei. </div></div>
 </div><!--header-->
 <div class="contents">
@@ -98,6 +83,8 @@ Függvények</h2></td></tr>
 <tr class="memdesc:gaf8493f781cbcbea3e63b5c7d212dea3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az en-passant lépés kezelése, adott táblán.  <br /></td></tr>
 <tr class="memitem:ga8a88abb17616b3ee2d31366ebf1d597d" id="r_ga8a88abb17616b3ee2d31366ebf1d597d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8a88abb17616b3ee2d31366ebf1d597d">m_play_generatedmove</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structgenerated__move.html">generated_move</a> gmv)</td></tr>
 <tr class="memdesc:ga8a88abb17616b3ee2d31366ebf1d597d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy a program által generált lépést oszt szét a segédfüggvényeknek. Amik aztán a lépés típusától függően végrehajtják a lépést. Így tudja a program kezelni a különleges lépéseket.  <br /></td></tr>
+<tr class="memitem:ga7bca76aa7d4a1a255f47113c25b3664b" id="r_ga7bca76aa7d4a1a255f47113c25b3664b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ga7bca76aa7d4a1a255f47113c25b3664b">has_moves</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> color)</td></tr>
+<tr class="memdesc:ga7bca76aa7d4a1a255f47113c25b3664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja, hogy van-e lépése a megadott színnek.  <br /></td></tr>
 <tr class="memitem:gae45395e81360801c5369ef37ab263f96" id="r_gae45395e81360801c5369ef37ab263f96"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#gae45395e81360801c5369ef37ab263f96">m_play_move</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
 <tr class="memdesc:gae45395e81360801c5369ef37ab263f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">A default lépéshvégrehajtó függvény.  <br /></td></tr>
 </table>
@@ -105,6 +92,37 @@ Függvények</h2></td></tr>
 <div class="textblock"><p>Ezek a függvények lépik meg a megadott lépést a megadott táblán. </p>
 <p>A m_play_generatedmove függvény ezeknek a függvényeknek osztja szét a generált lépéseket, azok típusa szerint. Ezeknek a függvényeknek a lépés végrehatásának kezelése a feladatuk, és annak a táblának az információinak frissítése, amin a lépést lépték. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Függvények dokumentációja</h2>
+<a id="ga7bca76aa7d4a1a255f47113c25b3664b" name="ga7bca76aa7d4a1a255f47113c25b3664b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bca76aa7d4a1a255f47113c25b3664b">&#9670;&#160;</a></span>has_moves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int has_moves </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structboard.html">board</a></td>          <td class="paramname"><span class="paramname"><em>brd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszaadja, hogy van-e lépése a megadott színnek. </p>
+<p>A has_moves függvény ellenőrzi a szín összes bábuját, ha bármelyiknek van lépése, akkor visszatér 1-el. Egyébként visszatér 0-val. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brd</td><td></td></tr>
+    <tr><td class="paramname">color</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>bool </dd></dl>
+
+</div>
+</div>
 <a id="gaf426556df93c62ac9051785ab43c3c77" name="gaf426556df93c62ac9051785ab43c3c77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf426556df93c62ac9051785ab43c3c77">&#9670;&#160;</a></span>m_createmove()</h2>
 
@@ -199,6 +217,7 @@ Függvények</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Hiba</a></b></dt><dd>Nem érzékeli az 50 lépéses szabályt </dd></dl>
 <dl class="section return"><dt>Visszatérési érték</dt><dd>SUCCESS vagy ERROR attól függően hogy sikerült-e </dd></dl>
 
 </div>
@@ -384,20 +403,10 @@ Függvények</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
-</div><!-- container -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

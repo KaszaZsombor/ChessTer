@@ -24,6 +24,7 @@
 */
 var menudata={children:[
 {text:"Főoldal",url:"index.html"},
+{text:"Kapcsolódó lapok",url:"pages.html"},
 {text:"Topics",url:"topics.html"},
 {text:"Adatszerkezetek",url:"annotated.html",children:[
 {text:"Adatszerkezetek",url:"annotated.html"},
@@ -40,6 +41,7 @@ var menudata={children:[
 {text:"d",url:"globals.html#index_d"},
 {text:"e",url:"globals.html#index_e"},
 {text:"g",url:"globals.html#index_g"},
+{text:"h",url:"globals.html#index_h"},
 {text:"k",url:"globals.html#index_k"},
 {text:"l",url:"globals.html#index_l"},
 {text:"m",url:"globals.html#index_m"},
@@ -55,6 +57,7 @@ var menudata={children:[
 {text:"b",url:"globals_func.html#index_b"},
 {text:"c",url:"globals_func.html#index_c"},
 {text:"g",url:"globals_func.html#index_g"},
+{text:"h",url:"globals_func.html#index_h"},
 {text:"m",url:"globals_func.html#index_m"},
 {text:"p",url:"globals_func.html#index_p"},
 {text:"t",url:"globals_func.html#index_t"},

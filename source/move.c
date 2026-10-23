@@ -239,24 +239,41 @@ void m_play_generatedmove(board *pbrd, generated_move gmv)
     if(gmv.type != DP) pbrd->ep_pos = NOPOS;
 }
 
-
+/**
+ * @brief Visszaadja, hogy van-e lépése a megadott színnek.
+ * @ingroup play_helper
+ * @details A has_moves függvény ellenőrzi a szín összes bábuját, ha bármelyiknek van lépése, akkor
+ * visszatér 1-el. Egyébként visszatér 0-val.
+ * @param brd 
+ * @param color 
+ * @return bool
+ */
 int has_moves(board brd, color_t color)
 {
-    int count = 0;
+    /* Ha a szín NONE akkor nincs lépése*/
     if(color == NONE) return 0;
+    /* Végigmegy a tábla összes mezőjén, és kiválasztja a megfelelő színű bábukat */
     for(int i = 0; i < 8; i++)
     {
         for(int j = 0; j < 8; j++)
         {
             piece pc;
+            /* A mezők biztosan a táblán vannak, nem lehet ERROR a getpiece*/
             (void)b_getpiece(brd, p_createpos(j, i), &pc);
             if(pc.col == color)
             {
+                /* A megfelelő színű bábura legenerálja az összes lépést */
                 generated_move list[MVL_MAX];
                 int size = 0;
+                /* A végpozíció NOPOS, ugyanis mindegy az értéke a program futásának szempontjából. Az átváltozási
+                bábu pedig EMPTY, így is lesz átváltozás lépés, viszont automatikusan vezér lesz az átváltozási bábu.
+                A függvény szempontjából ez mindegy, csak arra keres kérdést hogy van-e lépés. Az mindegy hogy mi az a
+                lépés.*/
                 (void)mg_generate_all_moves(brd, m_createmove(p_createpos(j, i), NOPOS, EMPTY), list, &size);
                 for(int k = 0; k < size; k++)
                 {
+                    /* A lépés akkor helyes, ha a próbatáblán való meglépés után nincs a lépett fél királya sakkban,
+                    ezt ugyanúgy ellenőrizi, mint azt az m_play_move függvény teszi.*/
                     board testbrd = brd;
                     m_play_generatedmove(&testbrd, list[k]);
                     if(!b_is_attacked(testbrd, b_get_king_pos(testbrd, color), color))return 1;
@@ -275,15 +292,16 @@ int has_moves(board brd, color_t color)
  * lehetséges lépést a szándék kezdeti pozíciójából, majd meghatározza hogy megtalálható-e ezek között a szándék, ha igen,
  * akkor a lépést meglépteti a táblán.
  * @param pbrd 
- * @param mv 
+ * @param mv
+ * @bug Nem érzékeli az 50 lépéses szabályt
  * @return SUCCESS vagy ERROR attól függően hogy sikerült-e
  */
 int m_play_move(board *pbrd, move mv)
 {
-    /* Ha nincs a táblán a kezdő vagy végpozíció kidobjuk */
+    /* Ha nincs a táblán a kezdő vagy végpozíció kilépünk */
     if(!b_ison(mv.from) || !b_ison(mv.to))return ERROR;
     
-    /* Ha a tábla nem játék állapotban van kilépünk*/
+    /* Ha a tábla nem játék állapotban van kilépünk */
     if(pbrd->state != PLAYING) return ERROR;
 
     /* Azért 27 hosszú a töb, mert 27 a vezér összes lépésése üres táblán
@@ -291,7 +309,7 @@ int m_play_move(board *pbrd, move mv)
     generated_move list[MVL_MAX] = {0};
     int size = 0;
 
-    /* Ha nem sikerül a keresés lépjünk ki ERROR-al*/
+    /* Ha nem sikerül a keresés lépjünk ki ERROR-al */
     if(mg_generate_all_moves(*pbrd, mv, list, &size) == ERROR) return ERROR;
 
     /* Keressük meg hogy a lépés kezdőpozíciójából generált lépések között

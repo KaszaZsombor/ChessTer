@@ -10,10 +10,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": true,
+  "generateTreeView": false,
   "searchEngine": false,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -58,28 +54,15 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </ul>
 </div><!-- main-nav -->
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('globals_func.html','',''); });
-</script>
-<div id="container">
 <div id="doc-content">
 <div class="contents">
 <div class="textblock">&#160;</div><br/>
-<div class="qindex"><a class="qindex" href="#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index_u">U</a></div>
+<div class="qindex"><a class="qindex" href="#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="#index_g">G</a><div class="alphasepar"></div><a class="qindex" href="#index_h">H</a><div class="alphasepar"></div><a class="qindex" href="#index_m">M</a><div class="alphasepar"></div><a class="qindex" href="#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index_u">U</a></div>
 
 
 <h3 class="doxsection"><a id="index_b" name="index_b"></a>- b -</h3><ul>
-<li>b_create()&#160;:&#160;<a class="el" href="group__board__help.html#gaa686eb3d76b82a9b59bc743dc1ec9563">board.h</a>, <a class="el" href="group__board__help.html#gaa686eb3d76b82a9b59bc743dc1ec9563">board.c</a></li>
-<li>b_create_empty_piece()&#160;:&#160;<a class="el" href="group__piece__help.html#ga5fdcf9d90a2b2cb98708bc4a88f82359">board.h</a>, <a class="el" href="group__piece__help.html#ga5fdcf9d90a2b2cb98708bc4a88f82359">board.c</a></li>
+<li>b_create()&#160;:&#160;<a class="el" href="group__board__help.html#ga92c564dad1d18330eeca3ae036077904">board.h</a>, <a class="el" href="group__board__help.html#ga92c564dad1d18330eeca3ae036077904">board.c</a></li>
+<li>b_create_empty_piece()&#160;:&#160;<a class="el" href="group__piece__help.html#ga91ba2e6798967317b81bfb557d43f80a">board.h</a>, <a class="el" href="group__piece__help.html#ga91ba2e6798967317b81bfb557d43f80a">board.c</a></li>
 <li>b_create_piece()&#160;:&#160;<a class="el" href="group__piece__help.html#gad9ab86ec5a6bf0ae3d25cedae3e457d9">board.h</a>, <a class="el" href="group__piece__help.html#gad9ab86ec5a6bf0ae3d25cedae3e457d9">board.c</a></li>
 <li>b_get_king_pos()&#160;:&#160;<a class="el" href="group__board__help.html#gab1950583414fdc7eb8c49409f4b9405b">board.h</a>, <a class="el" href="group__board__help.html#gab1950583414fdc7eb8c49409f4b9405b">board.c</a></li>
 <li>b_getpiece()&#160;:&#160;<a class="el" href="group__board__help.html#ga9cf43fd41d2a82ebacc682660633b631">board.h</a>, <a class="el" href="group__board__help.html#ga9cf43fd41d2a82ebacc682660633b631">board.c</a></li>
@@ -98,10 +81,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('globals_func.h
 
 
 <h3 class="doxsection"><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>game_start()&#160;:&#160;<a class="el" href="main_8c.html#a9945488589d2968b726a08787f3c18a8">main.c</a></li>
 <li>get_file_c()&#160;:&#160;<a class="el" href="group__ui.html#ga95dc497831100206246bbaf7ee341310">ui.c</a></li>
 <li>get_piece_c()&#160;:&#160;<a class="el" href="group__ui.html#gaa18ab8f7b3709879096a410dbe2e1fe9">ui.c</a></li>
 <li>get_row_c()&#160;:&#160;<a class="el" href="group__ui.html#gae8e56d235fc356cddf70155f040fb1c2">ui.c</a></li>
 <li>getc_p()&#160;:&#160;<a class="el" href="group__ui.html#ga203b92809b9067fc2c329d1b5cc796c7">ui.c</a></li>
+</ul>
+
+
+<h3 class="doxsection"><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>has_moves()&#160;:&#160;<a class="el" href="group__play__helper.html#ga7bca76aa7d4a1a255f47113c25b3664b">move.c</a></li>
 </ul>
 
 
@@ -144,13 +133,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('globals_func.h
 <li>ui_parse_str()&#160;:&#160;<a class="el" href="group__ui.html#ga26775395b006fdedb502c337b1120244">ui.h</a>, <a class="el" href="group__ui.html#ga26775395b006fdedb502c337b1120244">ui.c</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
-</div><!-- container -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -10,10 +10,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": true,
+  "generateTreeView": false,
   "searchEngine": false,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -57,20 +53,11 @@ document.addEventListener('DOMContentLoaded', codefold.init);
     </li>
   </ul>
 </div><!-- main-nav -->
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" class="ui-resizable-handle">
-  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('ui_8h_source.html','',''); });
-</script>
-<div id="container">
+</div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">ui.h</div></div>
@@ -97,14 +84,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('ui_8h_source.h
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">Alapvető típusokat és globális konstansokat határozza meg.</div></div>
 <div class="ttc" id="aui_8h_html_ae40eba6924a5c6952fb5f7d835e7c260adc6f24fd6915a3f2786a1b7045406924"><div class="ttname"><a href="ui_8h.html#ae40eba6924a5c6952fb5f7d835e7c260adc6f24fd6915a3f2786a1b7045406924">END</a></div><div class="ttdeci">@ END</div><div class="ttdef"><b>Definition</b> ui.h:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-</div><!-- container -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="ui_8h.html">ui.h</a></li>
-    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

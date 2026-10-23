@@ -10,10 +10,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -39,7 +35,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <script type="application/json" id="doxygen-config">
 {
   "relPath": "",
-  "generateTreeView": true,
+  "generateTreeView": false,
   "searchEngine": false,
   "serverBasedSearch": false,
   "disableIndex": false,
@@ -57,22 +53,15 @@ document.addEventListener('DOMContentLoaded', codefold.init);
     </li>
   </ul>
 </div><!-- main-nav -->
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" class="ui-resizable-handle">
-  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('move_8c.html','',''); });
-</script>
-<div id="container">
+</div><!-- top -->
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Függvények</a>  </div>
   <div class="headertitle"><div class="title">move.c fájlreferencia</div></div>
 </div><!--header-->
 <div class="contents">
@@ -82,6 +71,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('move_8c.html',
 <div class="textblock"><code>#include &quot;<a class="el" href="move_8h_source.html">move.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="board_8h_source.html">board.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="movegenerator_8h_source.html">movegenerator.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Függvények</h2></td></tr>
@@ -109,6 +99,8 @@ Függvények</h2></td></tr>
 <tr class="memdesc:gaf8493f781cbcbea3e63b5c7d212dea3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az en-passant lépés kezelése, adott táblán.  <br /></td></tr>
 <tr class="memitem:ga8a88abb17616b3ee2d31366ebf1d597d" id="r_ga8a88abb17616b3ee2d31366ebf1d597d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__play__helper.html#ga8a88abb17616b3ee2d31366ebf1d597d">m_play_generatedmove</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structgenerated__move.html">generated_move</a> gmv)</td></tr>
 <tr class="memdesc:ga8a88abb17616b3ee2d31366ebf1d597d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Egy a program által generált lépést oszt szét a segédfüggvényeknek. Amik aztán a lépés típusától függően végrehajtják a lépést. Így tudja a program kezelni a különleges lépéseket.  <br /></td></tr>
+<tr class="memitem:ga7bca76aa7d4a1a255f47113c25b3664b" id="r_ga7bca76aa7d4a1a255f47113c25b3664b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__play__helper.html#ga7bca76aa7d4a1a255f47113c25b3664b">has_moves</a> (<a class="el" href="structboard.html">board</a> brd, <a class="el" href="types_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> color)</td></tr>
+<tr class="memdesc:ga7bca76aa7d4a1a255f47113c25b3664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja, hogy van-e lépése a megadott színnek.  <br /></td></tr>
 <tr class="memitem:gae45395e81360801c5369ef37ab263f96" id="r_gae45395e81360801c5369ef37ab263f96"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="group__play__helper.html#gae45395e81360801c5369ef37ab263f96">m_play_move</a> (<a class="el" href="structboard.html">board</a> *pbrd, <a class="el" href="structmove.html">move</a> mv)</td></tr>
 <tr class="memdesc:gae45395e81360801c5369ef37ab263f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">A default lépéshvégrehajtó függvény.  <br /></td></tr>
 </table>
@@ -116,21 +108,10 @@ Függvények</h2></td></tr>
 <div class="textblock"><p>Az alapvető lépés és pozíció kezelés. </p>
 <p>Ebben a fájlban találhatóak a position műveleteket végző függvények, valamint a lépéseket végrehajtó függvének </p>
 </div></div><!-- contents -->
-</div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
-</div><!-- container -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="move_8c.html">move.c</a></li>
-    <li class="footer">Készítette <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

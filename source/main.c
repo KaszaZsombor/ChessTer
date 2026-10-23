@@ -11,11 +11,11 @@
 
 
 /**
- * @brief A főprogram, a játékciklus itt fut
- * @return int 
+ * @brief Elindtítja és futtatja a játékot a mecss végéig.
  */
-int main(void)
+void game_start(void)
 {
+
     board main_brd = b_create();
     b_setdefault(&main_brd);
     ui_drawboard(main_brd);
@@ -70,5 +70,16 @@ int main(void)
 
         ui_drawboard(main_brd);
     }
+}
+
+
+
+/**
+ * @brief A főprogram, a játékciklus itt fut
+ * @return int 
+ */
+int main(void)
+{
+    game_start();
     return 0;
 }
