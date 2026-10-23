@@ -9,7 +9,7 @@ piece b_create_empty_piece();
 
 
 /*SET*/
-void b_setdefault(board *pbrd);
+board get_default_board(void);
 int b_setpiece(board *pbrd, position pos, piece pcs);
 
 /*BOOl*/
@@ -20,6 +20,7 @@ int b_is_attacked(board brd, position pos, color_t col);
 int b_getpiece(board brd, position pos, piece *pcs);
 color_t b_opponent_col(color_t color);
 position b_get_king_pos(board brd, color_t col);
+int b_piece_count(board brd);
 
 
 #endif

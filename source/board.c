@@ -61,6 +61,7 @@ board b_create(void)
         .pcs = {0},
         .ep_pos = NOPOS,
         .side = NONE,
+        .halfmoves = 0,
         .state = PLAYING,
     };
     return brd;
@@ -149,36 +150,60 @@ position b_get_king_pos(board brd, color_t col)
     return NOPOS;
 }
 
+/**
+ * @brief Visszaadja a bábuk számát a táblán
+ * @ingroup board_help
+ * @param brd 
+ * @return int 
+ */
+int b_piece_count(board brd)
+{
+    int count = 0;
+    for(int i = 0; i < 8; i++)
+    {
+        for(int j = 0; j<8;j++)
+        {
+            piece pc;
+            b_getpiece(brd, p_createpos(j,i), &pc);
+            if(pc.type != EMPTY)count++;
+        }
+    }
+    return count;
+}
+
 
 /**
  * @ingroup board_help
- * @brief Az adott táblát alaphelyzetbe állítja.
- * @param pbrd 
+ * @brief Visszaad egy kezdőtáblát.
+ * @returns brd 
  */
-void b_setdefault(board *pbrd)
+board get_default_board(void)
 {
+    board brd = b_create();
+    brd.halfmoves = 0;
     /* A táblát alaphelyzetbe állítja */
-    pbrd->ep_pos = NOPOS;
-    pbrd->side = WHITE;
-    pbrd->state = PLAYING;
+    brd.ep_pos = NOPOS;
+    brd.side = WHITE;
+    brd.state = PLAYING;
     /* A gyalogokat rakjuk a táblára*/
     for(int i = 0; i < 8; i++)
     {
-        (void)b_setpiece(pbrd, p_createpos(i, 1), b_create_piece(PAWN, BLACK, 0));
-        (void)b_setpiece(pbrd, p_createpos(i, 6), b_create_piece(PAWN, WHITE, 0));
+        (void)b_setpiece(&brd, p_createpos(i, 1), b_create_piece(PAWN, BLACK, 0));
+        (void)b_setpiece(&brd, p_createpos(i, 6), b_create_piece(PAWN, WHITE, 0));
     }
     /*Tisztek felállítása az enum sorrendjében, az elsőt kihagyva*/
     /*Balról jobbra amég tudunk, majd a maradékot jobbról balra*/
     for(int i = 0; i < 5; i++)
     {
-        (void)b_setpiece(pbrd, p_createpos(i, 0), b_create_piece(i+2, BLACK, 0));
-        (void)b_setpiece(pbrd, p_createpos(i ,7), b_create_piece(i+2, WHITE, 0));
+        (void)b_setpiece(&brd, p_createpos(i, 0), b_create_piece(i+2, BLACK, 0));
+        (void)b_setpiece(&brd, p_createpos(i ,7), b_create_piece(i+2, WHITE, 0));
     }
     for(int i = 0; i < 3; i++)
     {
-        (void)b_setpiece(pbrd, p_createpos(7-i, 0), b_create_piece(i+2, BLACK, 0));
-        (void)b_setpiece(pbrd, p_createpos(7-i, 7), b_create_piece(i+2, WHITE, 0));
+        (void)b_setpiece(&brd, p_createpos(7-i, 0), b_create_piece(i+2, BLACK, 0));
+        (void)b_setpiece(&brd, p_createpos(7-i, 7), b_create_piece(i+2, WHITE, 0));
     }
+    return brd;
 }
 
 

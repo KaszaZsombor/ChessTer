@@ -294,7 +294,6 @@ int has_moves(board brd, color_t color)
  * akkor a lépést meglépteti a táblán.
  * @param pbrd 
  * @param mv
- * @bug Nem érzékeli az 50 lépéses szabályt
  * @return SUCCESS vagy ERROR attól függően hogy sikerült-e
  */
 int m_play_move(board *pbrd, move mv)
@@ -321,11 +320,23 @@ int m_play_move(board *pbrd, move mv)
         if(p_isequal(list[i].move.to, mv.to))
         {
             board testboard = *pbrd;
+            
+            int before_pc_count = b_piece_count(*pbrd);
             m_play_generatedmove(&testboard, list[i]);
             
             /* Sakkban van a király? */
             if(b_is_attacked(testboard, b_get_king_pos(testboard, pbrd->side), pbrd->side))return ERROR;
             m_play_generatedmove(pbrd, list[i]);
+
+            
+            /* A féllépés számláló frissítése */
+            pbrd->halfmoves++;
+            int after_pc_count = b_piece_count(*pbrd);
+            piece pc;
+            b_getpiece(*pbrd, list[i].move.to, &pc);
+            if( pc.type == PAWN ) pbrd->halfmoves = 0;
+            if( after_pc_count < before_pc_count) pbrd->halfmoves = 0;
+
 
             pbrd->side = b_opponent_col(pbrd->side);
             
@@ -339,6 +350,7 @@ int m_play_move(board *pbrd, move mv)
                 }
                 else pbrd->state = DRAW;
             }
+            if(pbrd->halfmoves == 100) pbrd->state = DRAW;
 
             return SUCCESS;
         }

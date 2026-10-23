@@ -182,6 +182,10 @@ typedef struct
      * @brief A meccs állapota.
      */
     gamestate_t state;
+    /**
+     * @brief A féllépések számon tartása az 50 lépéses szabályhoz
+     */
+    int halfmoves;
 }board;
 
 

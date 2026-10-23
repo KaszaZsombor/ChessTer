@@ -52,6 +52,7 @@ A program a sakk szabályai alapján ellenőrzi a lehetséges lépéseket.
 - Patthelyzet felismerése.
 - Gyalogátváltozás kezelése.
 - Lépések és játékállások megjelenítése.
+- 50 lépéses szabály ellenőrzése.
 
 ---
 

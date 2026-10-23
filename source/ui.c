@@ -84,6 +84,18 @@ char getc_p(piece_t pc_t)
     }
 }
 
+void ui_draw_welcome_screen(void)
+{
+    printf("    o            CCCCC  hh                         TTTTTTT              \n");
+    printf("   (^)          CC    C hh        eee   sss   sss    TTT     eee  rr rr \n");
+    printf(" -= H =-        CC      hhhhhh  ee   e s     s       TTT   ee   e rrr  r\n");
+    printf("   ] [          CC    C hh   hh eeeee   sss   sss    TTT   eeeee  rr    \n");
+    printf("  /___\\         CCCCC  hh   hh  eeeee     s     s   TTT    eeeee rr    \n");
+    printf("                                       sss   sss                        \n");
+    printf("\n\n");
+}
+
+
 
 /**
  * @ingroup ui

@@ -14,11 +14,9 @@
 /**
  * @brief Elindtítja és futtatja a játékot a mecss végéig.
  */
-void game_start(void)
+void game_start(board main_brd)
 {
     /* Tábla létrehozása*/
-    board main_brd = b_create();
-    b_setdefault(&main_brd);
     ui_drawboard(main_brd);
 
     while (1)
@@ -78,6 +76,7 @@ void game_start(void)
  */
 int main(void)
 {
-    game_start();
+    ui_draw_welcome_screen();
+    game_start(get_default_board());
     return 0;
 }

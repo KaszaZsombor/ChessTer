@@ -27,8 +27,8 @@ var NAVTREE =
   [ "ChessTer", "index.html", [
     [ "2026/27 őszi félév, sakk program dokumentáció", "index.html#autotoc_md1", null ],
     [ "Linkek", "index.html#autotoc_md3", [
-      [ "Projekt elérhetősége", "index.html#autotoc_md4", null ],
-      [ "A dokumentáció", "index.html#autotoc_md5", null ]
+      [ "<a href=\"https://github.com/KaszaZsombor/SAKK\">Github</a>", "index.html#autotoc_md4", null ],
+      [ "<a href=\"https://docs.kaszazsombor.hu\">Dokumentáció</a>", "index.html#autotoc_md5", null ]
     ] ],
     [ "Funkciók", "index.html#autotoc_md7", [
       [ "1. Sakktábla megjelenítése", "index.html#autotoc_md8", null ],

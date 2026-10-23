@@ -8,6 +8,7 @@ var board_8c =
     [ "b_is_attacked", "group__board__help.html#ga68e48836b74749c0896cfd02111c7cee", null ],
     [ "b_ison", "group__board__help.html#ga9193b46af362531bf7334622e60d7cb7", null ],
     [ "b_opponent_col", "group__board__help.html#ga1d099ed0e5acac0adc863ab62ec12cda", null ],
-    [ "b_setdefault", "group__board__help.html#ga66b9896e9724f9f9375f6c30f83c8d4c", null ],
-    [ "b_setpiece", "group__board__help.html#ga83db7a4eb83c00f5e6b2a834fa165703", null ]
+    [ "b_piece_count", "group__board__help.html#gaf551795524faa8a27793b33465a298cd", null ],
+    [ "b_setpiece", "group__board__help.html#ga83db7a4eb83c00f5e6b2a834fa165703", null ],
+    [ "get_default_board", "group__board__help.html#gade385f2f161f7319a0d395c53c797ac1", null ]
 ];
