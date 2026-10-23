@@ -18,7 +18,7 @@ $(TARGET): $(OBJS)
 
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) $(DEBUGFLAGS) -c $< -o $@
 
 
 $(OBJ_DIR):

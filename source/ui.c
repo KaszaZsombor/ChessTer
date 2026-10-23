@@ -16,6 +16,7 @@
  * kódot.
  */
 
+ 
 /**
  * @ingroup ui
  * @brief A user által beadott szöveg feldolgozása.

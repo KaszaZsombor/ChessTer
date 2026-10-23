@@ -75,9 +75,9 @@ Válasszon egy verziót, majd töltse le a .exe fájlt.
 
 **Az egyik lehetőség a zip-fájl letöltése:**
 
-![source1](docs/images/source1.png)
+![source 1](docs/images/source1.png)
 
-![source2](docs/images/source2.png)
+![source 2](docs/images/source2.png)
 
 **Vagy klónozás gitről:**
 

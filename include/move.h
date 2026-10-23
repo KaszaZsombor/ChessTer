@@ -9,6 +9,7 @@ int p_isequal(position a, position b);
 position p_times(position a, int b);
 position p_add(position a, position b);
 
+
 /*MOVE*/
 move m_createmove(position from, position to, piece_t pp);
 int m_play_move(board *pbrd, move mv);

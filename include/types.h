@@ -122,6 +122,7 @@ typedef struct
     int hasMoved;
 }piece;
 
+
 /**
  * @brief A lépések prototípusát tárolja, ez alapján választ a lehetséges lépések közül
  */

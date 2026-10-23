@@ -239,6 +239,7 @@ void m_play_generatedmove(board *pbrd, generated_move gmv)
     if(gmv.type != DP) pbrd->ep_pos = NOPOS;
 }
 
+
 /**
  * @brief Visszaadja, hogy van-e lépése a megadott színnek.
  * @ingroup play_helper

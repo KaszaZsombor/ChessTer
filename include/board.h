@@ -7,6 +7,7 @@ board b_create();
 piece b_create_piece(piece_t type, color_t col, int hasMoved);
 piece b_create_empty_piece();
 
+
 /*SET*/
 void b_setdefault(board *pbrd);
 int b_setpiece(board *pbrd, position pos, piece pcs);

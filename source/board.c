@@ -46,6 +46,7 @@ piece b_create_empty_piece(void)
  * ezek a függvények segítségével döntenek a feladatuk végrehajtásával kapcsolatban.
  */
  
+ 
 
 /**
  * @ingroup board_help

@@ -9,4 +9,5 @@ void ui_drawboard(board brd);
 int ui_getusrin(int* size, char* msg);
 int ui_parse_str(move *pmv, char *buff, int size);
 
+
 #endif
