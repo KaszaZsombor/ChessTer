@@ -25,6 +25,7 @@
  */
 int ui_getusrin(int *size, char *msg)
 {
+    printf("\nLepes: ");
     /* A kimenet a beolvasás sikerét határozza meg,
     a size befele a maximum msg size, kifele a beolvasott size*/
     int i;

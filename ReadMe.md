@@ -10,7 +10,7 @@ A dokumentáció célja, hogy a felhasználók megismerjék a program működés
 
 ## Telepítési útmutató
 
-### Szükséges környezet ellenőrzése
+### Környezet ellenőrzése
 
 Szükséges:
 
@@ -46,10 +46,15 @@ Lépjen be a letöltött projekt könyvtárába:
 
 ```bash
 cd SAKK
+```
+
+Futtassa az alábbi parancsot:
+
+```bash
 make
 ```
 
-Ha nincs make telepítve:
+Ha nincs make és git telepítve:
 
 ![A projekt letöltése a GitHub repositoryból](docs/images/download.png)
 
@@ -66,9 +71,7 @@ gcc  bin/board.o  bin/main.o  bin/move.o  bin/movegenerator.o  bin/ui.o -o sakk.
 
 ### 2. A program indítása
 
-A program indítási módja a projekt technológiájától függ.
-
-A tényleges indítási parancsot a projekt felépítésének megfelelően kell megadni.
+Lépjen be a telepítési mappába.
 
 **Indítási parancs:**
 
@@ -78,7 +81,7 @@ sakk.exe
 
 A futó program:
 
-![A sakkprogram főképernyője](docs/images/02-main-screen.png)
+![A sakkprogram főképernyője](docs/images/game.png)
 
 ---
 
@@ -89,8 +92,6 @@ A futó program:
 A program megjeleníti a sakktáblát és a sakkbábukat.
 
 A felhasználó a táblán követheti az aktuális játékállást, és kiválaszthatja a mozgatni kívánt bábut.
-
-![A sakktábla és a bábuk](docs/images/03-chessboard.png)
 
 ### Lépések megadása
 
