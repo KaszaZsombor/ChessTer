@@ -58,6 +58,7 @@ Ha nincs make és git telepítve:
 
 ![A projekt letöltése a GitHub repositoryból](docs/images/download.png)
 
+
 Nyissa meg a terminált, majd lépjen be a telepítési könyvtárba:
 
 ```bash
